@@ -1,0 +1,355 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>КП SIKOR – интернет-магазин | Deford</title>
+<meta name="description" content="Коммерческое предложение студии Deford на разработку интернет-магазина для бренда мужской одежды SIKOR, Челябинск.">
+<meta name="robots" content="noindex, nofollow">
+<meta name="theme-color" content="#000000">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Unbounded:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{--ink:#000;--paper:#fff;--grey:#f2f2f2;--muted:#5c5c5c;--line:#000;--x:clamp(16px,5vw,80px)}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--paper);color:var(--ink);font:400 15px/1.65 "JetBrains Mono",ui-monospace,monospace;-webkit-font-smoothing:antialiased}
+img{display:block;max-width:100%;height:auto}
+a{color:inherit}
+.un{font-family:"Unbounded",sans-serif}
+
+/* шапка и строка */
+.hd{position:sticky;top:0;z-index:20;display:grid;grid-template-columns:1fr auto 1fr;align-items:center;height:52px;padding:0 var(--x);background:#000;color:#fff;font-size:11px;font-weight:500;letter-spacing:.08em;text-transform:uppercase}
+.hd__logo{display:flex;align-items:center;gap:8px;font:500 22px/1 "Unbounded",sans-serif;letter-spacing:.06em}
+.hd__logo b{font:700 12px "JetBrains Mono",monospace}
+.hd__r{text-align:right}
+.tick{overflow:hidden;background:#000;color:#fff;border-top:1px solid #333;font-size:11px;white-space:nowrap;letter-spacing:.04em}
+.tick__in{display:flex;width:max-content;animation:tick 60s linear infinite;padding:6px 0}
+@keyframes tick{to{transform:translateX(-50%)}}
+@media (prefers-reduced-motion:reduce){.tick__in{animation:none}}
+
+/* первый экран */
+.hero{position:relative;height:min(82svh,780px);background:#111;overflow:hidden}
+.hero__pics{display:grid;grid-template-columns:repeat(4,1fr);height:100%}
+.hero__pics img{width:100%;height:100%;object-fit:cover}
+.hero:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,0) 35%,rgba(0,0,0,.72) 100%)}
+.hero__txt{position:absolute;z-index:2;left:var(--x);right:var(--x);bottom:9%;color:#fff;display:flex;justify-content:space-between;align-items:flex-end;gap:24px;flex-wrap:wrap}
+.hero__br{font:400 clamp(44px,8.6vw,136px)/1 "Unbounded",sans-serif;letter-spacing:-.02em}
+.hero__sub{max-width:440px;font-size:12px;letter-spacing:.1em;text-transform:uppercase;line-height:1.7}
+
+/* секции */
+.sec{padding:clamp(56px,8vw,104px) var(--x)}
+.sec+.sec{border-top:1px solid var(--line)}
+.rule{display:flex;align-items:center;gap:24px;margin-bottom:clamp(28px,4vw,48px);font:400 clamp(18px,2.4vw,30px)/1.15 "Unbounded",sans-serif;letter-spacing:.04em;text-transform:uppercase;text-align:center}
+.rule:before,.rule:after{content:"";flex:1;min-width:24px;height:1px;background:#000}
+.lead{font-size:clamp(15px,1.3vw,17px);max-width:820px}
+.center{text-align:center}.center .lead{margin:0 auto}
+.muted{color:var(--muted)}
+.label{font-size:11px;font-weight:700;letter-spacing:.12em;text-transform:uppercase}
+.grid2{display:grid;grid-template-columns:1fr 1.1fr;gap:clamp(28px,5vw,64px);align-items:center}
+ul.plus{list-style:none;display:grid;gap:10px}
+ul.plus li:before{content:"+ ";font-weight:700}
+.btn{display:inline-block;padding:15px 24px;background:#000;color:#fff;font-size:11px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;text-decoration:none}
+.btn.out{background:transparent;color:#000;box-shadow:inset 0 0 0 1px #000}
+
+/* рамка с плюсами по углам */
+.frame{position:relative;padding:clamp(10px,1.2vw,16px);border:1px solid #000}
+.frame:before,.frame:after,.frame i:before,.frame i:after{content:"+";position:absolute;font:500 18px/1 "JetBrains Mono",monospace;background:#fff;padding:0 2px}
+.frame:before{top:-10px;left:-8px}.frame:after{top:-10px;right:-8px}
+.frame i:before{bottom:-10px;left:-8px}.frame i:after{bottom:-10px;right:-8px}
+.frame button{all:unset;cursor:zoom-in;display:block;width:100%}
+.frame img{width:100%;aspect-ratio:16/10;object-fit:cover;object-position:top}
+.cap{margin-top:14px}
+.cap b{display:block;font-size:12px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;margin-bottom:4px}
+.cap span{font-size:13px;color:var(--muted)}
+
+/* новый канал продаж */
+.four{display:grid;grid-template-columns:repeat(2,1fr);gap:0;border-top:1px solid #000;border-left:1px solid #000}
+.four article{border-right:1px solid #000;border-bottom:1px solid #000;padding:clamp(22px,3vw,40px)}
+.four .n{font-size:12px;font-weight:700;letter-spacing:.1em}
+.four h3{font:400 clamp(20px,2.2vw,30px)/1.15 "Unbounded",sans-serif;margin:16px 0 14px;letter-spacing:-.01em}
+.four p{color:#333}
+.wide{position:relative;display:grid;place-items:center;margin:clamp(40px,5vw,64px) calc(-1*var(--x)) 0;height:clamp(300px,38vw,520px);overflow:hidden;background:#222}
+.wide img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 25%}
+.wide:after{content:"";position:absolute;inset:0;background:rgba(0,0,0,.35)}
+.wide p{position:relative;z-index:2;color:#fff;font:400 clamp(26px,4.4vw,64px)/1.1 "Unbounded",sans-serif;text-align:center;padding:0 var(--x)}
+
+/* галереи */
+.g2{display:grid;grid-template-columns:repeat(2,1fr);gap:clamp(28px,3vw,44px) clamp(20px,2.4vw,36px)}
+.stats{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid #000;border-bottom:1px solid #000;margin:0 0 clamp(36px,4vw,56px)}
+.stats div{padding:22px 18px;border-right:1px solid #000}.stats div:last-child{border-right:0}
+.stats b{display:block;font:400 clamp(34px,4vw,56px)/1 "Unbounded",sans-serif;margin-bottom:10px}
+.stats span{font-size:12px;color:var(--muted)}
+.phones{display:grid;grid-template-columns:1.6fr 1fr 1fr;gap:clamp(16px,2vw,28px);align-items:end}
+.phones .ph img{aspect-ratio:390/844;border:1px solid #000}
+
+/* тарифы */
+.tariffs{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid #000;border-left:1px solid #000}
+.tariff{border-right:1px solid #000;border-bottom:1px solid #000;padding:clamp(22px,2.6vw,36px);display:flex;flex-direction:column}
+.tariff .tag{font-size:12px;font-weight:700;letter-spacing:.12em}
+.tariff h3{font:400 clamp(22px,2vw,28px)/1.15 "Unbounded",sans-serif;margin:12px 0 10px}
+.tariff .sub{color:var(--muted);margin-bottom:22px;font-size:14px}
+.tariff .plusall{font-weight:700;margin-bottom:10px;font-size:14px}
+.tariff ul{font-size:14px;margin-bottom:24px}
+.tariff .res{border-top:1px solid #000;padding-top:14px;font-size:13px;margin-bottom:26px}
+.tariff .price{margin-top:auto;font:400 clamp(30px,3vw,42px)/1 "Unbounded",sans-serif}
+.tariff.dark{background:#000;color:#fff}
+.tariff.dark .sub{color:#aaa}.tariff.dark .res{border-color:#444}
+
+.end{background:#000;color:#fff;display:grid;grid-template-columns:200px 1fr;gap:clamp(24px,4vw,56px);align-items:end;padding-bottom:0}
+.end .rule:before,.end .rule:after{background:#fff}
+.end img{width:100%}
+.end .txt{padding-bottom:clamp(48px,6vw,80px)}
+.end .btn{background:#fff;color:#000}.end .btn.out{background:transparent;color:#fff;box-shadow:inset 0 0 0 1px #fff}
+.links{display:flex;flex-wrap:wrap;gap:10px;margin-top:26px}
+footer{padding:28px var(--x);border-top:1px solid #333;background:#000;color:#888;font-size:11px;letter-spacing:.08em;text-transform:uppercase;text-align:center}
+
+dialog{border:0;padding:0;background:transparent;max-width:96vw;max-height:94vh;margin:auto}
+dialog::backdrop{background:rgba(0,0,0,.9)}
+dialog img{max-width:96vw;max-height:94vh}
+dialog form{position:fixed;top:12px;right:18px}
+dialog form button{all:unset;cursor:pointer;color:#fff;font-size:34px;line-height:1}
+
+@media (max-width:980px){
+  .tariffs{grid-template-columns:1fr}
+  .phones{grid-template-columns:1fr 1fr}.phones .frame{grid-column:span 2}
+}
+@media (max-width:820px){
+  body{font-size:14px}
+  .hd{grid-template-columns:auto 1fr;gap:12px}.hd__l{display:none}.hd__logo{font-size:18px}
+  .hero{height:72svh}.hero__pics{grid-template-columns:1fr 1fr}.hero__pics img:nth-child(n+3){display:none}
+  .grid2,.g2,.four{grid-template-columns:1fr}
+  .stats{grid-template-columns:1fr}.stats div{border-right:0;border-bottom:1px solid #000}.stats div:last-child{border-bottom:0}
+  .end{grid-template-columns:1fr}.end img{max-width:220px;margin:0 auto}.end .txt{padding-bottom:0;order:-1}
+  .rule{gap:14px}
+}
+</style>
+</head>
+<body>
+<header class="hd">
+  <span class="hd__l">Коммерческое предложение</span>
+  <span class="hd__logo">SIKOR <b>(S)</b></span>
+  <span class="hd__r">× Deford</span>
+</header>
+<div class="tick" aria-hidden="true"><div class="tick__in"><span>Свой сайт – новая ступень для бренда / Новый канал продаж / Делитесь товарами, а не постами / Оплата картами онлайн / Челябинск, ТРК «Куба» / Свой сайт – новая ступень для бренда / Новый канал продаж / Делитесь товарами, а не постами / Оплата картами онлайн / Челябинск, ТРК «Куба» /&nbsp;</span><span>Свой сайт – новая ступень для бренда / Новый канал продаж / Делитесь товарами, а не постами / Оплата картами онлайн / Челябинск, ТРК «Куба» / Свой сайт – новая ступень для бренда / Новый канал продаж / Делитесь товарами, а не постами / Оплата картами онлайн / Челябинск, ТРК «Куба» /&nbsp;</span></div></div>
+
+<main>
+<!-- 1. Первый экран -->
+<section class="hero">
+  <div class="hero__pics">
+    <img src="img/p1.webp" alt="Куртка Sheep SIKOR" width="1200" height="1600">
+    <img src="img/p2.webp" alt="Куртка SIKOR" width="1200" height="1600">
+    <img src="img/p3.webp" alt="Свитшот Casual SIKOR" width="1200" height="1600">
+    <img src="img/p4.webp" alt="Куртка без капюшона SIKOR" width="1200" height="1600">
+  </div>
+  <div class="hero__txt">
+    <p class="hero__sub">Коммерческое предложение на разработку интернет-магазина для бренда мужской одежды SIKOR · Челябинск</p>
+    <p class="hero__br">[СВОЙ САЙТ]</p>
+  </div>
+</section>
+
+<!-- 2. Задача -->
+<section class="sec">
+  <h2 class="rule"><span>Задача</span></h2>
+  <div class="grid2">
+    <div>
+      <p class="lead" style="margin-bottom:22px">SIKOR – бренд мужской базовой одежды без логотипов: шоурум в ТРК «Куба» на Цвилинга, 25, подбор образа у стилиста и группа ВКонтакте на 20,9 тыс. подписчиков.</p>
+      <p style="margin-bottom:22px">Сейчас купить можно в магазине или через переписку. Ассортимент живёт в постах и товарах ВКонтакте, а покупателю, который ищет бренд в поиске, некуда перейти.</p>
+      <p class="label" style="margin-bottom:12px">Необходимо:</p>
+      <ul class="plus">
+        <li>Запустить собственный интернет-магазин SIKOR с каталогом, размерами, корзиной и онлайн-оплатой.</li>
+        <li>Показать бренд целиком: вещи, готовые образы, шоурум и стилиста.</li>
+        <li>Заложить SEO-структуру, чтобы магазин собирал покупателей из поиска и ответов нейросетей.</li>
+      </ul>
+    </div>
+    <figure class="frame"><i></i><img src="img/vk.webp" alt="Группа SIKOR во ВКонтакте" width="1440" height="900"><figcaption class="cap"><b>Сейчас</b><span>SIKOR в интернете – только группа ВКонтакте.</span></figcaption></figure>
+  </div>
+</section>
+
+<!-- 3. Новый канал продаж -->
+<section class="sec">
+  <h2 class="rule"><span>Новый канал продаж</span></h2>
+  <div class="four">
+    <article><span class="n">[01]</span><h3>Окупается даже без рекламы</h3><p>Свой сайт растит репутацию бренда. Покупатель, который услышал о SIKOR от друга или увидел шоурум в «Кубе», находит магазин в поиске, видит весь ассортимент и покупает сам, без переписки.</p></article>
+    <article><span class="n">[02]</span><h3>Делитесь товарами, а не постами</h3><p>У каждой вещи и каждого образа своя страница: фото, размеры, цена и кнопка «Купить». Ссылку можно отправить клиенту после примерки, в мессенджер или в сторис.</p></article>
+    <article><span class="n">[03]</span><h3>Оплата картами, в том числе кредитными</h3><p>Покупатель оплачивает заказ на сайте удобным способом: картой, в том числе кредитной, или через СБП. Так проще решиться на покупку и не нужно ехать в магазин.</p></article>
+    <article><span class="n">[04]</span><h3>Новая ступень для бизнеса</h3><p>Бренд с собственным сайтом воспринимается как бренд, а не как страница в соцсети. Это доверие покупателей и основа для рекламы, SEO и роста за пределы Челябинска.</p></article>
+  </div>
+  <div class="wide"><img src="img/p6.webp" alt="Пальто Balmacaan SIKOR" loading="lazy" width="1200" height="1600"><p>Свой сайт – это уже репутация</p></div>
+</section>
+
+<!-- 4. Как может выглядеть -->
+<section class="sec">
+  <h2 class="rule"><span>Как может выглядеть сайт SIKOR</span></h2>
+  <p class="lead center" style="margin-bottom:clamp(32px,4vw,52px)">Мы уже собрали 8 вариантов главной страницы на ваших товарах из ВКонтакте. Выбираете стиль, и мы развиваем его в полноценный магазин.</p>
+  <div class="g2">
+    <figure class="frame"><i></i><button type="button"><img src="img/sk-kavara.webp" alt="Вариант Kavara" loading="lazy" width="1440" height="900"></button><figcaption class="cap"><b>Kavara</b><span>Чёрно-белая витрина, бегущая строка, крупные кадры.</span></figcaption></figure>
+    <figure class="frame"><i></i><button type="button"><img src="img/sk-obrazy.webp" alt="Вариант Образы целиком" loading="lazy" width="1440" height="900"></button><figcaption class="cap"><b>Образы целиком</b><span>Продаём подбор: готовый образ и вещи из него.</span></figcaption></figure>
+    <figure class="frame"><i></i><button type="button"><img src="img/sk-bork.webp" alt="Вариант Bork" loading="lazy" width="1440" height="900"></button><figcaption class="cap"><b>Bork</b><span>Тёмная витрина в цветах SIKOR.</span></figcaption></figure>
+    <figure class="frame"><i></i><button type="button"><img src="img/sk-marc.webp" alt="Вариант Marc O’Polo" loading="lazy" width="1440" height="900"></button><figcaption class="cap"><b>Marc O’Polo</b><span>Кампания на весь экран и спокойная гамма.</span></figcaption></figure>
+  </div>
+  <p class="center" style="margin-top:clamp(36px,4vw,52px)"><a class="btn" href="https://tema-mail.github.io/sikor-shop/" target="_blank" rel="noopener">Смотреть все 8 вариантов ↗</a></p>
+</section>
+
+<!-- 5. Магазин одежды на коде -->
+<section class="sec">
+  <h2 class="rule"><span>Магазин одежды на коде</span></h2>
+  <p class="lead center" style="margin-bottom:clamp(32px,4vw,48px)">Пример – интернет-магазин бренда ALEX KROWN, который мы сделали на коде: видео на главной, 208 товаров, разделы, размеры у каждой вещи.</p>
+  <div class="stats">
+    <div><b>93</b><span>скорость на телефоне, Google Lighthouse, с видео на главной, 19.10.2026</span></div>
+    <div><b>99</b><span>скорость на компьютере, тот же замер</span></div>
+    <div><b>208</b><span>товаров с фото, размерами и ценами</span></div>
+  </div>
+  <div class="phones">
+    <figure class="frame"><i></i><button type="button"><img src="img/ak-catalog.webp" alt="Каталог ALEX KROWN" loading="lazy" width="1440" height="900"></button><figcaption class="cap"><b>Каталог с разделами</b><span>Фильтры по разделу, сортировка, скидки на карточках.</span></figcaption></figure>
+    <figure class="ph"><img src="img/ak-home-m.webp" alt="Главная ALEX KROWN на телефоне" loading="lazy" width="600" height="1299"><figcaption class="cap"><b>Видео</b><span>Не тормозит сайт.</span></figcaption></figure>
+    <figure class="ph"><img src="img/ak-catalog-m.webp" alt="Каталог ALEX KROWN на телефоне" loading="lazy" width="600" height="1299"><figcaption class="cap"><b>Телефон</b><span>Две карточки в ряд.</span></figcaption></figure>
+  </div>
+  <div class="grid2" style="margin-top:clamp(40px,5vw,64px);align-items:start">
+    <h3 class="un" style="font-weight:400;font-size:clamp(20px,2vw,28px);line-height:1.2">Что важно для магазина одежды и уже работает у нас</h3>
+    <ul class="plus">
+      <li>Много фото и видео без потери скорости</li>
+      <li>Размеры и цвета в карточке, наличие по каждому размеру</li>
+      <li>Фильтры по разделу, размеру и цене</li>
+      <li>Избранное, корзина и оформление в пару касаний</li>
+      <li>Готовые образы: комплект целиком и вещи по отдельности</li>
+      <li>Фиды для Яндекса и Google: товары сразу в рекламе и поиске</li>
+    </ul>
+  </div>
+</section>
+
+<!-- 6. Управление -->
+<section class="sec">
+  <h2 class="rule"><span>Управление магазином</span></h2>
+  <p class="lead center" style="margin-bottom:clamp(32px,4vw,52px)">Товары, цены, скидки, заказы и аналитика – в одной админке, понятной без программиста.</p>
+  <div class="g2">
+    <figure class="frame"><i></i><button type="button"><img src="img/ak-adm-products.webp" alt="Товары в админке" loading="lazy" width="1440" height="900"></button><figcaption class="cap"><b>Товары</b><span>Разделы, размеры, скидки, импорт и выгрузка CSV, скрытие одним переключателем.</span></figcaption></figure>
+    <figure class="frame"><i></i><button type="button"><img src="img/ak-adm-sales.webp" alt="Продажи в админке" loading="lazy" width="1440" height="900"></button><figcaption class="cap"><b>Продажи</b><span>Заказы, оплата, статус, средний чек и источник покупателя.</span></figcaption></figure>
+    <figure class="frame"><i></i><button type="button"><img src="img/ak-adm-leads.webp" alt="Заявки доской" loading="lazy" width="1440" height="900"></button><figcaption class="cap"><b>Заявки</b><span>Вопросы по размеру и доставке доской: новые, в работе, выполнено.</span></figcaption></figure>
+    <figure class="frame"><i></i><button type="button"><img src="img/adm-neuro.webp" alt="Видимость в нейросетях" loading="lazy" width="1340" height="667"></button><figcaption class="cap"><b>Поиск и нейросети</b><span>Позиции в Яндексе и Google, называют ли вас ChatGPT, Perplexity, Gemini и Claude.</span></figcaption></figure>
+  </div>
+  <p class="center muted" style="margin-top:28px;font-size:12px">Товары, заказы и заявки на снимках – примеры. Поиск и нейросети – снимок нашего проекта TEYES Sibir.</p>
+</section>
+
+<!-- 7. Что входит -->
+<section class="sec">
+  <h2 class="rule"><span>Что входит во все тарифы</span></h2>
+  <div class="grid2" style="align-items:start">
+    <p class="lead">Независимо от тарифа мы берём на себя весь цикл: от брифа до запуска и обучения сотрудников.</p>
+    <ul class="plus">
+      <li>Брифинг, структура и прототипы страниц</li>
+      <li>Тексты для всех страниц</li>
+      <li>Дизайн и вёрстка, адаптация под телефоны и планшеты</li>
+      <li>Каталог, карточки с размерами и цветами, корзина, оформление заказа</li>
+      <li>Перенос товаров и фото из ВКонтакте</li>
+      <li>Интеграция с «МойСклад» по запросу</li>
+      <li>Онлайн-оплата картами и подключение служб доставки</li>
+      <li>Юридические и информационные страницы</li>
+      <li>Подключение домена и Яндекс Метрики</li>
+      <li>Базовая техническая SEO-оптимизация</li>
+      <li>Видеоинструкция для сотрудников</li>
+    </ul>
+  </div>
+</section>
+
+<!-- 8. Тарифы -->
+<section class="sec" id="tariffs">
+  <h2 class="rule"><span>Тарифы</span></h2>
+  <div class="tariffs">
+    <article class="tariff">
+      <span class="tag">[01]</span>
+      <h3>Базовый</h3>
+      <p class="sub">Быстрый запуск интернет-магазина рядом с шоурумом и группой ВКонтакте.</p>
+      <ul class="plus">
+        <li>Магазин на нашей отработанной структуре в стиле SIKOR</li>
+        <li>Главная, каталог с фильтрами, карточки с размерами</li>
+        <li>Корзина, оформление и онлайн-оплата</li>
+        <li>Доставка и оплата, контакты, юридические страницы</li>
+        <li>Админ-панель: страницы, товары, заказы</li>
+        <li>Без дополнительных внутренних страниц</li>
+      </ul>
+      <p class="res">Результат: магазин, куда можно вести покупателей из ВКонтакте, шоурума и поиска.</p>
+      <p class="price">70 000 ₽</p>
+    </article>
+    <article class="tariff">
+      <span class="tag">[02]</span>
+      <h3>Оптимальный</h3>
+      <p class="sub">Магазин, готовый к рекламе и росту из поиска.</p>
+      <p class="plusall">Всё из «Базового», а также:</p>
+      <ul class="plus">
+        <li>Раздел «Готовые образы»</li>
+        <li>Страницы коллекций и сезонов: осень – зима, новинки, акции</li>
+        <li>Подготовка к рекламе: цели, страницы «Спасибо», фиды для Яндекса и Google</li>
+        <li>Яндекс Метрика и цифры по страницам в админке</li>
+        <li>Доработка дизайна под ваш стиль</li>
+      </ul>
+      <p class="res">Результат: сайт, на который можно сразу запускать рекламу и расти в поиске.</p>
+      <p class="price">90 000 ₽</p>
+    </article>
+    <article class="tariff dark">
+      <span class="tag">[03]</span>
+      <h3>Расширенный</h3>
+      <p class="sub">Магазин с личным кабинетом и системой лояльности.</p>
+      <p class="plusall">Всё из «Оптимального», а также:</p>
+      <ul class="plus">
+        <li>Личный кабинет: вход по коду, история заказов, адреса</li>
+        <li>Бонусные баллы и списание в корзине</li>
+        <li>Статусы с ростом кешбэка от суммы покупок</li>
+        <li>Реферальная программа «Приведи друга»</li>
+        <li>Промокоды и персональные скидки</li>
+      </ul>
+      <p class="res">Результат: своя клиентская база и система повторных продаж.</p>
+      <p class="price">150 000 ₽</p>
+    </article>
+  </div>
+</section>
+
+<!-- 9. Личный кабинет -->
+<section class="sec">
+  <h2 class="rule"><span>Личный кабинет</span></h2>
+  <div class="grid2" style="align-items:start;margin-bottom:clamp(32px,4vw,48px)">
+    <p class="lead">В тарифе «Расширенный» покупатель видит баллы, статус и заказы, а вы получаете базу, к которой можно вернуться с новой коллекцией.</p>
+    <ul class="plus">
+      <li>Баллы за покупки и оплата баллами части заказа</li>
+      <li>Статусы, например: от 10 000 ₽ – 5% кешбэка, от 100 000 ₽ – 10%</li>
+      <li>Личный код «Приведи друга»: другу скидка, вам баллы</li>
+      <li>Сохранённые адреса и история заказов</li>
+    </ul>
+  </div>
+  <div class="g2">
+    <figure class="frame"><i></i><button type="button"><img src="img/lk-bally.webp" alt="Баллы и статус" loading="lazy" width="1340" height="667"></button><figcaption class="cap"><b>Баллы и статус</b><span>Демо-стенд нашего личного кабинета.</span></figcaption></figure>
+    <figure class="frame"><i></i><button type="button"><img src="img/lk-cart.webp" alt="Корзина со списанием баллов" loading="lazy" width="1340" height="667"></button><figcaption class="cap"><b>Корзина</b><span>Промокод, списание баллов, доставка и адрес с подсказками.</span></figcaption></figure>
+  </div>
+</section>
+
+<!-- 10. Контакты -->
+<section class="sec end">
+  <img src="img/artem.webp" alt="Артём Галимов" loading="lazy" width="560" height="587">
+  <div class="txt">
+    <p class="label" style="color:#888;margin-bottom:12px">Deford</p>
+    <h2 class="un" style="font-weight:400;font-size:clamp(24px,3vw,40px);line-height:1.15;margin-bottom:16px">Артём Галимов, основатель студии Deford</h2>
+    <p style="color:#ccc;max-width:640px">Больше 10 лет делаем сайты, магазины и рекламу. Покажем варианты сайта SIKOR вживую и ответим на вопросы.</p>
+    <div class="links">
+      <a class="btn" href="https://t.me/Artem1Galimov" target="_blank" rel="noopener">Telegram ↗</a>
+      <a class="btn out" href="https://wa.me/79537777891" target="_blank" rel="noopener">WhatsApp ↗</a>
+      <a class="btn out" href="tel:+79537777891">+7 953 777-78-91</a>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>Предложение подготовлено 19 октября 2026 года</footer>
+
+<dialog id="zoom"><form method="dialog"><button aria-label="Закрыть">×</button></form><img alt=""></dialog>
+<script>
+(function(){
+  var d=document.getElementById('zoom'),im=d.querySelector('img');
+  document.querySelectorAll('.frame button').forEach(function(b){
+    b.addEventListener('click',function(){var s=b.querySelector('img');im.src=s.currentSrc||s.src;im.alt=s.alt;d.showModal();});
+  });
+  d.addEventListener('click',function(e){if(e.target===d||e.target===im)d.close();});
+})();
+</script>
+</body>
+</html>
