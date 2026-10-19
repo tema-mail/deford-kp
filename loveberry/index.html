@@ -1,0 +1,392 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>КП LOVEBERRY – интернет-магазин | Target Factory</title>
+<meta name="description" content="Коммерческое предложение Target Factory на разработку интернет-магазина для LOVEBERRY, Тольятти.">
+<meta name="robots" content="noindex, nofollow">
+<link rel="icon" href="img/logo.webp">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#ebe8e3; --card:#f6f4f1; --white:#fff; --ink:#1b1b1b; --muted:#5f5d59;
+  --line:#dcd8d1; --lime:#c9f23f; --dark:#1e1e1e; --rose:#8c1f2f;
+  --r:32px; --gap:clamp(12px,2vw,20px); --pad:clamp(20px,5vw,72px);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--ink);font:400 17px/1.55 "Inter Tight",system-ui,sans-serif;-webkit-font-smoothing:antialiased}
+img{display:block;max-width:100%;height:auto}
+a{color:inherit}
+.wrap{max-width:1360px;margin:0 auto;padding:var(--gap)}
+.slide{position:relative;background:var(--card);border-radius:var(--r);padding:var(--pad);margin-bottom:var(--gap);overflow:hidden}
+.pill{display:inline-block;background:var(--white);border-radius:999px;padding:6px 16px;font-size:14px;font-weight:600;box-shadow:0 1px 0 var(--line)}
+h1,h2,h3{font-weight:500;letter-spacing:-.02em;line-height:1.08}
+h1{font-size:clamp(34px,5.4vw,72px)}
+h2{font-size:clamp(28px,3.8vw,52px);margin:14px 0 20px}
+h3{font-size:clamp(20px,1.8vw,24px);margin-bottom:8px}
+.center{text-align:center}
+.center h2{max-width:920px;margin-left:auto;margin-right:auto}
+.lead{font-size:clamp(17px,1.5vw,20px);color:var(--muted);max-width:760px}
+.center .lead{margin:0 auto}
+.muted{color:var(--muted)}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:clamp(24px,4vw,56px);align-items:center}
+.btn{display:inline-flex;align-items:center;gap:14px;background:var(--dark);color:#fff;text-decoration:none;border-radius:999px;padding:10px 10px 10px 26px;font-weight:500;font-size:17px;white-space:nowrap}
+.btn i{width:44px;height:44px;border-radius:50%;background:var(--lime);display:grid;place-items:center;font-style:normal;color:var(--dark);font-size:18px}
+.btn.light{background:var(--white);color:var(--ink);box-shadow:inset 0 0 0 1px var(--line)}
+ul.list{list-style:none;display:grid;gap:10px}
+ul.list li{position:relative;padding-left:28px}
+ul.list li:before{content:"";position:absolute;left:0;top:.45em;width:14px;height:14px;border-radius:50%;background:var(--lime);box-shadow:inset 0 0 0 4px #e9f8b8}
+
+/* обложка */
+.cover{min-height:min(860px,92vh);display:flex;align-items:center;background:var(--card) url(img/bg.webp) center/cover;padding-bottom:0}
+.cover-in{position:relative;z-index:2;max-width:640px;padding-bottom:var(--pad)}
+.cover .brand{display:flex;align-items:center;gap:14px;margin-bottom:36px}
+.cover .brand img{width:56px;height:56px;border-radius:50%}
+.cover .brand span{font-weight:600;letter-spacing:.06em;text-transform:uppercase;font-size:14px}
+.cover .brand b{color:var(--muted);font-weight:500}
+.cover .brand img.tf{width:190px;height:auto;border-radius:0}
+.offer{background:var(--dark);color:#fff}
+.offer .pill{background:var(--lime);box-shadow:none;color:var(--dark)}
+.offer .lead{color:#c9c7c2}
+.offer-price{display:flex;flex-wrap:wrap;align-items:baseline;justify-content:center;gap:10px 22px;margin:34px 0 18px}
+.offer-price b{font-size:clamp(56px,8vw,112px);font-weight:600;letter-spacing:-.04em;line-height:1;color:var(--lime)}
+.offer-price s{font-size:clamp(24px,3vw,40px);color:#8d8b86}
+.offer .until{display:inline-block;border:1px solid #444;border-radius:999px;padding:10px 20px;font-weight:500}
+.cover h1{margin-bottom:24px}
+.cover .for{font-size:clamp(20px,2.2vw,30px);color:#8b8984;line-height:1.25;margin-bottom:36px}
+.artem{position:absolute;right:2%;bottom:0;width:min(50%,620px);z-index:1}
+.chips{position:absolute;right:max(36%,300px);top:24%;z-index:3;display:grid;gap:14px}
+.chip{display:flex;align-items:center;gap:12px;background:var(--white);border-radius:18px;padding:12px 18px 12px 12px;box-shadow:0 12px 30px rgba(0,0,0,.07);font-size:14px;line-height:1.25;position:relative}
+.chip:nth-child(2){margin-left:-40px}.chip:nth-child(3){margin-left:20px}
+.chip .ic{width:36px;height:36px;border-radius:10px;display:grid;place-items:center;color:#fff;font-weight:700;font-size:13px}
+.chip small{display:block;color:var(--muted)}
+.chip em{position:absolute;right:-8px;top:-8px;background:var(--rose);color:#fff;font-style:normal;font-size:11px;font-weight:600;border-radius:999px;padding:2px 6px}
+
+/* макеты устройств */
+.laptop{position:relative;padding:2.2% 2.2% 0;background:#202022;border-radius:18px 18px 0 0;box-shadow:0 30px 60px rgba(0,0,0,.18)}
+.laptop img{border-radius:6px 6px 0 0;aspect-ratio:16/10;object-fit:cover;object-position:top}
+.laptop:after{content:"";position:absolute;left:-7%;right:-7%;bottom:-16px;height:16px;background:linear-gradient(#cfcfd1,#a9a9ac);border-radius:0 0 18px 18px}
+.phone{width:min(300px,100%);margin:0 auto;padding:10px;background:#111;border-radius:42px;box-shadow:0 30px 60px rgba(0,0,0,.2)}
+.phone img{border-radius:32px;aspect-ratio:390/780;object-fit:cover;object-position:top}
+
+/* карточки */
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:var(--gap);margin-top:36px}
+.card{background:var(--white);border-radius:24px;padding:clamp(20px,2.4vw,30px)}
+.card .num{font-size:14px;font-weight:600;color:var(--rose);margin-bottom:14px;display:block}
+.card p{color:var(--muted)}
+.big{font-size:clamp(40px,4vw,56px);font-weight:600;letter-spacing:-.03em;line-height:1}
+.big span{font-size:.45em;color:var(--muted);font-weight:500;margin-left:4px}
+
+/* галерея */
+.shots{display:grid;grid-template-columns:repeat(2,1fr);gap:var(--gap);margin-top:36px}
+.shot{background:var(--white);border-radius:24px;padding:12px 12px 18px}
+.shot button{all:unset;cursor:zoom-in;display:block;width:100%}
+.shot img{border-radius:14px;aspect-ratio:16/10;object-fit:cover;object-position:top;border:1px solid #eee}
+.shot figcaption{padding:14px 8px 0}
+.shot figcaption b{display:block;font-weight:600;font-size:18px;margin-bottom:4px}
+.shot figcaption span{color:var(--muted);font-size:15px}
+.note{margin-top:20px;font-size:14px;color:var(--muted)}
+
+/* тарифы */
+.tariffs{display:grid;grid-template-columns:repeat(3,1fr);gap:var(--gap);margin-top:36px;align-items:stretch}
+.tariff{background:var(--white);border-radius:28px;padding:clamp(22px,2.6vw,34px);display:flex;flex-direction:column}
+.tariff .tag{font-size:13px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+.tariff h3{font-size:clamp(26px,2.4vw,32px);margin:8px 0 10px}
+.tariff .sub{color:var(--muted);margin-bottom:22px}
+.tariff .plus{font-weight:600;margin-bottom:12px}
+.tariff ul{margin-bottom:22px;font-size:16px}
+.tariff .res{background:var(--card);border-radius:16px;padding:14px 16px;font-size:15px;margin-bottom:24px}
+.tariff .res b{font-weight:600}
+.tariff .btn{margin-top:auto;align-self:flex-start;font-size:19px}
+.tariff.dark{background:var(--dark);color:#fff}
+.tariff.dark .tag,.tariff.dark .sub{color:#b9b7b2}
+.tariff.dark .res{background:#2c2c2c}
+.tariff.dark .btn{background:#fff;color:var(--ink)}
+.tariff.dark ul.list li:before{box-shadow:inset 0 0 0 4px #43501a}
+
+.split{display:grid;grid-template-columns:1.1fr .9fr;gap:clamp(24px,4vw,56px);align-items:center}
+.pay{display:grid;grid-template-columns:repeat(2,1fr);gap:var(--gap);margin-top:32px}
+.pay .card{display:flex;flex-direction:column;gap:10px}
+
+.author{display:grid;grid-template-columns:280px 1fr;gap:clamp(24px,4vw,56px);align-items:end;padding-bottom:0}
+.author img{width:100%}
+.author .txt{padding-bottom:var(--pad)}
+.contacts{display:flex;flex-wrap:wrap;gap:12px;margin-top:28px}
+footer{text-align:center;color:var(--muted);font-size:14px;padding:12px 0 28px}
+
+dialog{border:0;padding:0;background:transparent;max-width:96vw;max-height:94vh;margin:auto}
+dialog::backdrop{background:rgba(20,20,20,.86)}
+dialog img{max-width:96vw;max-height:94vh;border-radius:12px}
+dialog form{position:fixed;top:14px;right:18px}
+dialog form button{all:unset;cursor:pointer;color:#fff;font-size:34px;line-height:1}
+
+@media (max-width:1100px){
+  .cards,.tariffs{grid-template-columns:1fr 1fr}
+  .chips{display:none}
+}
+@media (max-width:820px){
+  body{font-size:16px}
+  .grid2,.split,.author{grid-template-columns:1fr}
+  .cards,.tariffs,.shots,.pay{grid-template-columns:1fr}
+  .cover{min-height:auto;display:block;padding-bottom:0}
+  .cover-in{padding-bottom:28px}
+  .cover .brand{gap:10px}
+  .cover .brand span{white-space:nowrap}
+  .cover .brand img.tf{width:132px}
+  .artem{position:relative;right:auto;width:82%;margin:0 auto}
+  .author img{max-width:260px;margin:0 auto}
+  .author .txt{padding-bottom:0;order:-1}
+  .author{padding-bottom:0}
+  .laptop:after{left:-4%;right:-4%}
+  .btn{font-size:16px}
+  .tariff .btn{font-size:17px}
+}
+</style>
+</head>
+<body>
+<main class="wrap">
+
+<!-- 1. Обложка -->
+<section class="slide cover">
+  <div class="cover-in">
+    <div class="brand"><img src="img/logo.webp" alt="Логотип LOVEBERRY" width="56" height="56"><span>LOVEBERRY <b>×</b></span><img class="tf" src="img/tf.svg" alt="Target Factory" width="190" height="9"></div>
+    <h1>Коммерческое предложение на разработку интернет-магазина</h1>
+    <p class="for">Для LOVEBERRY – цветы и клубника в шоколаде, Тольятти</p>
+    <a class="btn" href="#tariffs">Смотреть тарифы <i>↗</i></a>
+  </div>
+  <div class="chips" aria-hidden="true">
+    <div class="chip"><span class="ic" style="background:#0077ff">VK</span><div>Новая заявка<small>ВКонтакте</small></div><em>+5</em></div>
+    <div class="chip"><span class="ic" style="background:#29a9eb">TG</span><div>Новая заявка<small>Telegram</small></div><em>+7</em></div>
+    <div class="chip"><span class="ic" style="background:#fc3f1d">Я</span><div>Новая заявка<small>Яндекс Директ</small></div><em>+3</em></div>
+  </div>
+  <img class="artem" src="img/artem.webp" alt="Артём Галимов" width="760" height="796">
+</section>
+
+<!-- 2. Задача -->
+<section class="slide">
+  <div class="grid2">
+    <div>
+      <span class="pill">Задача</span>
+      <h2>Свой интернет-магазин как дополнительный источник продаж</h2>
+      <p class="lead" style="margin-bottom:20px">Сейчас LOVEBERRY продаёт через группу ВКонтакте: 30,5 тыс. подписчиков, заказы принимаются в сообщениях и по телефону. Своего сайта нет, поэтому покупателя из поиска и рекламы некуда привести, клиентская база остаётся внутри ВКонтакте, а в группе приходится предупреждать о мошенниках, которые пишут от чужих аккаунтов.</p>
+      <p style="font-weight:600;margin-bottom:12px">Необходимо:</p>
+      <ul class="list">
+        <li>Сделать удобный интернет-магазин: понятный каталог клубники в шоколаде, букетов и наборов, быстрое оформление заказа, оплата и доставка.</li>
+        <li>Собирать собственную клиентскую базу и мотивировать к повторным покупкам бонусами.</li>
+        <li>Заложить SEO-структуру под Тольятти, чтобы получать заказы из Яндекса, Google и ответов нейросетей.</li>
+      </ul>
+    </div>
+    <div>
+      <div class="laptop"><img src="img/lb-vk.webp" alt="Группа LOVEBERRY во ВКонтакте" width="1440" height="900"></div>
+      <p class="note center" style="margin-top:34px">Так покупатель находит LOVEBERRY сейчас: только группа ВКонтакте.</p>
+    </div>
+  </div>
+</section>
+
+<!-- 3. Что получит компания -->
+<section class="slide">
+  <div class="split">
+    <div>
+      <span class="pill">Результат</span>
+      <h2>Что получит компания</h2>
+      <p class="lead" style="margin-bottom:24px">Интернет-магазин объединит каталог, заказы, оплату, доставку, аналитику и работу с постоянными клиентами в одной системе.</p>
+      <ul class="list">
+        <li><b>Прямые продажи.</b> Покупатели оформляют и оплачивают заказ на вашем сайте, без переписки и без риска попасть к мошенникам с чужих аккаунтов.</li>
+        <li><b>Удобный каталог.</b> Выбор по разделу, поводу, составу и цене: клубника в шоколаде, боксы, шкатулки, букеты, комбо-наборы.</li>
+        <li><b>Свою клиентскую базу.</b> Контакты покупателей остаются у вас и работают на повторные продажи.</li>
+        <li><b>Программу лояльности.</b> Бонусы, статусы и «приведи друга» возвращают покупателей.</li>
+        <li><b>Новый источник трафика.</b> Сайт становится основой для контекстной рекламы, SEO, Яндекс Карт и ответов нейросетей.</li>
+      </ul>
+    </div>
+    <div class="phone"><img src="img/mv-catalog-m.webp" alt="Каталог цветочного магазина на телефоне" width="600" height="1299"></div>
+  </div>
+</section>
+
+<!-- 4. Почему на коде -->
+<section class="slide">
+  <div class="center">
+    <span class="pill">Технология</span>
+    <h2>Делаем магазин на коде, а не на конструкторе</h2>
+    <p class="lead">10 лет мы делаем сайты и сейчас переводим на код и проекты клиентов, и свои. Для магазина это даёт скорость, правильную структуру и собственную систему управления.</p>
+  </div>
+  <div class="cards">
+    <div class="card"><div class="big">96<span>/100</span></div><h3 style="margin-top:14px">Скорость загрузки</h3><p>Google Lighthouse, наш цветочный магазин на коде, телефон, замер 19.10.2026. На компьютере 95. Быстрый сайт теряет меньше покупателей с рекламы.</p></div>
+    <div class="card"><span class="num">01</span><h3>Структура под поиск</h3><p>Каждый раздел, повод и товар – отдельная страница с понятным адресом, заголовками и описанием. Так сайт собирает больше запросов.</p></div>
+    <div class="card"><span class="num">02</span><h3>Своя админка</h3><p>Товары, цены, скидки, метки на карточках, страницы и заявки – в одном кабинете, понятном без программиста.</p></div>
+    <div class="card"><span class="num">03</span><h3>Сайт и база принадлежат вам</h3><p>Код, товары и клиенты – ваши. Нет ограничений шаблонов: любой блок и любую механику можно добавить.</p></div>
+    <div class="card"><span class="num">04</span><h3>Аналитика внутри</h3><p>Метрика, позиции в Яндексе и Google, видимость в нейросетях и цифры по каждой странице – прямо в админке.</p></div>
+    <div class="card"><span class="num">05</span><h3>Личный кабинет 3.0</h3><p>Бонусы, статусы, рефералы и промокоды работают на вашей базе и подключаются, когда нужны.</p></div>
+  </div>
+</section>
+
+<!-- 5. Как устроен магазин -->
+<section class="slide">
+  <div class="center">
+    <span class="pill">Структура</span>
+    <h2>Отработанная структура цветочного магазина</h2>
+    <p class="lead">Блоки, которые уже приносят заказы на наших цветочных сайтах. Каждый закрывает конкретный вопрос покупателя до звонка флористу.</p>
+  </div>
+  <div class="shots">
+    <figure class="shot"><button type="button"><img src="img/mv-hero.webp" alt="Первый экран с оффером" loading="lazy" width="1440" height="900"></button><figcaption><b>Первый экран с оффером</b><span>За секунды понятно, что вы делаете, за сколько привезёте и куда нажать: «Выбрать букет» или «Помогите выбрать».</span></figcaption></figure>
+    <figure class="shot"><button type="button"><img src="img/mv-catalog.webp" alt="Каталог с разделами и фильтрами" loading="lazy" width="1440" height="900"></button><figcaption><b>Каталог с разделами и фильтрами</b><span>Разделы, поводы, цена и сортировка. На телефоне две карточки в ряд.</span></figcaption></figure>
+    <figure class="shot"><button type="button"><img src="img/mv-quiz.webp" alt="Квиз подбора букета" loading="lazy" width="1440" height="900"></button><figcaption><b>Квиз «Подберём букет»</b><span>Кому, повод, бюджет, пожелания. Вам приходит готовая заявка, а человек, потративший время, заинтересован сильнее.</span></figcaption></figure>
+    <figure class="shot"><button type="button"><img src="img/mv-why.webp" alt="Блок доверия" loading="lazy" width="1440" height="900"></button><figcaption><b>Блоки доверия</b><span>Гарантия, фото перед доставкой, бонусы, команда. В 2026 году покупатели проверяют компанию до заказа.</span></figcaption></figure>
+    <figure class="shot"><button type="button"><img src="img/mv-reviews.webp" alt="Отзывы с Яндекс Карт" loading="lazy" width="1440" height="900"></button><figcaption><b>Отзывы с Яндекс Карт</b><span>Настоящие отзывы с фото и ссылкой на оригинал снимают сомнения.</span></figcaption></figure>
+    <figure class="shot"><button type="button"><img src="img/mv-season.webp" alt="Сезонная страница 1 сентября" loading="lazy" width="1440" height="900"></button><figcaption><b>Страницы под поводы</b><span>1 сентября, 8 Марта, День матери, сезон пионов. Реклама ведёт сразу на подобранный каталог, конверсия выше.</span></figcaption></figure>
+    <figure class="shot"><button type="button"><img src="img/mv-delivery.webp" alt="Доставка по зонам" loading="lazy" width="1440" height="900"></button><figcaption><b>Доставка по зонам и частые вопросы</b><span>Цены доставки по районам и ответы на типовые вопросы без звонка.</span></figcaption></figure>
+    <figure class="shot"><button type="button"><img src="img/mv-order.webp" alt="Оформление заказа" loading="lazy" width="1440" height="900"></button><figcaption><b>Удобное оформление заказа</b><span>Получатель, время, текст открытки, способ оплаты и бонусы за заказ на одной странице.</span></figcaption></figure>
+  </div>
+  <p class="note center">Примеры с нашего магазина на коде Milovini Flowers (Самара).</p>
+</section>
+
+<!-- 6. Админка -->
+<section class="slide">
+  <div class="center">
+    <span class="pill">Управление</span>
+    <h2>Админ-панель, в которой всё видно</h2>
+    <p class="lead">Вы сами загружаете товары, меняете цены, ставите скидки и принимаете заявки. Расширенные разделы показывают, откуда приходят покупатели.</p>
+  </div>
+  <div class="shots">
+    <figure class="shot"><button type="button"><img src="img/er-admin-products.webp" alt="Товары в админке" loading="lazy" width="1440" height="900"></button><figcaption><b>Товары</b><span>Разделы, поиск, импорт и выгрузка CSV, включение и скрытие товара одним переключателем.</span></figcaption></figure>
+    <figure class="shot"><button type="button"><img src="img/adm-product.webp" alt="Редактор товара" loading="lazy" width="1340" height="667"></button><figcaption><b>Скидки и метки на карточках</b><span>Старая цена, метка «−10%» или «Новинка», скрытие товара. В редакторе – состав, фото, варианты, SEO.</span></figcaption></figure>
+    <figure class="shot"><button type="button"><img src="img/er-admin-leads.webp" alt="Заявки доской" loading="lazy" width="1440" height="900"></button><figcaption><b>Заявки доской</b><span>Новые, согласуем фото, доставляется, выполнено. У каждой заявки видно товар, сумму и источник.</span></figcaption></figure>
+    <figure class="shot"><button type="button"><img src="img/er-admin.webp" alt="Страницы сайта" loading="lazy" width="1440" height="900"></button><figcaption><b>Страницы сайта</b><span>Все страницы и каталоги со ссылками, заголовками и описаниями для поиска.</span></figcaption></figure>
+    <figure class="shot"><button type="button"><img src="img/adm-metrika.webp" alt="Метрика и поиск" loading="lazy" width="1340" height="667"></button><figcaption><b>Метрика и поисковые запросы</b><span>С каких фраз пришли из Яндекса и Google, сколько визитов и заявок.</span></figcaption></figure>
+    <figure class="shot"><button type="button"><img src="img/adm-neuro.webp" alt="Видимость в нейросетях" loading="lazy" width="1340" height="667"></button><figcaption><b>Позиции и нейросети</b><span>Где сайт в поиске и называют ли вас ChatGPT, Perplexity, Gemini и Claude.</span></figcaption></figure>
+  </div>
+  <p class="note center">Метрика, позиции и нейросети – снимки из нашего проекта TEYES Sibir (Новосибирск).</p>
+</section>
+
+<!-- 7. Что входит во все тарифы -->
+<section class="slide">
+  <div class="split">
+    <div>
+      <span class="pill">Под ключ</span>
+      <h2>Что входит во все тарифы</h2>
+      <p class="lead">Независимо от тарифа мы берём на себя весь цикл разработки.</p>
+    </div>
+    <ul class="list">
+      <li>Брифинг и сбор информации о компании</li>
+      <li>Структура и прототипы страниц</li>
+      <li>Написание всей текстовой части</li>
+      <li>Дизайн и вёрстка, адаптация под телефоны и планшеты</li>
+      <li>Каталог, карточки товаров, корзина и оформление заказа</li>
+      <li>Перенос ваших товаров из ВКонтакте</li>
+      <li>Интеграция с «МойСклад» по запросу</li>
+      <li>Подключение интернет-эквайринга и служб доставки</li>
+      <li>Юридические и информационные страницы</li>
+      <li>Подключение домена и Яндекс Метрики</li>
+      <li>Базовая техническая SEO-оптимизация</li>
+      <li>Видеоинструкция для сотрудников по работе с сайтом</li>
+    </ul>
+  </div>
+</section>
+
+<!-- 8. Тарифы -->
+<section class="slide" id="tariffs">
+  <div class="center">
+    <span class="pill">Стоимость</span>
+    <h2>Три варианта запуска</h2>
+  </div>
+  <div class="tariffs">
+    <article class="tariff">
+      <span class="tag">Тариф</span>
+      <h3>«Базовый»</h3>
+      <p class="sub">Быстрый запуск своего интернет-магазина рядом с группой ВКонтакте.</p>
+      <ul class="list">
+        <li>Магазин на нашей отработанной структуре в стилистике LOVEBERRY</li>
+        <li>Главная с оффером и преимуществами</li>
+        <li>Каталог с разделами и фильтрами, карточки с составом и ценами</li>
+        <li>Корзина и оформление заказа</li>
+        <li>Доставка и оплата, контакты, юридические страницы</li>
+        <li>Админ-панель: страницы, товары, заявки</li>
+        <li>Без дополнительных внутренних страниц</li>
+      </ul>
+      <p class="res"><b>Результат:</b> готовый магазин, куда можно вести покупателей из ВКонтакте, с карт и из рекламы.</p>
+      <a class="btn" href="#offer">70 000 ₽ <i>↗</i></a>
+    </article>
+    <article class="tariff">
+      <span class="tag">Тариф</span>
+      <h3>«Оптимальный»</h3>
+      <p class="sub">Магазин, подготовленный к рекламе и росту из поиска.</p>
+      <p class="plus">Всё из «Базового», а также:</p>
+      <ul class="list">
+        <li>Дополнительные страницы под маркетинг и SEO: поводы (14 февраля, 8 Марта, День матери, 1 сентября), о компании, гарантии, корпоративным клиентам</li>
+        <li>Квиз «Подберём букет»</li>
+        <li>Подготовка под контекстную рекламу: цели, страницы «Спасибо»</li>
+        <li>Яндекс Метрика с целями и цифры по страницам в админке</li>
+        <li>Доработка дизайна под ваш стиль</li>
+      </ul>
+      <p class="res"><b>Результат:</b> сайт, на который можно сразу запускать рекламу и расти в поиске.</p>
+      <a class="btn" href="#offer">90 000 ₽ <i>↗</i></a>
+    </article>
+    <article class="tariff dark">
+      <span class="tag">Тариф</span>
+      <h3>«Расширенный»</h3>
+      <p class="sub">Магазин с личным кабинетом покупателя и системой лояльности.</p>
+      <p class="plus">Всё из «Оптимального», а также:</p>
+      <ul class="list">
+        <li>Личный кабинет: вход по коду, история заказов, сохранённые адреса</li>
+        <li>Бонусные баллы и их списание в корзине</li>
+        <li>Статусы с ростом кешбэка от суммы покупок</li>
+        <li>Реферальная программа «Приведи друга»</li>
+        <li>Промокоды и персональные скидки</li>
+        <li>Настройка программы лояльности в админке</li>
+      </ul>
+      <p class="res"><b>Результат:</b> своя клиентская база и система повторных продаж.</p>
+      <a class="btn" href="#offer">150 000 ₽ <i>↗</i></a>
+    </article>
+  </div>
+</section>
+
+<!-- 9. Специальное предложение -->
+<section class="slide offer center" id="offer">
+  <span class="pill">Специальное предложение</span>
+  <h2>Target Factory для LOVEBERRY: разработка интернет-магазина по тарифу «Базовый»</h2>
+  <p class="lead">Полноценный интернет-магазин в стилистике LOVEBERRY с каталогом, корзиной, оформлением заказа и админ-панелью.</p>
+  <div class="offer-price"><b>50 000 ₽</b><s>70 000 ₽</s></div>
+  <span class="until">Действует до 31 октября 2026 года</span>
+</section>
+
+<!-- 10. Личный кабинет -->
+<section class="slide">
+  <div class="split">
+    <div>
+      <span class="pill">Тариф «Расширенный»</span>
+      <h2>Личный кабинет и система лояльности</h2>
+      <p class="lead" style="margin-bottom:22px">Покупатель видит свои баллы, статус и заказы, а вы получаете базу, к которой можно вернуться с предложением. Систему мы уже применяем в магазинах цветов и одежды.</p>
+      <ul class="list">
+        <li><b>Бонусы.</b> Баллы за заказы и регистрацию, оплата баллами части следующего заказа.</li>
+        <li><b>Статусы.</b> Например: от 10 000 ₽ покупок – 5% кешбэка, от 100 000 ₽ – 10%. Уровни настраиваются.</li>
+        <li><b>Приведи друга.</b> Личный код: другу скидка на первый заказ, вам баллы.</li>
+        <li><b>Удобство.</b> Сохранённые адреса, история заказов, повтор заказа.</li>
+      </ul>
+    </div>
+    <img src="img/lk-phone.webp" alt="Бонусный баланс и карта постоянного клиента" loading="lazy" width="820" height="782">
+  </div>
+  <div class="shots">
+    <figure class="shot"><button type="button"><img src="img/lk-bally.webp" alt="Баллы и статус в личном кабинете" loading="lazy" width="1340" height="667"></button><figcaption><b>Баллы, статус и приглашение друга</b><span>Демо-стенд нашего личного кабинета.</span></figcaption></figure>
+    <figure class="shot"><button type="button"><img src="img/lk-cart.webp" alt="Корзина со списанием баллов" loading="lazy" width="1340" height="667"></button><figcaption><b>Списание баллов и доставка в корзине</b><span>Промокод, баллы, выбор доставки и адрес с подсказками.</span></figcaption></figure>
+  </div>
+</section>
+
+
+<footer>Предложение подготовлено 19 октября 2026 года</footer>
+</main>
+
+<dialog id="zoom"><form method="dialog"><button aria-label="Закрыть">×</button></form><img alt=""></dialog>
+<script>
+(function(){
+  var d=document.getElementById('zoom'), im=d.querySelector('img');
+  document.querySelectorAll('.shot button').forEach(function(b){
+    b.addEventListener('click',function(){var s=b.querySelector('img');im.src=s.currentSrc||s.src;im.alt=s.alt;d.showModal();});
+  });
+  d.addEventListener('click',function(e){if(e.target===d||e.target===im)d.close();});
+})();
+</script>
+</body>
+</html>
