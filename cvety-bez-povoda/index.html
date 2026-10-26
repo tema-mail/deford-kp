@@ -1,0 +1,477 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>КП «Цветы без повода» – сайт, Яндекс Директ, бонусы | Target Factory × Deford</title>
+<meta name="description" content="Коммерческое предложение для цветочного салона «Цветы без повода», Курск: интернет-магазин на коде, Яндекс Директ и бонусы.">
+<meta name="robots" content="noindex, nofollow">
+<link rel="icon" href="img/logo.webp">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#ebe8e3; --card:#f6f4f1; --white:#fff; --ink:#1b1b1b; --muted:#5f5d59;
+  --line:#dcd8d1; --lime:#c9f23f; --dark:#1e1e1e; --accent:#4a5240;
+  --r:32px; --gap:clamp(12px,2vw,20px); --pad:clamp(20px,5vw,72px);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--ink);font:400 17px/1.55 "Inter Tight",system-ui,sans-serif;-webkit-font-smoothing:antialiased}
+img{display:block;max-width:100%;height:auto}
+a{color:inherit}
+.wrap{max-width:1360px;margin:0 auto;padding:0 var(--gap) var(--gap)}
+.slide{position:relative;background:var(--card);border-radius:var(--r);padding:var(--pad);margin-bottom:var(--gap);overflow:hidden}
+.pill{display:inline-block;background:var(--white);border-radius:999px;padding:6px 16px;font-size:14px;font-weight:600;box-shadow:0 1px 0 var(--line)}
+h1,h2,h3{font-weight:500;letter-spacing:-.02em;line-height:1.08}
+h1{font-size:clamp(34px,5.2vw,68px)}
+h2{font-size:clamp(28px,3.8vw,52px);margin:14px 0 20px}
+h3{font-size:clamp(20px,1.8vw,24px);margin-bottom:8px}
+.center{text-align:center}
+.center h2{max-width:960px;margin-left:auto;margin-right:auto}
+.lead{font-size:clamp(17px,1.5vw,20px);color:var(--muted);max-width:760px}
+.center .lead{margin:0 auto}
+.muted{color:var(--muted)}
+.note{margin-top:20px;font-size:14px;color:var(--muted)}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:clamp(24px,4vw,56px);align-items:center}
+.split{display:grid;grid-template-columns:1.1fr .9fr;gap:clamp(24px,4vw,56px);align-items:center}
+.btn{display:inline-flex;align-items:center;gap:14px;background:var(--dark);color:#fff;text-decoration:none;border-radius:999px;padding:10px 10px 10px 26px;font-weight:500;font-size:17px;white-space:nowrap;border:0;cursor:pointer;font-family:inherit}
+.btn i{width:44px;height:44px;border-radius:50%;background:var(--lime);display:grid;place-items:center;font-style:normal;color:var(--dark);font-size:18px}
+.btn.light{background:var(--white);color:var(--ink);box-shadow:inset 0 0 0 1px var(--line)}
+ul.list{list-style:none;display:grid;gap:10px}
+ul.list li{position:relative;padding-left:28px}
+ul.list li:before{content:"";position:absolute;left:0;top:.45em;width:14px;height:14px;border-radius:50%;background:var(--lime);box-shadow:inset 0 0 0 4px #e9f8b8}
+
+/* переключатель вкладок */
+.tabs{position:sticky;top:0;z-index:30;display:flex;align-items:center;justify-content:space-between;gap:16px;padding:12px var(--gap);margin:0 calc(-1*var(--gap)) var(--gap);background:rgba(235,232,227,.92);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px)}
+.tabs .who{display:flex;align-items:center;gap:10px;font-weight:600;font-size:15px;white-space:nowrap}
+.tabs .who img{width:36px;height:36px;border-radius:50%}
+.seg{display:flex;gap:4px;background:var(--white);border-radius:999px;padding:4px;box-shadow:0 1px 0 var(--line)}
+.seg a{padding:9px 18px;border-radius:999px;text-decoration:none;font-weight:500;font-size:15px;white-space:nowrap;color:var(--muted)}
+.seg a[aria-current="page"]{background:var(--dark);color:#fff}
+.pane[hidden]{display:none}
+
+/* обложка */
+.cover{min-height:min(820px,90vh);display:flex;align-items:center;background:var(--card) url(img/bg.webp) center/cover;padding-bottom:0}
+.cover-in{position:relative;z-index:2;max-width:640px;padding-bottom:var(--pad)}
+.brand{display:flex;align-items:center;flex-wrap:wrap;gap:12px;margin-bottom:34px;font-weight:600;font-size:14px;letter-spacing:.06em;text-transform:uppercase}
+.brand img.logo{width:56px;height:56px;border-radius:50%}
+.brand img.tf{width:170px;height:auto}
+.brand b{font-weight:500;color:var(--muted)}
+.cover h1{margin-bottom:22px}
+.cover .for{font-size:clamp(20px,2.2vw,30px);color:#8b8984;line-height:1.25;margin-bottom:34px}
+.person{position:absolute;right:2%;bottom:0;width:min(48%,600px);z-index:1}
+.person.denis{width:min(40%,480px)}
+.chips{position:absolute;right:max(36%,300px);top:24%;z-index:3;display:grid;gap:14px}
+.chip{display:flex;align-items:center;gap:12px;background:var(--white);border-radius:18px;padding:12px 18px 12px 12px;box-shadow:0 12px 30px rgba(0,0,0,.07);font-size:14px;line-height:1.25;position:relative}
+.chip:nth-child(2){margin-left:-40px}.chip:nth-child(3){margin-left:20px}
+.chip .ic{width:36px;height:36px;border-radius:10px;display:grid;place-items:center;color:#fff;font-weight:700;font-size:13px}
+.chip small{display:block;color:var(--muted)}
+.chip em{position:absolute;right:-8px;top:-8px;background:var(--accent);color:#fff;font-style:normal;font-size:11px;font-weight:600;border-radius:999px;padding:2px 6px}
+.tag-who{display:inline-flex;align-items:center;gap:8px;margin-bottom:18px;font-size:14px;color:var(--muted)}
+
+/* устройства */
+.laptop{position:relative;padding:2.2% 2.2% 0;background:#202022;border-radius:18px 18px 0 0;box-shadow:0 30px 60px rgba(0,0,0,.18)}
+.laptop img{border-radius:6px 6px 0 0;aspect-ratio:16/10;object-fit:cover;object-position:top}
+.laptop:after{content:"";position:absolute;left:-7%;right:-7%;bottom:-16px;height:16px;background:linear-gradient(#cfcfd1,#a9a9ac);border-radius:0 0 18px 18px}
+
+/* карточки */
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:var(--gap);margin-top:36px}
+.cards.two{grid-template-columns:repeat(2,1fr)}
+.card{background:var(--white);border-radius:24px;padding:clamp(20px,2.4vw,30px)}
+.card .num{font-size:14px;font-weight:600;color:var(--accent);margin-bottom:14px;display:block}
+.card p{color:var(--muted)}
+.card ul.list{margin-top:14px;font-size:16px}
+.big{font-size:clamp(40px,4vw,56px);font-weight:600;letter-spacing:-.03em;line-height:1}
+.big span{font-size:.42em;color:var(--muted);font-weight:500;margin-left:6px}
+
+/* галерея */
+.shots{display:grid;grid-template-columns:repeat(2,1fr);gap:var(--gap);margin-top:36px}
+.shot{background:var(--white);border-radius:24px;padding:12px 12px 18px}
+.shot button{all:unset;cursor:zoom-in;display:block;width:100%}
+.shot img{border-radius:14px;aspect-ratio:16/10;object-fit:cover;object-position:top;border:1px solid #eee}
+.shot figcaption{padding:14px 8px 0}
+.shot figcaption b{display:block;font-weight:600;font-size:18px;margin-bottom:4px}
+.shot figcaption span{color:var(--muted);font-size:15px}
+
+/* поводы */
+.chipsrow{display:flex;flex-wrap:wrap;justify-content:center;gap:10px;margin-top:28px}
+.chipsrow span{background:var(--white);border-radius:999px;padding:10px 18px;font-weight:500}
+
+/* цена */
+.price{background:var(--dark);color:#fff}
+.price .pill{background:var(--lime);box-shadow:none;color:var(--dark)}
+.price .lead{color:#c9c7c2}
+.price-row{display:flex;flex-wrap:wrap;align-items:baseline;justify-content:center;gap:10px 22px;margin:30px 0 26px}
+.price-row b{font-size:clamp(56px,8vw,112px);font-weight:600;letter-spacing:-.04em;line-height:1;color:var(--lime)}
+.price-row s{font-size:clamp(24px,3vw,40px);color:#8d8b86}
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:var(--gap);margin-top:10px;text-align:left}
+.steps div{background:#2a2a2a;border-radius:22px;padding:22px 24px}
+.steps b{display:block;font-size:clamp(26px,2.6vw,36px);font-weight:600;letter-spacing:-.02em;margin-bottom:6px}
+.steps span{color:#c9c7c2;font-size:15px}
+.steps.two{grid-template-columns:repeat(2,1fr)}
+
+/* подарок */
+.gift{display:grid;grid-template-columns:repeat(2,1fr);gap:var(--gap);margin-top:36px}
+.gift .card{display:flex;flex-direction:column;gap:12px}
+.gift .was{display:flex;align-items:baseline;gap:14px;margin-top:auto;padding-top:14px}
+.gift .was s{font-size:24px;color:var(--muted)}
+.gift .was b{font-size:clamp(28px,2.6vw,36px);font-weight:600;letter-spacing:-.02em}
+.gift .was em{font-style:normal;background:var(--lime);border-radius:999px;padding:4px 12px;font-weight:600;font-size:14px}
+
+/* автор */
+.author{display:grid;grid-template-columns:300px 1fr;gap:clamp(24px,4vw,56px);align-items:end;padding-bottom:0}
+.author img{width:100%}
+.author .txt{padding-bottom:var(--pad)}
+.contacts{display:flex;flex-wrap:wrap;gap:12px;margin-top:28px}
+
+/* навигация между вкладками */
+.pager{display:grid;grid-template-columns:1fr 1fr;gap:var(--gap);margin-bottom:var(--gap)}
+.pager a{display:flex;flex-direction:column;gap:6px;background:var(--white);border-radius:24px;padding:22px 26px;text-decoration:none;transition:transform .2s}
+.pager a:hover{transform:translateY(-2px)}
+.pager a small{color:var(--muted);font-size:14px}
+.pager a b{font-size:clamp(20px,2vw,26px);font-weight:600;letter-spacing:-.01em}
+.pager a.next{text-align:right;grid-column:2;background:var(--dark);color:#fff}
+.pager a.next small{color:#b9b7b2}
+
+footer{text-align:center;color:var(--muted);font-size:14px;padding:8px 0 28px}
+footer .partner{color:var(--ink);font-weight:600;font-size:16px;margin-bottom:6px}
+
+dialog{border:0;padding:0;background:transparent;max-width:96vw;max-height:94vh;margin:auto}
+dialog::backdrop{background:rgba(20,20,20,.86)}
+dialog img{max-width:96vw;max-height:94vh;border-radius:12px}
+dialog form{position:fixed;top:14px;right:18px}
+dialog form button{all:unset;cursor:pointer;color:#fff;font-size:34px;line-height:1}
+
+@media (max-width:1100px){.cards{grid-template-columns:1fr 1fr}.chips{display:none}}
+@media (max-width:820px){
+  body{font-size:16px}
+  .tabs{flex-direction:column;align-items:stretch;gap:10px;padding:10px var(--gap)}
+  .tabs .who{justify-content:center}
+  .seg a{flex:1;text-align:center;padding:9px 6px;font-size:14px}
+  .grid2,.split,.author,.cards,.cards.two,.shots,.gift,.steps,.steps.two{grid-template-columns:1fr}
+  .cover{min-height:auto;display:block}
+  .cover-in{padding-bottom:28px}
+  .person,.person.denis{position:relative;right:auto;width:80%;margin:0 auto}
+  .brand img.tf{width:130px}
+  .author img{max-width:280px;margin:0 auto}
+  .author .txt{padding-bottom:0;order:-1}
+  .laptop:after{left:-4%;right:-4%}
+  .pager{grid-template-columns:1fr}.pager a.next{grid-column:1}
+  .btn{font-size:16px}
+}
+</style>
+</head>
+<body>
+<main class="wrap">
+
+<nav class="tabs" aria-label="Разделы предложения">
+  <span class="who"><img src="img/logo.webp" alt="" width="36" height="36">Цветы без повода</span>
+  <div class="seg">
+    <a href="#site" data-tab="site">Сайт</a>
+    <a href="#direct" data-tab="direct">Яндекс Директ</a>
+    <a href="#bonus" data-tab="bonus">Бонусы</a>
+  </div>
+</nav>
+
+<!-- ============ ВКЛАДКА 1. САЙТ ============ -->
+<div class="pane" id="pane-site" data-pane="site">
+
+<section class="slide cover">
+  <div class="cover-in">
+    <div class="brand"><img class="logo" src="img/logo.webp" alt="Логотип «Цветы без повода»" width="56" height="56"><img class="tf" src="img/tf.svg" alt="Target Factory" width="170" height="8"><b>× Deford</b></div>
+    <h1>Коммерческое предложение на разработку интернет-магазина</h1>
+    <p class="for">Для цветочного салона «Цветы без повода», Курск</p>
+    <a class="btn" href="#site-price">Стоимость и рассрочка <i>↓</i></a>
+  </div>
+  <div class="chips" aria-hidden="true">
+    <div class="chip"><span class="ic" style="background:#0077ff">VK</span><div>Новый заказ<small>ВКонтакте</small></div><em>+5</em></div>
+    <div class="chip"><span class="ic" style="background:#29a9eb">TG</span><div>Новый заказ<small>Telegram</small></div><em>+7</em></div>
+    <div class="chip"><span class="ic" style="background:#fc3f1d">Я</span><div>Новый заказ<small>Яндекс Директ</small></div><em>+3</em></div>
+  </div>
+  <img class="person" src="img/artem.webp" alt="Артём Галимов" width="760" height="796">
+</section>
+
+<section class="slide">
+  <div class="grid2">
+    <div>
+      <span class="pill">Задача</span>
+      <h2>Из каталога – в полноценный интернет-магазин</h2>
+      <p class="lead" style="margin-bottom:18px">Сейчас tsvetibezpovoda.ru – стильный каталог на Тильде: красивые фото, поиск, корзина, политика и реквизиты на месте. Но сайт почти не продаёт сам.</p>
+      <ul class="list">
+        <li>Нет главной страницы: сайт открывается сразу каталогом, без оффера и причин выбрать вас.</li>
+        <li>У товаров нет описания и состава – покупатель не понимает, что получит.</li>
+        <li>В бегущей строке обещана бонусная система, а личного кабинета и баллов нет.</li>
+        <li>SEO-структуры почти нет, поэтому сайт мало собирает из поиска Яндекса и Google.</li>
+      </ul>
+    </div>
+    <div class="laptop"><img src="img/cbp-home.webp" alt="Сайт «Цветы без повода» сейчас" width="1440" height="900"></div>
+  </div>
+</section>
+
+<section class="slide">
+  <div class="center">
+    <span class="pill">Состав работ</span>
+    <h2>Что входит в работу</h2>
+    <p class="lead">Делаем сайт на коде: быстрый, со своей админкой и SEO-структурой. Весь цикл – от концепции до запуска.</p>
+  </div>
+  <div class="cards">
+    <div class="card"><span class="num">01 / Дизайн и тексты</span>
+      <ul class="list">
+        <li>Дизайн-концепция сайта</li>
+        <li>Прототипирование и написание текстов</li>
+        <li>Главная страница с оффером</li>
+        <li>Страницы сезонных предложений – до 12 шт.</li>
+      </ul></div>
+    <div class="card"><span class="num">02 / Каталог и SEO</span>
+      <ul class="list">
+        <li>Проработка SEO-структуры сайта</li>
+        <li>Перенос товаров и каталогов</li>
+        <li>Разработка и перенос информационных страниц</li>
+        <li>Полная базовая SEO-оптимизация</li>
+      </ul></div>
+    <div class="card"><span class="num">03 / Продажи и лояльность</span>
+      <ul class="list">
+        <li>Подключение доставки и оплаты</li>
+        <li>Формы заявок и внутренняя CRM</li>
+        <li>Личный кабинет покупателя</li>
+        <li>Бонусная и статусная программы</li>
+      </ul></div>
+  </div>
+</section>
+
+<section class="slide">
+  <div class="center">
+    <span class="pill">Структура</span>
+    <h2>Отработанная структура цветочного магазина</h2>
+    <p class="lead">Блоки, которые уже приносят заказы на наших цветочных сайтах. Каждый закрывает вопрос покупателя до звонка флористу.</p>
+  </div>
+  <div class="shots">
+    <figure class="shot"><button type="button"><img src="img/mv-hero.webp" alt="Первый экран с оффером" loading="lazy" width="1440" height="900"></button><figcaption><b>Главная с оффером</b><span>Сразу понятно, что вы делаете, за сколько привезёте и куда нажать.</span></figcaption></figure>
+    <figure class="shot"><button type="button"><img src="img/mv-catalog.webp" alt="Каталог с разделами и фильтрами" loading="lazy" width="1440" height="900"></button><figcaption><b>Каталог с разделами и фильтрами</b><span>Разделы, поводы, цена, сортировка. На телефоне две карточки в ряд.</span></figcaption></figure>
+    <figure class="shot"><button type="button"><img src="img/mv-quiz.webp" alt="Квиз подбора букета" loading="lazy" width="1440" height="900"></button><figcaption><b>Подбор букета</b><span>Тест «Подберём идеальный букет» остаётся и приносит готовую заявку: кому, повод, бюджет.</span></figcaption></figure>
+    <figure class="shot"><button type="button"><img src="img/mv-why.webp" alt="Блок доверия" loading="lazy" width="1440" height="900"></button><figcaption><b>Блоки доверия</b><span>Гарантия, фото перед доставкой, бонусы, о салоне – покупатели проверяют вас до заказа.</span></figcaption></figure>
+    <figure class="shot"><button type="button"><img src="img/mv-reviews.webp" alt="Отзывы" loading="lazy" width="1440" height="900"></button><figcaption><b>Отзывы с Яндекс Карт</b><span>Настоящие отзывы с фото снимают сомнения.</span></figcaption></figure>
+    <figure class="shot"><button type="button"><img src="img/mv-order.webp" alt="Оформление заказа" loading="lazy" width="1440" height="900"></button><figcaption><b>Удобное оформление заказа</b><span>Получатель, время, текст открытки, оплата и бонусы на одной странице.</span></figcaption></figure>
+  </div>
+  <p class="note center">Примеры с нашего магазина на коде Milovini Flowers (Самара).</p>
+</section>
+
+<section class="slide">
+  <div class="split">
+    <div>
+      <span class="pill">До 12 страниц</span>
+      <h2>Страницы под сезонные поводы</h2>
+      <p class="lead">Человек ищет «цветы маме на День матери Курск» – и попадает не в общий каталог, а на подборку под его повод. Такие страницы собирают поисковый спрос и дают рекламе точную посадку.</p>
+      <div class="chipsrow" style="justify-content:flex-start">
+        <span>14 февраля</span><span>8 Марта</span><span>День матери</span><span>1 сентября</span><span>День учителя</span><span>Выпускной</span><span>Свадебные букеты</span><span>Новый год</span><span>Сезон пионов</span><span>Сезон тюльпанов</span>
+      </div>
+    </div>
+    <figure class="shot"><button type="button"><img src="img/mv-season.webp" alt="Страница 1 сентября" loading="lazy" width="1440" height="900"></button><figcaption><b>Пример: «1 сентября»</b><span>Подборка с отдельным оффером.</span></figcaption></figure>
+  </div>
+</section>
+
+<section class="slide">
+  <div class="center">
+    <span class="pill">Управление</span>
+    <h2>Своя админка и CRM для заявок</h2>
+    <p class="lead">Товары, цены, скидки и заказы – в одном кабинете, понятном без программиста.</p>
+  </div>
+  <div class="shots">
+    <figure class="shot"><button type="button"><img src="img/er-admin-products.webp" alt="Товары в админке" loading="lazy" width="1440" height="900"></button><figcaption><b>Товары</b><span>Разделы, поиск, импорт и выгрузка CSV, скрытие товара одним переключателем.</span></figcaption></figure>
+    <figure class="shot"><button type="button"><img src="img/adm-product.webp" alt="Скидки и метки" loading="lazy" width="1340" height="667"></button><figcaption><b>Скидки и метки на карточках</b><span>Старая цена, метка «−10%» или «Новинка», состав, фото, SEO.</span></figcaption></figure>
+    <figure class="shot"><button type="button"><img src="img/er-admin-leads.webp" alt="Заявки доской" loading="lazy" width="1440" height="900"></button><figcaption><b>Заказы и заявки доской</b><span>Новые, согласуем фото, доставляется, выполнено. Видно товар, сумму и источник.</span></figcaption></figure>
+    <figure class="shot"><button type="button"><img src="img/adm-metrika.webp" alt="Метрика и поиск" loading="lazy" width="1340" height="667"></button><figcaption><b>Метрика и поисковые запросы</b><span>С каких фраз пришли из Яндекса и Google, сколько визитов и заявок.</span></figcaption></figure>
+  </div>
+  <p class="note center">Метрика – снимок нашего проекта TEYES Sibir, остальное – примерные данные.</p>
+</section>
+
+<section class="slide">
+  <div class="split">
+    <div>
+      <span class="pill">Лояльность</span>
+      <h2>Личный кабинет, бонусы и статусы</h2>
+      <p class="lead" style="margin-bottom:22px">То, что обещает ваша бегущая строка, заработает на сайте. Покупатель видит баллы, статус и заказы, а у вас остаётся своя клиентская база.</p>
+      <ul class="list">
+        <li><b>Бонусная программа.</b> Баллы за заказы и регистрацию, оплата баллами части следующего заказа.</li>
+        <li><b>Статусная программа.</b> Например: от 10 000 ₽ покупок – 5% кешбэка, от 100 000 ₽ – 10%. Уровни настраиваются.</li>
+        <li><b>Кабинет.</b> История заказов, сохранённые адреса и получатели, повтор заказа.</li>
+      </ul>
+    </div>
+    <img src="img/lk-phone.webp" alt="Бонусный баланс и карта постоянного клиента" loading="lazy" width="820" height="782">
+  </div>
+  <div class="shots">
+    <figure class="shot"><button type="button"><img src="img/lk-bally.webp" alt="Баллы и статус" loading="lazy" width="1340" height="667"></button><figcaption><b>Баллы и статус</b><span>Демо-стенд нашего личного кабинета.</span></figcaption></figure>
+    <figure class="shot"><button type="button"><img src="img/lk-cart.webp" alt="Корзина со списанием баллов" loading="lazy" width="1340" height="667"></button><figcaption><b>Списание баллов в корзине</b><span>Промокод, баллы, доставка и адрес с подсказками.</span></figcaption></figure>
+  </div>
+</section>
+
+<section class="slide price center" id="site-price">
+  <span class="pill">Стоимость</span>
+  <h2>Интернет-магазин под ключ</h2>
+  <p class="lead">Всё из состава работ: сайт на коде, SEO, до 12 сезонных страниц, личный кабинет, бонусная и статусная программы.</p>
+  <div class="price-row"><b>120 000 ₽</b><s>150 000 ₽</s></div>
+  <p class="lead" style="margin-bottom:22px">Действует рассрочка платежа:</p>
+  <div class="steps">
+    <div><b>20 000 ₽</b><span>предоплата для старта работ</span></div>
+    <div><b>10 000 ₽</b><span>каждый месяц</span></div>
+    <div><b>10 платежей</b><span>до закрытия общей суммы</span></div>
+  </div>
+</section>
+
+<section class="slide author">
+  <img src="img/artem.webp" alt="Артём Галимов" loading="lazy" width="760" height="796">
+  <div class="txt">
+    <span class="pill">Сайт</span>
+    <h2>Артём Галимов, основатель студии Deford</h2>
+    <p class="lead">Отвечаю за разработку сайта. Больше 10 лет делаем сайты и магазины, а цветочные магазины сейчас переводим на код.</p>
+    <div class="contacts">
+      <a class="btn" href="https://t.me/Artem1Galimov" target="_blank" rel="noopener">Telegram <i>↗</i></a>
+      <a class="btn light" href="https://wa.me/79537777891" target="_blank" rel="noopener">WhatsApp <i>↗</i></a>
+      <a class="btn light" href="tel:+79537777891">+7 953 777-78-91 <i>☎</i></a>
+    </div>
+  </div>
+</section>
+
+<nav class="pager"><a class="next" href="#direct"><small>Далее →</small><b>Яндекс Директ</b></a></nav>
+</div>
+
+<!-- ============ ВКЛАДКА 2. ЯНДЕКС ДИРЕКТ ============ -->
+<div class="pane" id="pane-direct" data-pane="direct" hidden>
+
+<section class="slide cover">
+  <div class="cover-in">
+    <div class="brand"><img class="logo" src="img/logo.webp" alt="" width="56" height="56"><img class="tf" src="img/tf.svg" alt="Target Factory" width="170" height="8"></div>
+    <h1>Контекстная реклама в Яндекс Директе</h1>
+    <p class="for">Для «Цветы без повода», Курск. Заказы с поиска Яндекса прямо в интернет-магазин</p>
+    <a class="btn" href="#direct-price">Стоимость настройки <i>↓</i></a>
+  </div>
+  <div class="chips" aria-hidden="true">
+    <div class="chip"><span class="ic" style="background:#fc3f1d">Я</span><div>Новый заказ<small>Поиск Яндекса</small></div><em>+4</em></div>
+    <div class="chip"><span class="ic" style="background:#fc3f1d">Я</span><div>Звонок<small>Яндекс Директ</small></div><em>+2</em></div>
+    <div class="chip"><span class="ic" style="background:#fc3f1d">Я</span><div>Новый заказ<small>Ретаргетинг</small></div><em>+1</em></div>
+  </div>
+  <img class="person denis" src="img/denis.webp" alt="Денис Коротаев" width="760" height="1094">
+</section>
+
+<section class="slide">
+  <div class="center">
+    <span class="pill">Состав работ</span>
+    <h2>Что входит в настройку</h2>
+  </div>
+  <div class="cards">
+    <div class="card"><span class="num">01</span><h3>Анализ рекламы конкурентов</h3><p>Смотрим, кто из цветочных Курска рекламируется, по каким запросам и с какими предложениями.</p></div>
+    <div class="card"><span class="num">02</span><h3>Поисковая реклама</h3><p>Настраиваем кампании на горячие запросы: «доставка цветов Курск», «купить букет», поводы и праздники.</p></div>
+    <div class="card"><span class="num">03</span><h3>Аналитика и Метрика</h3><p>Подключаем Яндекс Метрику к сайту и связываем её с рекламным кабинетом.</p></div>
+    <div class="card"><span class="num">04</span><h3>Цели в Метрике</h3><p>Заказ, заявка, звонок, переход в мессенджер – видно, какая реклама приносит деньги.</p></div>
+    <div class="card"><span class="num">05</span><h3>Ежемесячный отчёт</h3><p>Расходы, клики, заказы и стоимость заказа – с выводами и следующими шагами.</p></div>
+    <div class="card"><span class="num">06</span><h3>Маркировка рекламы</h3><p>Передаём данные в ЕРИР через ОРД Яндекса – реклама работает по закону.</p></div>
+  </div>
+</section>
+
+<section class="slide">
+  <div class="center">
+    <span class="pill">Подробно</span>
+    <h2>Этапы настройки и ведения</h2>
+  </div>
+  <div class="cards two">
+    <div class="card"><span class="num">Этап 1</span><h3>Метрика и цели</h3>
+      <ul class="list"><li>Проверка или установка счётчика</li><li>Цели: заказ, «Спасибо за заказ», звонок, мессенджеры</li><li>Шаги корзины для интернет-магазина</li><li>Связка Метрики с Директом для автостратегий</li></ul></div>
+    <div class="card"><span class="num">Этап 2</span><h3>Семантическое ядро</h3>
+      <ul class="list"><li>Анализ выдачи и объявлений конкурентов</li><li>Сбор горячих и целевых запросов</li><li>Минус-слова: «бесплатно», «своими руками», «вакансии»</li><li>Кросс-минусация и группировка</li></ul></div>
+    <div class="card"><span class="num">Этап 3</span><h3>Создание кампаний</h3>
+      <ul class="list"><li>Тексты и заголовки с вашими преимуществами</li><li>Быстрые ссылки и уточнения</li><li>Гео и время показов, корректировки ставок</li><li>Поиск, РСЯ, ретаргетинг, UTM-метки, модерация</li></ul></div>
+    <div class="card"><span class="num">Этап 4</span><h3>Ведение и контроль</h3>
+      <ul class="list"><li>Чистка площадок РСЯ</li><li>Новые минус-слова по реальным запросам</li><li>Перенос бюджета в лучшие кампании</li><li>А/Б-тесты объявлений, контроль расхода</li></ul></div>
+  </div>
+</section>
+
+<section class="slide price center" id="direct-price">
+  <span class="pill">Стоимость</span>
+  <h2>Настройка контекстной рекламы</h2>
+  <div class="price-row"><b>35 000 ₽</b></div>
+  <div class="steps two">
+    <div><b>от 1 000 ₽</b><span>в день – рекомендованный рекламный бюджет, оплачивается в Яндексе</span></div>
+    <div><b>Бонус</b><span>при продлении на второй месяц – Яндекс Бизнес и упаковка Яндекс Карт в подарок</span></div>
+  </div>
+</section>
+
+<section class="slide author">
+  <img src="img/denis.webp" alt="Денис Коротаев" loading="lazy" width="760" height="1094">
+  <div class="txt">
+    <span class="pill">Реклама</span>
+    <h2>Денис Коротаев, основатель агентства Target Factory</h2>
+    <p class="lead">Отвечаю за контекстную рекламу и Яндекс Бизнес: настройку, ведение и отчёты.</p>
+    <div class="contacts">
+      <a class="btn" href="https://t.me/korotaev_denis" target="_blank" rel="noopener">Telegram <i>↗</i></a>
+      <a class="btn light" href="mailto:korotaev.TF@yandex.ru">korotaev.TF@yandex.ru <i>✉</i></a>
+    </div>
+  </div>
+</section>
+
+<nav class="pager"><a href="#site"><small>← Назад</small><b>Сайт</b></a><a class="next" href="#bonus"><small>Далее →</small><b>Бонусы</b></a></nav>
+</div>
+
+<!-- ============ ВКЛАДКА 3. БОНУСЫ ============ -->
+<div class="pane" id="pane-bonus" data-pane="bonus" hidden>
+
+<section class="slide">
+  <div class="center">
+    <span class="pill">Бонусы</span>
+    <h2>Продлеваете Яндекс Директ на второй месяц – получаете подарок</h2>
+    <p class="lead">Яндекс Бизнес приводит звонки и маршруты из Карт и Поиска – для салона с адресом в Курске это один из самых дешёвых каналов.</p>
+  </div>
+  <div class="gift">
+    <div class="card">
+      <span class="num">Подарок 1</span>
+      <h3>Настройка Яндекс Бизнеса</h3>
+      <ul class="list"><li>Подключение и настройка канала</li><li>Получение первых результатов</li><li>Корректировка по итогам</li></ul>
+      <div class="was"><s>25 000 ₽</s><b>0 ₽</b><em>в подарок</em></div>
+    </div>
+    <div class="card">
+      <span class="num">Подарок 2</span>
+      <h3>Упаковка Яндекс Карт</h3>
+      <ul class="list"><li>Оформление карточки салона</li><li>Фото, описание, товары и цены</li><li>Работа с отзывами и рейтингом</li></ul>
+      <div class="was"><s>25 000 ₽</s><b>0 ₽</b><em>в подарок</em></div>
+    </div>
+  </div>
+</section>
+
+<section class="slide price center">
+  <span class="pill">Итого</span>
+  <h2>Подарков на 50 000 ₽</h2>
+  <p class="lead">Условие: продление работы по Яндекс Директу на второй месяц.</p>
+  <div class="steps two" style="margin-top:30px">
+    <div><b>15 000 ₽ / 3 мес.</b><span>подписка Яндекс Бизнеса – оплачивается в Яндексе отдельно</span></div>
+    <div><b>15 000 ₽ / 6 мес.</b><span>та же подписка с промокодом</span></div>
+  </div>
+</section>
+
+<nav class="pager"><a href="#direct"><small>← Назад</small><b>Яндекс Директ</b></a><a class="next" href="#site"><small>В начало →</small><b>Сайт</b></a></nav>
+</div>
+
+<footer><p class="partner">Deford is a partner of Target Factory</p>Предложение подготовлено 26 октября 2026 года</footer>
+</main>
+
+<dialog id="zoom"><form method="dialog"><button aria-label="Закрыть">×</button></form><img alt=""></dialog>
+<script>
+(function(){
+  var tabs=['site','direct','bonus'];
+  function show(push){
+    var id=(location.hash||'').slice(1), tab=tabs.indexOf(id)>=0?id:null, target=null;
+    if(!tab){target=id&&document.getElementById(id);var p=target&&target.closest('.pane');tab=p?p.dataset.pane:'site';}
+    document.querySelectorAll('.pane').forEach(function(p){p.hidden=p.dataset.pane!==tab;});
+    document.querySelectorAll('.seg a').forEach(function(a){if(a.dataset.tab===tab)a.setAttribute('aria-current','page');else a.removeAttribute('aria-current');});
+    if(target)target.scrollIntoView({behavior:'instant'});else window.scrollTo({top:0,behavior:'instant'});
+  }
+  window.addEventListener('hashchange',show);show();
+  var d=document.getElementById('zoom'),im=d.querySelector('img');
+  document.querySelectorAll('.shot button').forEach(function(b){
+    b.addEventListener('click',function(){var s=b.querySelector('img');im.src=s.currentSrc||s.src;im.alt=s.alt;d.showModal();});
+  });
+  d.addEventListener('click',function(e){if(e.target===d||e.target===im)d.close();});
+})();
+</script>
+</body>
+</html>
