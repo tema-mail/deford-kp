@@ -62,10 +62,9 @@ ul.list li:before{content:"";position:absolute;left:0;top:.45em;width:14px;heigh
 .cover h1{margin-bottom:22px}
 .cover .for{font-size:clamp(20px,2.2vw,30px);color:#8b8984;line-height:1.25;margin-bottom:34px}
 .person{position:absolute;right:2%;bottom:0;width:min(48%,600px);z-index:1}
-.person.denis{width:min(46%,580px)}
+.person.denis{height:94%;width:auto;max-width:52%;object-fit:contain;object-position:bottom right}
 .chips{position:absolute;right:max(36%,300px);top:24%;z-index:3;display:grid;gap:14px}
 .chip{display:flex;align-items:center;gap:12px;background:var(--white);border-radius:18px;padding:12px 18px 12px 12px;box-shadow:0 12px 30px rgba(0,0,0,.07);font-size:14px;line-height:1.25;position:relative}
-.chips-d{right:44%;top:auto;bottom:3%}
 .chip:nth-child(2){margin-left:-40px}.chip:nth-child(3){margin-left:20px}
 .chip .ic{width:36px;height:36px;border-radius:10px;display:grid;place-items:center;color:#fff;font-weight:700;font-size:13px}
 .chip small{display:block;color:var(--muted)}
@@ -162,6 +161,7 @@ dialog form button{all:unset;cursor:pointer;color:#fff;font-size:34px;line-heigh
   .cover{min-height:auto;display:block}
   .cover-in{padding-bottom:28px}
   .person,.person.denis{position:relative;right:auto;width:80%;margin:0 auto}
+  .person.denis{height:auto;max-width:none;width:86%}
   .brand img.tf{width:130px}
   .author img{max-width:280px;margin:0 auto}
   .author .txt{padding-bottom:0;order:-1}
@@ -354,11 +354,6 @@ dialog form button{all:unset;cursor:pointer;color:#fff;font-size:34px;line-heigh
     <h1>Контекстная реклама в Яндекс Директе</h1>
     <p class="for">Для «Цветы без повода», Курск. Заказы с поиска Яндекса прямо в интернет-магазин</p>
     <a class="btn" href="#direct-price">Стоимость настройки <i>↓</i></a>
-  </div>
-  <div class="chips chips-d" aria-hidden="true">
-    <div class="chip"><span class="ic" style="background:#fc3f1d">Я</span><div>Новый заказ<small>Поиск Яндекса</small></div><em>+4</em></div>
-    <div class="chip"><span class="ic" style="background:#fc3f1d">Я</span><div>Звонок<small>Яндекс Директ</small></div><em>+2</em></div>
-    <div class="chip"><span class="ic" style="background:#fc3f1d">Я</span><div>Новый заказ<small>Ретаргетинг</small></div><em>+1</em></div>
   </div>
   <img class="person denis" src="img/denis.webp" alt="Денис Коротаев" width="900" height="1199">
 </section>
