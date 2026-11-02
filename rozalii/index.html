@@ -132,7 +132,11 @@ tr.sum td:first-child{border-radius:12px 0 0 12px}tr.sum td:last-child{border-ra
 .price .cost span{font-size:14px;color:var(--muted)}
 .price .cost em{font-style:normal;display:inline-block;background:var(--green);color:#fff;border-radius:999px;padding:3px 12px;font-size:13px;font-weight:600;margin-bottom:6px}
 
-.total{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:16px;background:var(--deep);color:#fff;border-radius:22px;padding:clamp(22px,2.6vw,34px)}
+.total{background:var(--deep);color:#fff;border-radius:22px;padding:clamp(22px,2.6vw,34px)}
+.total-head{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:16px}
+.total ul.list{grid-template-columns:repeat(2,1fr);gap:10px 32px;margin-top:24px;padding-top:22px;border-top:1px solid rgba(255,255,255,.15);color:#e4efe7;font-size:16px}
+.total ul.list li:before{background:#9fd6b0;box-shadow:0 0 0 4px rgba(159,214,176,.2)}
+@media (max-width:640px){.total ul.list{grid-template-columns:1fr}}
 .total .pill{border-color:#9fd6b0;color:#9fd6b0}
 .total .sum-line{margin-top:10px;font-size:clamp(17px,1.6vw,21px);color:#cfe3d5}
 .total b{font:800 clamp(40px,5vw,64px)/1 Raleway,sans-serif;color:#fff}
@@ -393,8 +397,17 @@ tr.sum td:first-child{border-radius:12px 0 0 12px}tr.sum td:last-child{border-ra
       <div class="cost"><b>25 000 ₽</b><span>разово</span></div>
     </div>
     <div class="total">
-      <div><span class="pill">Первый месяц работ</span><p class="sum-line">10 000 + 15 000 + 25 000</p></div>
-      <b>50 000 ₽</b>
+      <div class="total-head"><div><span class="pill">Первый месяц работ</span><p class="sum-line">10 000 + 15 000 + 25 000</p></div><b>50 000 ₽</b></div>
+      <ul class="list">
+        <li>Перенос сайта на код, CMS Astro</li>
+        <li>Создание админ-панели</li>
+        <li>Блоки Метрики и SEO-аналитики</li>
+        <li>Доработка товаров сайта</li>
+        <li>Отдельный поддомен под опт</li>
+        <li>Дополнительные страницы для розницы и оптовых продаж по регионам</li>
+        <li>Сбор площадок для размещения ссылок</li>
+        <li>Настройка и запуск Яндекс Бизнеса</li>
+      </ul>
     </div>
     <div class="cards two" style="margin-top:0">
       <div class="card"><span class="num">Отдельно · бюджет Яндекс Бизнеса</span><div class="big" style="font-size:clamp(28px,2.8vw,38px)">15 000 ₽ <small>+ НДС, разово</small></div><p style="margin-top:10px">Оплачивается Яндексу, не нам. Это подписка на 3 месяца, промокод на первую кампанию удваивает бюджет – показов хватает на полгода.</p></div>
