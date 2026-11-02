@@ -132,6 +132,11 @@ tr.sum td:first-child{border-radius:12px 0 0 12px}tr.sum td:last-child{border-ra
 .price .cost span{font-size:14px;color:var(--muted)}
 .price .cost em{font-style:normal;display:inline-block;background:var(--green);color:#fff;border-radius:999px;padding:3px 12px;font-size:13px;font-weight:600;margin-bottom:6px}
 
+.total{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:16px;background:var(--deep);color:#fff;border-radius:22px;padding:clamp(22px,2.6vw,34px)}
+.total .pill{border-color:#9fd6b0;color:#9fd6b0}
+.total .sum-line{margin-top:10px;font-size:clamp(17px,1.6vw,21px);color:#cfe3d5}
+.total b{font:800 clamp(40px,5vw,64px)/1 Raleway,sans-serif;color:#fff}
+.price .cost s{display:block}
 /* этапы */
 .steps{display:grid;grid-template-columns:repeat(4,1fr);gap:var(--gap);margin-top:30px}
 .step{background:var(--card);border-radius:22px;padding:24px;border-top:4px solid var(--green)}
@@ -372,24 +377,28 @@ tr.sum td:first-child{border-radius:12px 0 0 12px}tr.sum td:last-child{border-ra
   <h2>Что сколько стоит</h2>
   <div class="prices">
     <div class="price free">
-      <div><h3>Перенос сайта с Тильды на код</h3><p>Сайт делали мы, поэтому перенос, админку и кабинет оптовика не берём в счёт. Дальше сайт уходит на обслуживание.</p></div>
+      <div><h3>Перенос сайта с Тильды на код</h3><p>Сайт делали мы, поэтому перенос, админку и кабинет оптовика не берём в счёт. Дальше сайт уходит на ведение.</p></div>
       <div class="cost"><em>Бесплатно</em><b>0 ₽</b></div>
     </div>
     <div class="price">
-      <div><h3>Обслуживание и SEO</h3><p>Наполнение сайта, новые коммерческие страницы (размеры, города, Москва, кладбища, регионы опта) и статьи каждый месяц. Розница и опт.</p></div>
-      <div class="cost"><span>от</span><b>10 000 ₽</b><span>в месяц</span></div>
+      <div><h3>Ведение сайта</h3><p>Наполнение сайта, новые коммерческие страницы (размеры, города, Москва, кладбища, регионы опта) и статьи. Розница и опт.</p></div>
+      <div class="cost"><b>10 000 ₽</b><span>в месяц</span></div>
     </div>
     <div class="price">
-      <div><h3>Яндекс Бизнес</h3><p>Карточка на Картах, прайс, отзывы и реклама в Поиске и на Картах. Подписка от 5 000 ₽ в месяц при оплате за 3 месяца; промокод на первую кампанию удваивает бюджет – показов хватает на полгода. Через полгода смотрим результат и продлеваем.</p></div>
-      <div class="cost"><span>настройка</span><div><s>50 000 ₽</s></div><b>15 000 ₽</b><span>с обслуживанием · + подписка 15 000 ₽ + НДС за 3 мес.</span></div>
+      <div><h3>Настройка Яндекс Бизнеса</h3><p>Карточка на Картах, прайс, отзывы и реклама в Поиске и на Картах. Настраиваем на розницу. Через полгода смотрим результат и продлеваем.</p></div>
+      <div class="cost"><s>50 000 ₽</s><b>15 000 ₽</b><span>разово</span></div>
     </div>
     <div class="price">
-      <div><h3>Ссылки и площадки</h3><p>Находим, где должны быть производители венков, анализируем доноров, размещаем: Яндекс Бизнес, 2ГИС, Zoon, каталоги производителей. Бесплатные и платные площадки – по согласованию.</p></div>
-      <div class="cost"><span>старт</span><b>25 000 ₽</b><span>дальше от 10 000 ₽ в месяц</span></div>
+      <div><h3>Ссылки и площадки</h3><p>Находим, где должны быть производители венков, анализируем доноров, размещаем: Яндекс Бизнес, 2ГИС, Zoon, каталоги производителей.</p></div>
+      <div class="cost"><b>25 000 ₽</b><span>разово</span></div>
     </div>
-    <div class="price">
-      <div><h3>Яндекс Директ или реклама ВК · по желанию</h3><p>Если нужны заявки сразу, а не через SEO. Ведёт Денис Коротаев, Target Factory.</p></div>
-      <div class="cost"><b>35 000 ₽</b><span>в месяц + бюджет от 1 000 ₽ в день</span></div>
+    <div class="total">
+      <div><span class="pill">Первый месяц работ</span><p class="sum-line">10 000 + 15 000 + 25 000</p></div>
+      <b>50 000 ₽</b>
+    </div>
+    <div class="cards two" style="margin-top:0">
+      <div class="card"><span class="num">Отдельно · бюджет Яндекс Бизнеса</span><div class="big" style="font-size:clamp(28px,2.8vw,38px)">15 000 ₽ <small>+ НДС, разово</small></div><p style="margin-top:10px">Оплачивается Яндексу, не нам. Это подписка на 3 месяца, промокод на первую кампанию удваивает бюджет – показов хватает на полгода.</p></div>
+      <div class="card"><span class="num">Со второго месяца</span><div class="big" style="font-size:clamp(28px,2.8vw,38px)">10 000–25 000 ₽ <small>в месяц</small></div><p style="margin-top:10px">Дальнейшее ведение и продвижение сайта. Сумма зависит от объёма: сколько новых страниц, статей и площадок берём в работу в месяце.</p></div>
     </div>
   </div>
 </section>
