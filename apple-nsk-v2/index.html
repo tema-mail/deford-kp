@@ -1,0 +1,564 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Сайт для продавцов Apple: что вы теряете без него – КП Deford</title>
+<meta name="description" content="Коммерческое предложение студии Deford для продавцов iPhone и MacBook в Новосибирске: интернет-магазин на коде, личный кабинет с бонусами и Яндекс Бизнес.">
+<meta name="robots" content="noindex, nofollow">
+<link rel="icon" href="favicon.ico">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#ebe8e3; --card:#f6f4f1; --white:#fff; --ink:#1b1b1b; --muted:#5f5d59;
+  --line:#dcd8d1; --lime:#c9f23f; --dark:#1e1e1e; --accent:#4a5240;
+  --r:32px; --gap:clamp(12px,2vw,20px); --pad:clamp(20px,5vw,72px);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--ink);font:400 17px/1.55 "Inter Tight",system-ui,sans-serif;-webkit-font-smoothing:antialiased}
+img{display:block;max-width:100%;height:auto}
+a{color:inherit}
+.wrap{max-width:1360px;margin:0 auto;padding:0 var(--gap) var(--gap)}
+.slide{position:relative;background:var(--card);border-radius:var(--r);padding:var(--pad);margin-bottom:var(--gap);overflow:hidden}
+.pill{display:inline-block;background:var(--white);border-radius:999px;padding:6px 16px;font-size:14px;font-weight:600;box-shadow:0 1px 0 var(--line)}
+h1,h2,h3{font-weight:500;letter-spacing:-.02em;line-height:1.08}
+h1{font-size:clamp(34px,5.2vw,68px)}
+h2{font-size:clamp(28px,3.8vw,52px);margin:14px 0 20px}
+h3{font-size:clamp(20px,1.8vw,24px);margin-bottom:8px}
+.center{text-align:center}
+.center h2{max-width:960px;margin-left:auto;margin-right:auto}
+.lead{font-size:clamp(17px,1.5vw,20px);color:var(--muted);max-width:760px}
+.center .lead{margin:0 auto}
+.muted{color:var(--muted)}
+.note{margin-top:20px;font-size:14px;color:var(--muted)}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:clamp(24px,4vw,56px);align-items:center}
+.split{display:grid;grid-template-columns:1.1fr .9fr;gap:clamp(24px,4vw,56px);align-items:center}
+.btn{display:inline-flex;align-items:center;gap:14px;background:var(--dark);color:#fff;text-decoration:none;border-radius:999px;padding:10px 10px 10px 26px;font-weight:500;font-size:17px;white-space:nowrap;border:0;cursor:pointer;font-family:inherit}
+.btn i{width:44px;height:44px;border-radius:50%;background:var(--lime);display:grid;place-items:center;font-style:normal;color:var(--dark);font-size:18px}
+.btn.light{background:var(--white);color:var(--ink);box-shadow:inset 0 0 0 1px var(--line)}
+ul.list{list-style:none;display:grid;gap:10px}
+ul.list li{position:relative;padding-left:28px}
+ul.list li:before{content:"";position:absolute;left:0;top:.45em;width:14px;height:14px;border-radius:50%;background:var(--lime);box-shadow:inset 0 0 0 4px #e9f8b8}
+
+/* переключатель вкладок */
+.tabs{position:sticky;top:0;z-index:30;display:flex;align-items:center;justify-content:space-between;gap:16px;padding:12px var(--gap);margin:0 calc(-1*var(--gap)) var(--gap);background:rgba(235,232,227,.92);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px)}
+.tabs .who{display:flex;align-items:center;gap:10px;font-weight:600;font-size:15px;white-space:nowrap}
+.tabs .who img{width:36px;height:36px;border-radius:50%}
+.seg{display:flex;gap:4px;background:var(--white);border-radius:999px;padding:4px;box-shadow:0 1px 0 var(--line)}
+.seg a{padding:9px 18px;border-radius:999px;text-decoration:none;font-weight:500;font-size:15px;white-space:nowrap;color:var(--muted)}
+.seg a[aria-current="page"]{background:var(--dark);color:#fff}
+.pane[hidden]{display:none}
+
+/* обложка */
+.cover{min-height:min(820px,90vh);display:flex;align-items:center;background:var(--card) url(img/bg.webp) center/cover;padding-bottom:0}
+.cover-in{position:relative;z-index:2;max-width:640px;padding-bottom:var(--pad)}
+.brand{display:flex;align-items:center;flex-wrap:wrap;gap:12px;margin-bottom:34px;font-weight:600;font-size:14px;letter-spacing:.06em;text-transform:uppercase}
+.brand img.logo{width:56px;height:56px;border-radius:50%}
+.brand img.tf{width:170px;height:auto}
+.brand b{font-weight:500;color:var(--muted)}
+.cover h1{margin-bottom:22px}
+.cover .for{font-size:clamp(20px,2.2vw,30px);color:#8b8984;line-height:1.25;margin-bottom:34px}
+.person{position:absolute;right:2%;bottom:0;width:min(48%,600px);z-index:1}
+.person.denis{height:94%;width:auto;max-width:52%;object-fit:contain;object-position:bottom right}
+.chips{position:absolute;right:max(36%,300px);top:24%;z-index:3;display:grid;gap:14px}
+.chip{display:flex;align-items:center;gap:12px;background:var(--white);border-radius:18px;padding:12px 18px 12px 12px;box-shadow:0 12px 30px rgba(0,0,0,.07);font-size:14px;line-height:1.25;position:relative}
+.chip:nth-child(2){margin-left:-40px}.chip:nth-child(3){margin-left:20px}
+.chip .ic{width:36px;height:36px;border-radius:10px;display:grid;place-items:center;color:#fff;font-weight:700;font-size:13px}
+.chip small{display:block;color:var(--muted)}
+.chip em{position:absolute;right:-8px;top:-8px;background:var(--accent);color:#fff;font-style:normal;font-size:11px;font-weight:600;border-radius:999px;padding:2px 6px}
+.tag-who{display:inline-flex;align-items:center;gap:8px;margin-bottom:18px;font-size:14px;color:var(--muted)}
+
+/* устройства */
+.laptop{position:relative;padding:2.2% 2.2% 0;background:#202022;border-radius:18px 18px 0 0;box-shadow:0 30px 60px rgba(0,0,0,.18)}
+.laptop img{border-radius:6px 6px 0 0;aspect-ratio:16/10;object-fit:cover;object-position:top}
+.laptop:after{content:"";position:absolute;left:-7%;right:-7%;bottom:-16px;height:16px;background:linear-gradient(#cfcfd1,#a9a9ac);border-radius:0 0 18px 18px}
+
+/* карточки */
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:var(--gap);margin-top:36px}
+.cards.two{grid-template-columns:repeat(2,1fr)}
+.card{background:var(--white);border-radius:24px;padding:clamp(20px,2.4vw,30px)}
+.card .num{font-size:14px;font-weight:600;color:var(--accent);margin-bottom:14px;display:block}
+.card p{color:var(--muted)}
+.card ul.list{margin-top:14px;font-size:16px}
+.big{font-size:clamp(40px,4vw,56px);font-weight:600;letter-spacing:-.03em;line-height:1}
+.big span{font-size:.42em;color:var(--muted);font-weight:500;margin-left:6px}
+
+/* галерея */
+.shots{display:grid;grid-template-columns:repeat(2,1fr);gap:var(--gap);margin-top:36px}
+.shot{background:var(--white);border-radius:24px;padding:12px 12px 18px}
+.shot button{all:unset;cursor:zoom-in;display:block;width:100%}
+.shot img{border-radius:14px;aspect-ratio:16/10;object-fit:cover;object-position:top;border:1px solid #eee}
+.shot figcaption{padding:14px 8px 0}
+.shot figcaption b{display:block;font-weight:600;font-size:18px;margin-bottom:4px}
+.shot figcaption span{color:var(--muted);font-size:15px}
+
+/* поводы */
+.chipsrow{display:flex;flex-wrap:wrap;justify-content:center;gap:10px;margin-top:28px}
+.chipsrow span{background:var(--white);border-radius:999px;padding:10px 18px;font-weight:500}
+
+/* цена */
+.price{background:var(--dark);color:#fff}
+.price .pill{background:var(--lime);box-shadow:none;color:var(--dark)}
+.price .lead{color:#c9c7c2}
+.price-row{display:flex;flex-wrap:wrap;align-items:baseline;justify-content:center;gap:10px 22px;margin:30px 0 26px}
+.price-row b{font-size:clamp(56px,8vw,112px);font-weight:600;letter-spacing:-.04em;line-height:1;color:var(--lime)}
+.price-row s{font-size:clamp(24px,3vw,40px);color:#8d8b86}
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:var(--gap);margin-top:10px;text-align:left}
+.steps div{background:#2a2a2a;border-radius:22px;padding:22px 24px}
+.steps b{display:block;font-size:clamp(26px,2.6vw,36px);font-weight:600;letter-spacing:-.02em;margin-bottom:6px}
+.steps span{color:#c9c7c2;font-size:15px}
+.steps.two{grid-template-columns:repeat(2,1fr)}
+
+/* подарок */
+.gift{display:grid;grid-template-columns:repeat(2,1fr);gap:var(--gap);margin-top:36px}
+.gift .card{display:flex;flex-direction:column;gap:12px}
+.gift .was{display:flex;align-items:baseline;gap:14px;margin-top:auto;padding-top:14px}
+.gift .was s{font-size:24px;color:var(--muted)}
+.gift .was b{font-size:clamp(28px,2.6vw,36px);font-weight:600;letter-spacing:-.02em}
+.gift .was em{font-style:normal;background:var(--lime);border-radius:999px;padding:4px 12px;font-weight:600;font-size:14px}
+
+.gi{width:1em;height:1em;vertical-align:-.15em;margin-right:6px}
+.seg a .gi{color:var(--accent)}.seg a[aria-current="page"] .gi{color:var(--lime)}
+.giftbadge{width:64px;height:64px;border-radius:50%;background:var(--lime);color:var(--dark);display:grid;place-items:center;margin:18px auto 0;font-size:30px}
+.giftbadge .gi{margin:0}
+.steps .gifted{background:#2f3a14;box-shadow:inset 0 0 0 1px var(--lime)}
+.gtag{display:inline-flex;align-items:center;background:var(--lime);color:var(--dark);border-radius:999px;padding:4px 12px;font-size:13px;font-weight:600;margin-bottom:10px}
+.steps .gtag{color:var(--dark)}
+.cond{max-width:760px;margin:22px auto 0;font-size:16px;line-height:1.55;color:#c9c7c2}
+/* автор */
+.author{display:grid;grid-template-columns:300px 1fr;gap:clamp(24px,4vw,56px);align-items:end;padding-bottom:0}
+.author img{width:100%}
+.author .txt{padding-bottom:var(--pad)}
+.contacts{display:flex;flex-wrap:wrap;gap:12px;margin-top:28px}
+
+/* навигация между вкладками */
+.pager{display:grid;grid-template-columns:1fr 1fr;gap:var(--gap);margin-bottom:var(--gap)}
+.pager a{display:flex;flex-direction:column;gap:6px;background:var(--white);border-radius:24px;padding:22px 26px;text-decoration:none;transition:transform .2s}
+.pager a:hover{transform:translateY(-2px)}
+.pager a small{color:var(--muted);font-size:14px}
+.pager a b{font-size:clamp(20px,2vw,26px);font-weight:600;letter-spacing:-.01em}
+.pager a.next{text-align:right;grid-column:2;background:var(--dark);color:#fff}
+.pager a.next small{color:#b9b7b2}
+
+footer{text-align:center;color:var(--muted);font-size:14px;padding:8px 0 28px}
+footer .partner{color:var(--ink);font-weight:600;font-size:16px;margin-bottom:6px}
+
+dialog{border:0;padding:0;background:transparent;max-width:96vw;max-height:94vh;margin:auto}
+dialog::backdrop{background:rgba(20,20,20,.86)}
+dialog img{max-width:96vw;max-height:94vh;border-radius:12px}
+dialog form{position:fixed;top:14px;right:18px}
+dialog form button{all:unset;cursor:pointer;color:#fff;font-size:34px;line-height:1}
+
+@media (max-width:1100px){.cards{grid-template-columns:1fr 1fr}.chips{display:none}}
+@media (max-width:820px){
+  body{font-size:16px}
+  .tabs{flex-direction:column;align-items:stretch;gap:10px;padding:10px var(--gap)}
+  .tabs .who{justify-content:center}
+  .seg a{flex:1;text-align:center;padding:9px 6px;font-size:14px}
+  .grid2,.split,.author,.cards,.cards.two,.shots,.gift,.steps,.steps.two{grid-template-columns:1fr}
+  .cover{min-height:auto;display:block}
+  .cover-in{padding-bottom:28px}
+  .person,.person.denis{position:relative;right:auto;width:80%;margin:0 auto}
+  .person.denis{height:auto;max-width:none;width:86%}
+  .brand img.tf{width:130px}
+  .author img{max-width:280px;margin:0 auto}
+  .author .txt{padding-bottom:0;order:-1}
+  .laptop:after{left:-4%;right:-4%}
+  .pager{grid-template-columns:1fr}.pager a.next{grid-column:1}
+  .btn{font-size:16px}
+}
+
+.cover{background:var(--card)}
+.dmark{display:inline-grid;place-items:center;width:36px;height:36px;border-radius:50%;background:var(--dark);color:var(--lime);font-weight:700;font-size:17px;letter-spacing:0}
+.dmark.big-d{width:56px;height:56px;font-size:26px}
+.cards.nums{grid-template-columns:repeat(4,1fr)}
+.cards.nums .big{margin:6px 0 10px}
+.season{display:grid;grid-template-columns:auto auto 1fr;gap:var(--gap);align-items:center;margin-top:var(--gap);background:var(--white);border-radius:24px;padding:clamp(20px,2.4vw,30px)}
+.season b{display:block;font-size:clamp(30px,3vw,42px);font-weight:600;letter-spacing:-.02em;line-height:1}
+.season span{color:var(--muted);font-size:14px}
+.season p{color:var(--muted)}
+.quote .qtext{font-size:clamp(20px,1.8vw,24px);color:var(--ink);line-height:1.35;margin:6px 0 14px}
+.cost{margin-top:18px;font-size:clamp(28px,2.6vw,36px);font-weight:600;letter-spacing:-.02em}
+.cost span{font-size:.5em;color:var(--muted);font-weight:500}
+@media (max-width:1100px){.cards.nums{grid-template-columns:1fr 1fr}}
+@media (max-width:820px){.cards.nums,.season{grid-template-columns:1fr}}
+
+.calc-card{display:grid;gap:14px}
+.calc-card label{display:grid;gap:6px;font-weight:500;font-size:15px}
+.calc-card input{font:inherit;font-size:18px;padding:12px 14px;border:1px solid var(--line);border-radius:14px;background:var(--card);width:100%}
+.calc-out{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:6px}
+.calc-out div{background:var(--dark);color:#fff;border-radius:16px;padding:14px}
+.calc-out small{display:block;color:#b9b7b2;font-size:13px}
+.calc-out b{font-size:clamp(20px,2vw,28px);font-weight:600;color:var(--lime);letter-spacing:-.02em}
+.why6{display:grid;grid-template-columns:1fr 1fr;gap:var(--gap);margin-top:36px}
+.wgroup{display:grid;gap:12px;align-content:start}
+.wgroup .card p{color:var(--muted)}
+.wlabel{justify-self:start;border-radius:999px;padding:8px 16px;font-weight:600;font-size:14px}
+.wlabel.green{background:var(--lime);color:var(--dark)}.wlabel.dark{background:var(--dark);color:#fff}
+ul.chan{list-style:none;display:grid;gap:10px}
+ul.chan li{background:var(--white);border-radius:20px;padding:16px 20px}
+ul.chan b{display:block;font-size:18px;font-weight:600;margin-bottom:2px}
+ul.chan span{color:var(--muted);font-size:15px}
+@media (max-width:820px){.why6,.calc-out{grid-template-columns:1fr}.seg{flex-wrap:wrap;border-radius:22px}.seg a{flex:1 1 40%}}
+</style>
+</head>
+<body>
+<main class="wrap">
+
+<nav class="tabs" aria-label="Разделы предложения">
+  <span class="who"><span class="dmark">D</span>Deford · магазинам Apple</span>
+  <div class="seg">
+    <a href="#why" data-tab="why">Зачем сегодня</a>
+    <a href="#market" data-tab="market">Рынок</a>
+    <a href="#shop" data-tab="shop">Магазин и ЛК</a>
+    <a href="#yabiz" data-tab="yabiz">Яндекс Бизнес</a>
+  </div>
+</nav>
+
+<!-- ============ ВКЛАДКА 1. РЫНОК ============ -->
+<!-- ============ ВКЛАДКА 0. ЗАЧЕМ СЕГОДНЯ ============ -->
+<div class="pane" id="pane-why" data-pane="why">
+
+<section class="slide cover">
+  <div class="cover-in">
+    <div class="brand"><span class="dmark big-d">D</span>Deford<b>· студия разработки</b></div>
+    <h1>Каждый день без сайта – это сотни покупателей iPhone, которые выбирают без вас</h1>
+    <p class="for">Интернет-магазин, личный кабинет с бонусами и Яндекс Бизнес для продавцов техники Apple в Новосибирске</p>
+    <a class="btn" href="#loss">Что вы теряете сегодня <i>↓</i></a>
+  </div>
+  <img class="person" src="img/artem.webp" alt="Артём Галимов" width="760" height="796">
+</section>
+
+<section class="slide" id="loss">
+  <div class="center">
+    <span class="pill">Каждый день</span>
+    <h2>Пока у вас нет сайта, каждый день в Новосибирске</h2>
+    <p class="lead">Это не просмотры и не охваты. Это люди, которые прямо сейчас набирают в Яндексе, что хотят купить.</p>
+  </div>
+  <div class="cards nums">
+    <div class="card"><span class="num">«купить айфон»</span><div class="big">~780</div><p>поисков в день. Человек сравнивает цены на нескольких сайтах и едет туда, где выгоднее</p></div>
+    <div class="card"><span class="num">«купить айфон в новосибирске»</span><div class="big">~230</div><p>в день прямо называют ваш город – ищут магазин рядом</p></div>
+    <div class="card"><span class="num">«айфон в рассрочку»</span><div class="big">~34</div><p>в день хотят купить частями, а объявлений по этому запросу в Директе не было ни одного</p></div>
+    <div class="card"><span class="num">«купить макбук»</span><div class="big">~38</div><p>в день – покупка на 100 000 ₽ и больше</p></div>
+  </div>
+  <div class="season">
+    <div><b>~1 060</b><span>в день в ноябре 2025</span></div>
+    <div><b>~580</b><span>в день в апреле 2026</span></div>
+    <p>Сейчас сезон: до Нового года ищут почти вдвое больше, чем весной. Каждая неделя без сайта – это неделя самого жаркого спроса, отданная конкурентам.</p>
+  </div>
+  <p class="note center">Яндекс Wordstat, Новосибирск, снято 09.11.2026. В день – месячная частота, делённая на 30.</p>
+</section>
+
+<section class="slide calc" id="calc">
+  <div class="grid2">
+    <div>
+      <span class="pill">Посчитайте сами</span>
+      <h2>Сколько стоит вам один день без сайта</h2>
+      <p class="lead">Подставьте свою прибыль с одного телефона и долю покупателей, которых мог бы привести сайт. Мы не знаем ваших цифр – поэтому считаете вы.</p>
+    </div>
+    <div class="card calc-card">
+      <label>Прибыль с одной продажи, ₽<input id="c-margin" type="number" inputmode="numeric" min="0" step="500" value="5000"></label>
+      <label>Из ~780 поисков в день к вам дошли бы, %<input id="c-share" type="number" inputmode="decimal" min="0" max="100" step="0.1" value="0.5"></label>
+      <label>Из них купили бы, %<input id="c-conv" type="number" inputmode="decimal" min="0" max="100" step="1" value="10"></label>
+      <div class="calc-out">
+        <div><small>Продаж в месяц</small><b id="c-sales">–</b></div>
+        <div><small>Вы теряете в день</small><b id="c-day">–</b></div>
+        <div><small>В месяц</small><b id="c-month">–</b></div>
+      </div>
+      <p class="note">Значения по умолчанию – пример для расчёта, а не обещание. Сравните сумму в месяц с платежом по рассрочке за магазин – 10 000 ₽.</p>
+    </div>
+  </div>
+</section>
+
+<section class="slide">
+  <div class="center">
+    <span class="pill">Почему сейчас</span>
+    <h2>6 причин сделать сайт уже в этом месяце</h2>
+  </div>
+  <div class="why6">
+    <div class="wgroup">
+      <span class="wlabel green">Если сайта ещё нет</span>
+      <article class="card"><h3>Вы выпадаете из сравнения цен</h3><p>Ваш козырь – цена: iPhone 17 Pro 256 у местных стоит 97 990–112 990 ₽ против 119 990 ₽ в re:Store. Но сравнивают только то, что видно в интернете. Нет сайта – нет вашей цены в сравнении.</p></article>
+      <article class="card"><h3>Вас не советуют поиск и нейросети</h3><p>В Яндексе из местных стоят только магазины с каталогом. Нейросеть Google на «купить айфон новосибирск» называет 5 магазинов – у всех есть сайт. Из 26 местных продавцов без сайта в выдаче нет ни одного.</p></article>
+      <article class="card"><h3>Оплата переводами – это риск</h3><p>Перевод на карту без чека – штраф до 100% суммы, а оплата на карты сотрудников может попасть под уголовную ст. 187 УК. Сайт с онлайн-кассой принимает оплату законно.</p></article>
+    </div>
+    <div class="wgroup">
+      <span class="wlabel dark">Если сайт есть, но старый</span>
+      <article class="card"><h3>Сайт есть, но не работает</h3><p>Мы проверили сайты местных продавцов Apple: у 9 он не открывается или стоит заглушка, у 4 – одна страница без каталога, у 6 нет карты сайта для поисковиков.</p></article>
+      <article class="card"><h3>Штрафы до 3 млн ₽ в 2027 году</h3><p>По нашей оценке, больше 80% сайтов не готовы к требованиям законов, принятых в 2026 году: согласия, персональные данные, оплата.</p></article>
+      <article class="card"><h3>Сделан как визитка, а не магазин</h3><p>Нет цены на каждую модель и память, нет корзины, заявки на рассрочку и trade-in. Покупатель уходит звонить туда, где всё видно сразу.</p></article>
+    </div>
+  </div>
+</section>
+
+<section class="slide">
+  <div class="center">
+    <span class="pill">Что получите</span>
+    <h2>Что даст вам свой магазин</h2>
+  </div>
+  <div class="cards">
+    <div class="card"><span class="num">01</span><h3>Ваша цена в каждом сравнении</h3><p>Каталог с ценой на модель, память и цвет. Человек ищет «iPhone 17 Pro 256» – и видит вашу цену рядом с сетевой.</p></div>
+    <div class="card"><span class="num">02</span><h3>Заказы и брони круглосуточно</h3><p>Покупатель бронирует телефон вечером и забирает утром. Вам не нужно отвечать в личке в 23:00, чтобы не потерять продажу.</p></div>
+    <div class="card"><span class="num">03</span><h3>Доверие до звонка</h3><p>Оригинал, гарантия, проверка при покупке, отзывы с Яндекс Карт, адрес и фото магазина. Главный страх покупателя – подделка – снимается ещё на сайте.</p></div>
+    <div class="card"><span class="num">04</span><h3>Рассрочка и trade-in онлайн</h3><p>Отдельные страницы и заявки под спрос, который сейчас никто не забирает: «айфон в рассрочку» ищут 1 027 раз в месяц.</p></div>
+    <div class="card"><span class="num">05</span><h3>Свои покупатели, а не подписчики</h3><p>Личный кабинет и бонусы: человек вернётся за чехлом, AirPods и следующим iPhone к вам, а база останется у вас, даже если соцсеть заблокируют.</p></div>
+    <div class="card"><span class="num">06</span><h3>Видно, что приносит деньги</h3><p>Каждый заказ с источником: Яндекс, Карты, ВК, Авито, реклама. Деньги на рекламу уходят туда, где есть продажи.</p></div>
+  </div>
+</section>
+
+<section class="slide">
+  <div class="grid2">
+    <div>
+      <span class="pill">Сайт усиливает всё остальное</span>
+      <h2>Не вместо ваших каналов, а поверх них</h2>
+      <p class="lead">Вы уже продаёте через Авито, соцсети, Карты и сарафан. Сайт не заменяет их, а делает каждый сильнее: это место, куда все дороги ведут покупателя.</p>
+    </div>
+    <ul class="chan">
+      <li><b>Авито</b><span>Покупатель с Авито проверяет продавца: ищет название в Яндексе – и находит магазин с адресом, гарантией и отзывами, а не только объявление.</span></li>
+      <li><b>ВК, Telegram, Instagram</b><span>Вместо «цена в личке» – ссылка на карточку с ценой. Пост продаёт сразу, а не через переписку.</span></li>
+      <li><b>Яндекс Карты</b><span>Кнопка «Сайт» в карточке и товары с ценами: человек видит магазин целиком и едет к вам, а не к соседу.</span></li>
+      <li><b>Реклама в Директе</b><span>Объявление ведёт на страницу нужной модели с ценой, а не в переписку, где покупатели теряются.</span></li>
+      <li><b>Сарафан</b><span>«Скинь, где брал» – друг пересылает ссылку на модель с ценой, а не номер телефона.</span></li>
+      <li><b>Нейросети</b><span>Алиса и Google отвечают на «где купить айфон» ссылками на сайты. Чтобы вас советовали, нужен сайт.</span></li>
+    </ul>
+  </div>
+</section>
+
+<nav class="pager"><a class="next" href="#market"><small>Далее →</small><b>Рынок в цифрах</b></a></nav>
+</div>
+
+<div class="pane" id="pane-market" data-pane="market" hidden>
+
+<section class="slide" id="demand">
+  <div class="center">
+    <span class="pill">Спрос</span>
+    <h2>Каждый месяц в Новосибирске ищут</h2>
+    <p class="lead">Запросы в Яндексе за последние 30 дней.</p>
+  </div>
+  <div class="cards nums">
+    <div class="card"><span class="num">«купить айфон»</span><div class="big">23 336</div><p>запросов в месяц, вместе с моделями и «про»</p></div>
+    <div class="card"><span class="num">«купить айфон в новосибирске»</span><div class="big">7 026</div><p>человек прямо называют город</p></div>
+    <div class="card"><span class="num">«купить макбук»</span><div class="big">1 144</div><p>в месяц, из них 285 – с городом</p></div>
+    <div class="card"><span class="num">«айфон в рассрочку»</span><div class="big">1 027</div><p>отдельный спрос, 516 – с городом</p></div>
+  </div>
+  <div class="season">
+    <div><b>31 726</b><span>«купить айфон», ноябрь 2025</span></div>
+    <div><b>17 424</b><span>тот же запрос, апрель 2026</span></div>
+    <p>Пик спроса – с августа по декабрь: в ноябре 2025 искали почти вдвое больше, чем в апреле 2026. Чем раньше магазин запущен, тем больше сезона он застаёт.</p>
+  </div>
+  <p class="note center">Яндекс Wordstat, регион Новосибирск, снято 09.11.2026.</p>
+</section>
+
+<section class="slide">
+  <div class="grid2">
+    <div>
+      <span class="pill">Кто забирает покупателя</span>
+      <h2>В поиске стоят только магазины с каталогом</h2>
+      <ul class="list">
+        <li><b>Яндекс:</b> из местных продавцов по 19 запросам про покупку iPhone и MacBook чаще всех стоят iDiscount (13 запросов, лучшее – 1-е место) и Белое Яблоко (10 запросов, 2-е место). У обоих каталог с ценами.</li>
+        <li><b>Нейросеть Google</b> на «купить айфон новосибирск» советует 5 магазинов – у всех есть сайт.</li>
+        <li><b>Без сайта вас нет ни там, ни там.</b> Из 26 местных продавцов без сайта в выдачу Яндекса не попал ни один.</li>
+      </ul>
+    </div>
+    <div class="card quote"><span class="num">Как покупает человек</span><p class="qtext">Ищет модель в Яндексе → сравнивает цены на нескольких сайтах → едет туда, где дешевле и понятно, что оригинал с гарантией.</p><p>Если вашей цены нет в интернете, сравнение проходит без вас.</p></div>
+  </div>
+</section>
+
+<section class="slide">
+  <div class="center">
+    <span class="pill">Ваш козырь</span>
+    <h2>У местных iPhone дешевле, чем в сетях. Покупатель об этом не знает</h2>
+  </div>
+  <div class="cards two">
+    <div class="card"><span class="num">iPhone 17 Pro 256 у местных магазинов</span><div class="big">97 990 – 112 990 <span>₽</span></div><p>цены на сайтах и в карточках местных продавцов</p></div>
+    <div class="card"><span class="num">тот же iPhone 17 Pro 256 в re:Store</span><div class="big">119 990 <span>₽</span></div><p>федеральная сеть, версия eSIM</p></div>
+  </div>
+  <p class="lead center" style="margin:26px auto 0">Разница до 22 000 ₽ – это главный повод купить у вас. Но цену видно только тому, кто уже до вас дозвонился. Каталог с ценами показывает её каждому, кто ищет модель.</p>
+  <p class="note center">Цены сняты с сайтов и Яндекс Карт 09–10.11.2026.</p>
+</section>
+
+<section class="slide">
+  <div class="center">
+    <span class="pill">Что никто не делает</span>
+    <h2>Три места, где рынок пустой</h2>
+  </div>
+  <div class="cards">
+    <div class="card"><span class="num">01 / Бонусы</span><h3>Покупателя не возвращают</h3><p>Из 7 сайтов лидеров бонусной программы нет у 4. Кабинет с баллами есть только у одной сети. В отзывах о подарках при покупке пишут 131 раз из 963 – людям это важно.</p></div>
+    <div class="card"><span class="num">02 / Рассрочка</span><h3>Спрос есть, рекламы нет</h3><p>«Айфон в рассрочку» ищут 1 027 раз в месяц, а объявлений в Директе по этому запросу в момент проверки не было ни одного.</p></div>
+    <div class="card"><span class="num">03 / Яндекс Карты</span><h3>Реклама только у сетей</h3><p>Приоритет на Картах покупают сети. У 26 местных продавцов без сайта рекламы на Картах нет ни у кого.</p></div>
+  </div>
+</section>
+
+<nav class="pager"><a href="#why"><small>← Назад</small><b>Зачем сегодня</b></a><a class="next" href="#shop"><small>Далее →</small><b>Магазин и личный кабинет</b></a></nav>
+</div>
+
+<!-- ============ ВКЛАДКА 2. МАГАЗИН И ЛК ============ -->
+<div class="pane" id="pane-shop" data-pane="shop" hidden>
+
+<section class="slide">
+  <div class="center">
+    <span class="pill">Состав работ</span>
+    <h2>Интернет-магазин техники Apple под ключ</h2>
+    <p class="lead">Сайт на коде: быстрый, со своей админкой и правильной структурой для поиска. Весь цикл – от концепции до запуска.</p>
+  </div>
+  <div class="cards">
+    <div class="card"><span class="num">01 / Каталог</span>
+      <ul class="list">
+        <li>iPhone, MacBook, iPad, Watch, AirPods – по разделам</li>
+        <li>Модель, память и цвет в одной карточке с ценой</li>
+        <li>Новые и б/у отдельно, состояние и АКБ на карточке</li>
+        <li>На телефоне две карточки в ряд</li>
+      </ul></div>
+    <div class="card"><span class="num">02 / Поиск и страницы</span>
+      <ul class="list">
+        <li>Страницы моделей под спрос: iPhone 17 Pro, MacBook Air и другие</li>
+        <li>Страницы «рассрочка» и «trade-in»</li>
+        <li>Дизайн, тексты и базовая SEO-оптимизация</li>
+        <li>Отзывы с Яндекс Карт на сайте</li>
+      </ul></div>
+    <div class="card"><span class="num">03 / Продажи</span>
+      <ul class="list">
+        <li>Корзина, заказ и бронь с самовывозом</li>
+        <li>Заявка на рассрочку и на trade-in</li>
+        <li>Заказы в админке с источником: Яндекс, Карты, реклама</li>
+        <li>Связь: телефон, Telegram и Макс</li>
+      </ul></div>
+  </div>
+</section>
+
+<section class="slide">
+  <div class="center">
+    <span class="pill">Управление</span>
+    <h2>Своя админка: товары, цены и заказы</h2>
+    <p class="lead">Цены на технику меняются каждую неделю. Поменять цену или скрыть проданный б/у телефон – одно действие, без программиста.</p>
+  </div>
+  <div class="shots">
+    <figure class="shot"><button type="button"><img src="img/er-admin-products.webp" alt="Товары в админке" loading="lazy" width="1440" height="900"></button><figcaption><b>Товары</b><span>Разделы, поиск, импорт и выгрузка CSV, скрытие товара одним переключателем.</span></figcaption></figure>
+    <figure class="shot"><button type="button"><img src="img/adm-product.webp" alt="Скидки и метки" loading="lazy" width="1340" height="667"></button><figcaption><b>Скидки и метки</b><span>Старая цена, метка «−10%» или «Новинка», фото, SEO.</span></figcaption></figure>
+    <figure class="shot"><button type="button"><img src="img/er-admin-leads.webp" alt="Заказы доской" loading="lazy" width="1440" height="900"></button><figcaption><b>Заказы и заявки доской</b><span>Новые, в работе, выдано. Видно товар, сумму и откуда пришёл покупатель.</span></figcaption></figure>
+    <figure class="shot"><button type="button"><img src="img/adm-metrika.webp" alt="Метрика и поиск" loading="lazy" width="1340" height="667"></button><figcaption><b>Метрика и поисковые запросы</b><span>С каких фраз пришли из Яндекса и Google, сколько визитов и заказов.</span></figcaption></figure>
+  </div>
+  <p class="note center">Снимки с наших проектов на коде: Метрика – TEYES Sibir, остальное – примерные данные.</p>
+</section>
+
+<section class="slide">
+  <div class="split">
+    <div>
+      <span class="pill">Лояльность</span>
+      <h2>Личный кабинет и бонусы: подарок к следующей покупке</h2>
+      <p class="lead" style="margin-bottom:22px">Покупатели и так ценят подарки: стекло, чехол, настройку. Кабинет превращает их в баллы, которые возвращают человека за чехлом, AirPods и следующим iPhone. А у вас остаётся своя база покупателей.</p>
+      <ul class="list">
+        <li><b>Бонусы.</b> Баллы за покупку и регистрацию, оплата баллами части следующего заказа.</li>
+        <li><b>Статусы.</b> Например: от 100 000 ₽ покупок – больше кешбэка. Уровни настраиваются.</li>
+        <li><b>Кабинет.</b> История покупок, гарантия по чеку, повтор заказа.</li>
+      </ul>
+    </div>
+    <img src="img/lk-phone.webp" alt="Бонусный баланс в личном кабинете" loading="lazy" width="820" height="782">
+  </div>
+  <div class="shots">
+    <figure class="shot"><button type="button"><img src="img/lk-bally.webp" alt="Баллы и статус" loading="lazy" width="1340" height="667"></button><figcaption><b>Баллы и статус</b><span>Демо-стенд нашего личного кабинета.</span></figcaption></figure>
+    <figure class="shot"><button type="button"><img src="img/lk-cart.webp" alt="Корзина со списанием баллов" loading="lazy" width="1340" height="667"></button><figcaption><b>Списание баллов в корзине</b><span>Промокод, баллы и самовывоз на одной странице.</span></figcaption></figure>
+  </div>
+</section>
+
+<section class="slide price center" id="shop-price">
+  <span class="pill">Стоимость</span>
+  <h2>Магазин и личный кабинет под ключ</h2>
+  <p class="lead">Всё из состава работ: магазин на коде, страницы моделей, рассрочка и trade-in, админка, личный кабинет и бонусная программа.</p>
+  <div class="price-row"><b>120 000 ₽</b><s>150 000 ₽</s></div>
+  <p class="lead" style="margin-bottom:22px">Действует рассрочка платежа:</p>
+  <div class="steps">
+    <div><b>20 000 ₽</b><span>предоплата для старта работ</span></div>
+    <div><b>10 000 ₽</b><span>каждый месяц</span></div>
+    <div><b>10 платежей</b><span>до закрытия общей суммы</span></div>
+  </div>
+</section>
+
+<section class="slide author">
+  <img src="img/artem.webp" alt="Артём Галимов" loading="lazy" width="760" height="796">
+  <div class="txt">
+    <span class="pill">Автор</span>
+    <h2>Артём Галимов, основатель студии Deford</h2>
+    <p class="lead">Делаем сайты и интернет-магазины на коде: быстрые, со своей админкой и личным кабинетом покупателя.</p>
+    <div class="contacts">
+      <a class="btn" href="https://t.me/Artem1Galimov" target="_blank" rel="noopener">Написать в Telegram <i>↗</i></a>
+      <a class="btn light" href="https://max.ru/u/f9LHodD0cOKS6C3PPXRh8eHyRKrJiSTUcpsOsnbQDl6Cp3LSE-Xu-dNig7c" target="_blank" rel="noopener">Написать в Макс <i>↗</i></a>
+      <a class="btn light" href="tel:+79537777891">+7 953 777-78-91 <i>☎</i></a>
+    </div>
+  </div>
+</section>
+
+<nav class="pager"><a href="#market"><small>← Назад</small><b>Рынок</b></a><a class="next" href="#yabiz"><small>Далее →</small><b>Яндекс Бизнес</b></a></nav>
+</div>
+
+<!-- ============ ВКЛАДКА 3. ЯНДЕКС БИЗНЕС ============ -->
+<div class="pane" id="pane-yabiz" data-pane="yabiz" hidden>
+
+<section class="slide">
+  <div class="center">
+    <span class="pill">Яндекс Бизнес</span>
+    <h2>Звонки и маршруты из Яндекс Карт и Поиска</h2>
+    <p class="lead">Яндекс показывает ваш магазин тем, кто ищет iPhone рядом: в Картах, Поиске и Навигаторе. Сейчас это место занимают сети, а местные продавцы без сайта им не пользуются.</p>
+  </div>
+  <div class="cards">
+    <div class="card"><span class="num">Услуга 1</span><h3>Настройка Яндекс Бизнеса</h3>
+      <ul class="list"><li>Подключение и настройка рекламы на Картах и в Поиске</li><li>Связка с сайтом и Метрикой</li><li>Корректировка по первым результатам</li></ul>
+      <div class="cost">25 000 ₽</div></div>
+    <div class="card"><span class="num">Услуга 2</span><h3>Упаковка Яндекс Карт</h3>
+      <ul class="list"><li>Оформление карточки магазина</li><li>Фото, описание, товары и цены</li><li>Работа с отзывами и рейтингом</li></ul>
+      <div class="cost">25 000 ₽</div></div>
+    <div class="card"><span class="num">В Яндексе</span><h3>Подписка Яндекс Бизнеса</h3>
+      <ul class="list"><li>Оплачивается в Яндексе напрямую, отдельно от наших работ</li></ul>
+      <div class="cost">15 000 ₽ <span>/ 3 мес.</span></div></div>
+  </div>
+</section>
+
+<section class="slide author">
+  <img src="img/artem.webp" alt="Артём Галимов" loading="lazy" width="760" height="796">
+  <div class="txt">
+    <span class="pill">Обсудить</span>
+    <h2>Покажем, как будет выглядеть ваш магазин</h2>
+    <p class="lead">Напишите или позвоните – соберём каталог на ваших моделях и ценах и покажем до оплаты.</p>
+    <div class="contacts">
+      <a class="btn" href="https://t.me/Artem1Galimov" target="_blank" rel="noopener">Написать в Telegram <i>↗</i></a>
+      <a class="btn light" href="https://max.ru/u/f9LHodD0cOKS6C3PPXRh8eHyRKrJiSTUcpsOsnbQDl6Cp3LSE-Xu-dNig7c" target="_blank" rel="noopener">Написать в Макс <i>↗</i></a>
+      <a class="btn light" href="tel:+79537777891">+7 953 777-78-91 <i>☎</i></a>
+    </div>
+  </div>
+</section>
+
+<nav class="pager"><a href="#shop"><small>← Назад</small><b>Магазин и ЛК</b></a><a class="next" href="#why"><small>В начало →</small><b>Зачем сегодня</b></a></nav>
+</div>
+
+<footer>Студия Deford · предложение подготовлено 10 ноября 2026 года</footer>
+</main>
+
+<dialog id="zoom"><form method="dialog"><button aria-label="Закрыть">×</button></form><img alt=""></dialog>
+<script>
+(function(){
+  var tabs=['why','market','shop','yabiz'];
+  function show(){
+    var id=(location.hash||'').slice(1), tab=tabs.indexOf(id)>=0?id:null, target=null;
+    if(!tab){target=id&&document.getElementById(id);var p=target&&target.closest('.pane');tab=p?p.dataset.pane:'why';}
+    document.querySelectorAll('.pane').forEach(function(p){p.hidden=p.dataset.pane!==tab;});
+    document.querySelectorAll('.seg a').forEach(function(a){if(a.dataset.tab===tab)a.setAttribute('aria-current','page');else a.removeAttribute('aria-current');});
+    if(target)target.scrollIntoView({behavior:'instant'});else window.scrollTo({top:0,behavior:'instant'});
+  }
+  window.addEventListener('hashchange',show);show();
+  var d=document.getElementById('zoom'),im=d.querySelector('img');
+  document.querySelectorAll('.shot button').forEach(function(b){
+    b.addEventListener('click',function(){var s=b.querySelector('img');im.src=s.currentSrc||s.src;im.alt=s.alt;d.showModal();});
+  });
+  d.addEventListener('click',function(e){if(e.target===d||e.target===im)d.close();});
+  var m=document.getElementById('c-margin'),sh=document.getElementById('c-share'),cv=document.getElementById('c-conv');
+  function f(n){return Math.round(n).toLocaleString('ru-RU').replace(/\u00a0/g,' ')+' ₽'}
+  function calc(){var day=780*(+sh.value||0)/100*(+cv.value||0)/100;document.getElementById('c-sales').textContent=(day*30).toFixed(1).replace('.',',');document.getElementById('c-day').textContent=f(day*(+m.value||0));document.getElementById('c-month').textContent=f(day*30*(+m.value||0));}
+  [m,sh,cv].forEach(function(x){x.addEventListener('input',calc)});calc();
+
+})();
+</script>
+</body>
+</html>
