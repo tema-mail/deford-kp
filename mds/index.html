@@ -1,0 +1,403 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>КП для MDS – перенос сайта на код и вывод услуг в поиск | Deford</title>
+<meta name="description" content="Коммерческое предложение для Minsk Detailing Studio: перенос mds.by с Тильды на код, страницы услуг под спрос Минска, ведение и ссылки.">
+<meta name="robots" content="noindex, nofollow">
+<meta name="theme-color" content="#0b0b0b">
+<link rel="icon" href="img/logo-mds.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#0b0b0b; --card:#141414; --card2:#1d1d1d; --line:rgba(255,255,255,.1); --line2:rgba(255,255,255,.18);
+  --ink:#fff; --muted:#9a9a9a; --soft:rgba(255,255,255,.6); --y:#ffcb00;
+  --gap:clamp(12px,1.6vw,20px); --pad:clamp(22px,4.6vw,64px);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--ink);font:300 17px/1.6 Inter,system-ui,sans-serif;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+img{display:block;max-width:100%;height:auto}
+a{color:inherit}
+b,strong{font-weight:600}
+.wrap{max-width:1320px;margin:0 auto;padding:0 16px}
+section{padding:clamp(56px,8vw,110px) 0;border-top:1px solid var(--line)}
+.tag{display:inline-block;color:var(--muted);font-size:14px;margin-bottom:18px}
+.tag:before{content:"[ "}.tag:after{content:" ]"}
+h1,h2,h3{font-weight:500;letter-spacing:-.025em;line-height:1.08}
+h1{font-size:clamp(34px,5.4vw,70px)}
+h2{font-size:clamp(28px,3.8vw,52px);margin-bottom:22px;max-width:980px}
+h3{font-size:clamp(19px,1.6vw,23px);margin-bottom:10px;letter-spacing:-.01em}
+.y{color:var(--y)}
+.lead{font-size:clamp(16px,1.35vw,19px);color:var(--soft);max-width:820px}
+.note{margin-top:18px;font-size:14px;color:var(--muted);max-width:900px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:12px;border:1px solid #fff;color:#fff;text-decoration:none;padding:16px 28px;font-weight:500;font-size:15px;transition:.2s}
+.btn:hover{background:#fff;color:#000}
+.btn.fill{background:var(--y);border-color:var(--y);color:#000}
+.btn.fill:hover{background:#fff;border-color:#fff}
+
+/* шапка */
+.top{position:absolute;inset:0 0 auto;z-index:5}
+.top .wrap{display:flex;align-items:center;justify-content:space-between;gap:20px;padding-top:22px}
+.top img{width:170px}
+.top .by{font-size:14px;color:var(--soft);text-align:right}
+
+/* обложка */
+.cover{position:relative;min-height:min(900px,100vh);display:flex;align-items:flex-end;padding:140px 0 56px;border:0;
+  background:linear-gradient(180deg,rgba(11,11,11,.45) 0%,rgba(11,11,11,.1) 30%,rgba(11,11,11,.75) 62%,#0b0b0b 100%),linear-gradient(90deg,rgba(11,11,11,.88) 0%,rgba(11,11,11,.55) 45%,rgba(11,11,11,0) 75%),url(img/hero.webp) center 30%/cover no-repeat}
+.cover h1{max-width:1000px;margin-bottom:22px}
+.cover .for{display:grid;grid-template-columns:1fr auto;gap:28px;align-items:end}
+.cover .for p{max-width:620px;color:var(--soft);font-size:clamp(16px,1.4vw,19px)}
+.kpis{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--line);border:1px solid var(--line);margin-top:42px}
+.kpi{background:rgba(11,11,11,.82);backdrop-filter:blur(6px);padding:22px 22px 24px;position:relative}
+.kpi:before{content:"";position:absolute;left:22px;top:20px;width:5px;height:5px;border-radius:50%;background:var(--y)}
+.kpi b{display:block;font-size:clamp(26px,2.6vw,38px);font-weight:500;letter-spacing:-.02em;margin-top:22px;line-height:1.1}
+.kpi span{font-size:14px;color:var(--muted)}
+
+/* голос */
+.voice{display:flex;align-items:center;gap:18px;flex-wrap:wrap;border:1px solid var(--line2);padding:18px 22px;margin-top:22px;max-width:760px;background:rgba(11,11,11,.7)}
+.voice span{font-size:15px;color:var(--soft)}
+.voice audio{height:40px;max-width:100%;flex:1 1 260px}
+
+/* сетки */
+.grid{display:grid;gap:var(--gap);margin-top:34px}
+.g2{grid-template-columns:repeat(2,1fr)}.g3{grid-template-columns:repeat(3,1fr)}.g4{grid-template-columns:repeat(4,1fr)}
+.card{background:var(--card);border:1px solid var(--line);padding:clamp(20px,2.4vw,32px);position:relative}
+.card p,.card li{color:var(--soft);font-size:16px}
+.card .num{font-size:14px;color:var(--y);margin-bottom:26px;display:block}
+.card.y{background:var(--y);color:#000;border-color:var(--y)}
+.card.y p,.card.y li{color:rgba(0,0,0,.72)}
+ul.list{list-style:none;display:grid;gap:9px}
+ul.list li{position:relative;padding-left:22px}
+ul.list li:before{content:"";position:absolute;left:2px;top:.62em;width:6px;height:6px;border-radius:50%;background:var(--y)}
+.card.y ul.list li:before{background:#000}
+
+/* фото */
+.ph{position:relative;overflow:hidden;background:#111;border:1px solid var(--line)}
+.ph img{width:100%;height:100%;object-fit:cover}
+.split{display:grid;grid-template-columns:1.05fr .95fr;gap:var(--gap);align-items:stretch;margin-top:34px}
+.split .ph{min-height:360px}
+
+/* таблица */
+.tbl-wrap{overflow-x:auto;border:1px solid var(--line);margin-top:30px;background:var(--card)}
+table{border-collapse:collapse;width:100%;min-width:640px;font-size:15px}
+th,td{padding:14px 18px;text-align:left;border-bottom:1px solid var(--line);vertical-align:top}
+th{font-weight:500;color:var(--muted);font-size:13px;text-transform:uppercase;letter-spacing:.04em}
+td.n,th.n{text-align:right;white-space:nowrap}
+td small{display:block;color:var(--muted);font-size:13px;margin-top:3px}
+tr.sum td{font-weight:600;color:var(--y);border-bottom:0}
+.bar{height:4px;background:var(--y);margin-top:8px;opacity:.85}
+
+/* скрины */
+.shot{background:var(--card);border:1px solid var(--line);padding:10px}
+.shot img{cursor:zoom-in;width:100%}
+.shot figcaption{padding:14px 6px 6px;font-size:15px;color:var(--soft)}
+.shot figcaption b{color:#fff;display:block;font-weight:500;margin-bottom:2px}
+
+/* цифры кейса */
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--line);border:1px solid var(--line);margin-top:30px}
+.stat{background:var(--card);padding:22px}
+.stat b{display:block;font-size:clamp(28px,3vw,42px);font-weight:500;letter-spacing:-.02em;line-height:1.1}
+.stat span{font-size:14px;color:var(--muted)}
+.stat.hl b{color:var(--y)}
+
+/* шаги */
+.steps{counter-reset:s;display:grid;gap:1px;background:var(--line);border:1px solid var(--line);margin-top:34px}
+.step{background:var(--card);display:grid;grid-template-columns:90px 1fr 220px;gap:24px;padding:26px clamp(20px,2.4vw,32px);align-items:start}
+.step:before{counter-increment:s;content:"0" counter(s);color:var(--y);font-size:15px}
+.step p{color:var(--soft);font-size:16px}
+.step .when{font-size:14px;color:var(--muted);text-align:right}
+.step .when b{display:block;color:#fff;font-size:17px;font-weight:500}
+
+/* цены */
+.price{display:grid;grid-template-columns:repeat(2,1fr);gap:var(--gap);margin-top:34px}
+.pcard{background:var(--card);border:1px solid var(--line);padding:clamp(24px,3vw,40px);display:flex;flex-direction:column;gap:18px}
+.pcard.main{border-color:var(--y)}
+.pcard .sum{font-size:clamp(34px,3.6vw,52px);font-weight:500;letter-spacing:-.03em;line-height:1}
+.pcard .sum small{font-size:16px;color:var(--muted);font-weight:400;letter-spacing:0}
+.pcard .per{font-size:14px;color:var(--y)}
+.extra{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border:1px solid var(--line);margin-top:var(--gap)}
+.extra div{background:var(--card2);padding:24px}
+.extra b{display:block;font-size:24px;font-weight:500;margin:8px 0 6px;letter-spacing:-.02em}
+.extra span{font-size:14px;color:var(--muted)}
+.extra p{font-size:15px;color:var(--soft)}
+.compare{margin-top:var(--gap);border:1px solid var(--line);padding:22px clamp(20px,2.4vw,32px);display:grid;grid-template-columns:1fr 1fr;gap:24px;background:repeating-linear-gradient(135deg,#141414 0 22px,#171717 22px 44px)}
+.compare p{color:var(--soft);font-size:16px}
+.compare b{color:#fff}
+
+/* автор */
+.author{display:grid;grid-template-columns:300px 1fr;gap:clamp(24px,4vw,64px);align-items:end}
+.author .ph{border:0;background:transparent}
+.author .contacts{display:flex;flex-wrap:wrap;gap:12px;margin-top:28px}
+.foot{text-align:center;font-size:13px;color:var(--muted);padding:26px 16px 40px;border-top:1px solid var(--line)}
+
+/* полоса как на их сайте */
+.stripe{height:14px;background:repeating-linear-gradient(135deg,#fff 0 18px,#0b0b0b 18px 36px);opacity:.9}
+
+.lb{position:fixed;inset:0;background:rgba(0,0,0,.92);display:none;align-items:center;justify-content:center;padding:3vw;z-index:50;cursor:zoom-out}
+.lb.on{display:flex}
+.lb img{max-height:92vh;max-width:100%}
+.lb button{position:absolute;top:14px;right:14px;width:48px;height:48px;border:1px solid var(--line2);background:#000;color:#fff;font-size:26px;line-height:1;cursor:pointer}
+
+@media (max-width:1000px){
+  .g4,.kpis,.stats{grid-template-columns:repeat(2,1fr)}
+  .g3,.extra{grid-template-columns:1fr}
+  .split,.price,.compare{grid-template-columns:1fr}
+  .step{grid-template-columns:1fr;gap:8px}
+  .step .when{text-align:left}
+  .cover .for{grid-template-columns:1fr}
+}
+@media (max-width:640px){
+  body{font-size:16px}
+  .g2{grid-template-columns:1fr}
+  .top img{width:130px}
+  .top .by{font-size:12px}
+  .author{grid-template-columns:1fr}
+  .author .ph{max-width:260px}
+  .split .ph{min-height:240px}
+  .kpi{padding:18px}
+  .btn{width:100%}
+  table{min-width:0;font-size:14px}
+  th,td{padding:12px 10px}
+  th{font-size:11px}
+  td small{display:none}
+  .grid.photos{grid-template-columns:repeat(3,1fr);gap:6px}
+}
+</style>
+</head>
+<body>
+
+<header class="top">
+  <div class="wrap">
+    <img src="img/logo-mds.svg" alt="MDS – Minsk Detailing Studio">
+    <div class="by">Deford · Артём Галимов<br>12.11.2026</div>
+  </div>
+</header>
+
+<main>
+<!-- 1. Обложка -->
+<section class="cover">
+  <div class="wrap">
+    <span class="tag">Предложение для MDS</span>
+    <h1>Переносим mds.by с Тильды на код и выводим каждую услугу <span class="y">в поиск Минска</span></h1>
+    <div class="for">
+      <p>Дизайн остаётся вашим. Меняется то, что под ним: страниц столько, сколько есть спроса, своя админка с заявками и аналитикой, ответы в нейросетях.</p>
+      <a class="btn fill" href="#price">Стоимость и план →</a>
+    </div>
+    <div class="voice">
+      <span>Коротко голосом – чуть больше минуты</span>
+      <audio controls preload="none" src="itog.mp3"></audio>
+    </div>
+    <div class="kpis">
+      <div class="kpi"><b>28 713</b><span>горячих поисков в месяц по детейлингу в Минске</span></div>
+      <div class="kpi"><b>≈138</b><span>клиентов в месяц, которых можно забрать из поиска</span></div>
+      <div class="kpi"><b>30 000 ₽</b><span>перенос сайта на код, разово</span></div>
+      <div class="kpi"><b>35 000 ₽</b><span>в месяц – ведение и новые страницы</span></div>
+    </div>
+  </div>
+</section>
+<div class="stripe" aria-hidden="true"></div>
+
+<!-- 2. Что уже готово -->
+<section>
+  <div class="wrap">
+    <span class="tag">Что уже сделано</span>
+    <h2>Копия mds.by на коде уже собрана – можно открыть и полистать</h2>
+    <p class="lead">Тот же дизайн, те же тексты и фото, все страницы услуг. Разница в том, что теперь сайт не упирается в возможности конструктора: меню, блоки, фильтры и любые технические вещи делаем так, как нужно бизнесу, а не как разрешает Тильда.</p>
+    <div class="split">
+      <div class="ph"><img src="img/range.webp" alt="Range Rover в студии MDS" loading="lazy"></div>
+      <div class="grid" style="margin-top:0">
+        <div class="card"><span class="num">01</span><h3>Дизайн – ваш</h3><p>Ничего не перерисовываем ради переезда. Клиенты увидят привычный сайт.</p></div>
+        <div class="card"><span class="num">02</span><h3>Ограничений почти нет</h3><p>Сотни страниц с правильными адресами, блог, калькуляторы, конфигураторы – всё, что на Тильде делалось обходными путями или не делалось вовсе.</p></div>
+        <div class="card"><span class="num">03</span><h3>Переезд без потерь в поиске</h3><p>Старые адреса переводим на новые 301-й переадресацией, чтобы накопленные позиции не пропали.</p></div>
+        <a class="btn" href="https://deford2027.github.io/mds-by/" target="_blank" rel="noopener">Открыть новый mds.by →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 3. Спрос -->
+<section>
+  <div class="wrap">
+    <span class="tag">Спрос в Минске</span>
+    <h2>Каждый месяц <span class="y">28 713 раз</span> в Минске ищут то, что вы делаете</h2>
+    <p class="lead">Это только «горячие» запросы – с городом, ценой, «где сделать». Курсы, «своими руками» и покупку материалов мы убрали. Чтобы забрать эти заявки, под каждую услугу нужна своя сильная страница: с ценами, сроками, примерами работ.</p>
+    <div class="tbl-wrap">
+      <table>
+        <thead><tr><th>Услуга</th><th class="n">Ищут<br>в месяц</th><th class="n">Мимо вас,<br>BYN/мес</th></tr></thead>
+        <tbody>
+          <tr><td>Антикор<small>антикор минск · антикор днища · антикор авто</small><div class="bar" style="width:100%"></div></td><td class="n">9 586</td><td class="n">31 тыс.</td></tr>
+          <tr><td>Тонировка<small>тонировка минск · тонировка авто в минске · тонировка цена</small><div class="bar" style="width:51%"></div></td><td class="n">4 924</td><td class="n">5 672</td></tr>
+          <tr><td>Детейлинг (общий запрос)<small>детейлинг минск · детейлинг студия · детейлинг центр</small><div class="bar" style="width:38%"></div></td><td class="n">3 671</td><td class="n">23 тыс.</td></tr>
+          <tr><td>Оклейка плёнкой<small>оклейка авто плёнкой в минске · оклейка плёнкой цена</small><div class="bar" style="width:35%"></div></td><td class="n">3 358</td><td class="n">93 тыс.</td></tr>
+          <tr><td>Бронеплёнка<small>бронеплёнка минск · оклейка бронеплёнкой минск</small><div class="bar" style="width:23%"></div></td><td class="n">2 217</td><td class="n">19 тыс.</td></tr>
+          <tr><td>Химчистка салона<small>химчистка салона минск · химчистка салона автомобиля цена</small><div class="bar" style="width:13%"></div></td><td class="n">1 286</td><td class="n">2 160</td></tr>
+          <tr><td>Полировка кузова<small>полировка авто в минске цены · полировка кузова авто</small><div class="bar" style="width:13%"></div></td><td class="n">1 271</td><td class="n">4 118</td></tr>
+          <tr><td>Шумоизоляция<small>шумоизоляция автомобиля в минске · шумоизоляция арок</small><div class="bar" style="width:13%"></div></td><td class="n">1 234</td><td class="n">3 672</td></tr>
+          <tr><td>Восстановление и полировка фар<small>полировка фар минск · полировка фар цена</small><div class="bar" style="width:11%"></div></td><td class="n">1 064</td><td class="n">511</td></tr>
+          <tr><td>Керамика<small>покрытие керамикой авто · покрытие кузова керамикой</small><div class="bar" style="width:1%"></div></td><td class="n">102</td><td class="n">318</td></tr>
+          <tr class="sum"><td>Итого по детейлингу</td><td class="n">28 713</td><td class="n">≈184 тыс.</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="note">Спрос – Яндекс Вордстат за октябрь 2026 по Минску, Google досчитан по доле поисковиков в Беларуси. «Мимо вас» – наша оценка: половина кликов уходит на сайты, сайт в первой тройке получает около 20 % из них, 8 % звонят, 60 % приезжают; средний чек – по прайсам детейлинг-центров Минска. Это ориентир, а не обещание: точнее покажет ваша Метрика через месяц работы.</p>
+  </div>
+</section>
+
+<!-- 4. Кейс -->
+<section>
+  <div class="wrap">
+    <span class="tag">Проверили на себе</span>
+    <h2>Наш техцентр в Новосибирске: перенесли на код – и за месяц <span class="y">119 обращений</span></h2>
+    <p class="lead">EV Service – сайт техцентра по китайским автомобилям. Переехал с Тильды на код чуть больше месяца назад: домен старый, сайт новый. Сейчас на нём 351 страница – услуги, марки, модели, блог.</p>
+    <div class="stats">
+      <div class="stat"><b>582</b><span>человека за 30 дней, без роботов</span></div>
+      <div class="stat hl"><b>119</b><span>целевых действий: 28 заявок, 55 звонков, 36 сообщений</span></div>
+      <div class="stat hl"><b>16,5 %</b><span>посетителей оставляют заявку, звонят или пишут</span></div>
+      <div class="stat"><b>17,3 %</b><span>отказов – люди находят то, что искали</span></div>
+    </div>
+    <div class="grid g2">
+      <figure class="shot"><img src="img/ev-metrika.webp" alt="Метрика EV Service за месяц" loading="lazy"><figcaption><b>Метрика за месяц, 13.10–11.11.2026</b>Заявки с форм, звонки и мессенджеры считаются отдельно.</figcaption></figure>
+      <figure class="shot"><img src="img/ev-google.webp" alt="Google Search Console EV Service" loading="lazy"><figcaption><b>Google: 751 переход и 17 751 показ за месяц</b>Средняя позиция 8,1. И это пока только Google.</figcaption></figure>
+    </div>
+    <p class="note">Почему только Google: переезд совпал с аварией дата-центров Яндекса в октябре, и его обход встал. Сейчас поднимаем Яндекс отдельно – когда он догонит, цифры вырастут. Для Минска это особенно важно: там Google даёт больше половины поиска.</p>
+  </div>
+</section>
+
+<!-- 5. Админка -->
+<section>
+  <div class="wrap">
+    <span class="tag">Админка сайта</span>
+    <h2>Всё про сайт и заявки – в одном кабинете</h2>
+    <p class="lead">Такой же кабинет получит mds.by. Вы видите не просто «пришла заявка», а кто это, откуда пришёл, сколько раз заходил и что смотрел.</p>
+    <div class="grid g2">
+      <figure class="shot"><img src="img/ev-zayavki.webp" alt="Доска заявок" loading="lazy"><figcaption><b>Заявки доской</b>Новые, в работе, записан, выполнена, отказ. У каждой – источник и страница входа. Имена и телефоны клиентов на скрине скрыты.</figcaption></figure>
+      <figure class="shot"><img src="img/ev-zayavka.webp" alt="Карточка заявки" loading="lazy"><figcaption><b>Карточка заявки</b>Человек зашёл 6 раз, прежде чем оставить заявку, пришёл из поиска Google на страницу Zeekr 9X. Это видно сразу.</figcaption></figure>
+      <figure class="shot"><img src="img/ev-stranitsy.webp" alt="Дерево страниц сайта" loading="lazy"><figcaption><b>Все страницы деревом</b>Хаб услуги → марка → модель. По каждой странице – свои показы, заходы и заявки.</figcaption></figure>
+      <figure class="shot"><img src="img/ev-seo.webp" alt="Карта поискового спроса" loading="lazy"><figcaption><b>Карта спроса</b>Какие запросы закрыты страницами, а под какие страниц ещё нет.</figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<!-- 6. Нейросети -->
+<section>
+  <div class="wrap">
+    <span class="tag">Поиск и нейросети</span>
+    <h2>Клиенты всё чаще спрашивают не поисковик, а нейросеть. Наш техцентр там уже советуют</h2>
+    <p class="lead">Нейросеть советует сервис, когда на его странице есть всё, что нужно для ответа: цена, что входит, сроки, как проходит работа. Поэтому страницы услуг MDS делаем подробными – с ценами и примерами, а не «звоните, всё расскажем».</p>
+    <div class="split">
+      <figure class="shot"><img src="img/ev-neyroseti.webp" alt="Проверка ответов нейросетей" loading="lazy"><figcaption><b>Проверка нейросетей, EV Service</b>24 вопроса клиента: ChatGPT называет нас в 5 ответах, Gemini – в 5, Perplexity – в 4.</figcaption></figure>
+      <div class="grid" style="margin-top:0">
+        <div class="card"><h3>Обычный поиск</h3><p>Новая страница попадает в индекс за 1–3 недели. После этого видно, как она встала и что докрутить.</p></div>
+        <div class="card"><h3>Ответы нейросетей</h3><p>В среднем через месяц после того, как на страницах появились цены и подробности.</p></div>
+        <div class="card"><h3>Замеры</h3><p>Позиции и ответы нейросетей снимаем платными сервисами – около 1 000 ₽ за прогон. При ведении это уже заложено в работу.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 7. План -->
+<section id="plan">
+  <div class="wrap">
+    <span class="tag">Как работаем</span>
+    <h2>Сначала переезд и все страницы, потом – докрутка каждой</h2>
+    <div class="steps">
+      <div class="step"><div><h3>Переносим mds.by на код</h3><p>Дизайн как сейчас, все страницы и адреса, переадресация со старых, админка с заявками и аналитикой.</p></div><div class="when"><b>≈1 неделя</b>после старта</div></div>
+      <div class="step"><div><h3>Поднимаем страницы второго и третьего релиза</h3><p>Те, что мы с вами уже обсуждали. Смотрим аналитику спроса, решаем, что выводим первым, и выкладываем сразу пачкой – страницы начинают индексироваться.</p></div><div class="when"><b>2–3 недели</b>индексация</div></div>
+      <div class="step"><div><h3>Докручиваем каждую страницу</h3><p>Временные картинки меняем на ваши фото работ, уникализируем блоки, добавляем цены и подробности для нейросетей. Здесь понадобятся ваши фото и ответы по услугам.</p></div><div class="when"><b>первый месяц</b>ведения</div></div>
+      <div class="step"><div><h3>Ведём дальше по цифрам</h3><p>Каждую неделю – Метрика и позиции. По ним решаем, что усилить, какие страницы добавить, о чём писать в блог.</p></div><div class="when"><b>каждый месяц</b>отчёт и план</div></div>
+    </div>
+    <div class="split" style="align-items:start">
+      <figure class="shot"><img src="img/zeekr-konfigurator.webp" alt="Конфигуратор Zeekr 8X" loading="lazy"><figcaption><b>Задачи сложнее страниц тоже берём</b>Например, 3D-конфигуратор автомобиля для другого клиента. Простые и сложные задачи обсуждаем с вами и ставим в план месяца.</figcaption></figure>
+      <div class="ph" style="aspect-ratio:4/3;min-height:0"><img src="img/master2.webp" alt="Мастер MDS за работой" loading="lazy" style="object-position:center 30%"></div>
+    </div>
+  </div>
+</section>
+
+<!-- 8. Цены -->
+<section id="price">
+  <div class="wrap">
+    <span class="tag">Стоимость</span>
+    <h2>Что сколько стоит</h2>
+    <div class="price">
+      <div class="pcard">
+        <span class="per">Разово</span>
+        <h3>Перенос сайта на код</h3>
+        <div class="sum">30 000 ₽</div>
+        <ul class="list">
+          <li>Сайт целиком в вашем дизайне</li>
+          <li>Переадресация старых адресов, чтобы не потерять позиции</li>
+          <li>Админка: страницы, заявки, Метрика</li>
+          <li>Цена для тех, кому мы уже делали сайт</li>
+        </ul>
+      </div>
+      <div class="pcard main">
+        <span class="per">Каждый месяц</span>
+        <h3>Ведение и выкладка страниц</h3>
+        <div class="sum">35 000 ₽ <small>/ мес</small></div>
+        <ul class="list">
+          <li>Новые страницы услуг под спрос Минска</li>
+          <li>Доработка страниц: фото, цены, блоки</li>
+          <li>Метрика и позиции каждую неделю</li>
+          <li>Блог и ответы для нейросетей</li>
+          <li>Не всё продвижение «от и до», но большая его часть</li>
+        </ul>
+      </div>
+    </div>
+    <div class="extra">
+      <div><span>Дополнительно · разово</span><b>15 000 ₽</b><p>Аудит ссылок: что на вас уже ссылается, где выгодно размещаться, план закупки.</p></div>
+      <div><span>Дополнительно · в месяц</span><b>10 000 ₽</b><p>Работа со ссылками и картами по плану после аудита.</p></div>
+      <div><span>Бюджет на площадки</span><b>по плану</b><p>Если найдём платные площадки, бюджет на них – отдельно, согласуем заранее.</p></div>
+    </div>
+    <div class="compare">
+      <p><b>Как обычно.</b> SEO-специалист отдельно – 50–80 тысяч ₽ в месяц (500–1 000 $), плюс дизайнер и разработчик за каждую новую страницу.</p>
+      <p><b>У нас.</b> Тот же объём в облегчённом формате: убрали то, что не даёт заявок, оставили то, что работает, – и страницы делаем сами.</p>
+    </div>
+  </div>
+</section>
+
+<!-- 9. Старт -->
+<section>
+  <div class="wrap">
+    <span class="tag">Старт</span>
+    <h2>Начать можно на этой неделе</h2>
+    <p class="lead">Чем раньше страницы попадут в поиск, тем раньше пойдут заявки: индексация занимает 1–3 недели, и это время уже не ускорить. Переезд займёт около недели – дальше начинается работа по страницам.</p>
+    <div class="grid g3 photos">
+      <div class="ph" style="aspect-ratio:4/5"><img src="img/antikor.webp" alt="Антикор в MDS" loading="lazy"></div>
+      <div class="ph" style="aspect-ratio:4/5"><img src="img/pink.webp" alt="Оклейка плёнкой в MDS" loading="lazy"></div>
+      <div class="ph" style="aspect-ratio:4/5"><img src="img/polirovka.webp" alt="Полировка в MDS" loading="lazy"></div>
+    </div>
+  </div>
+</section>
+
+<!-- 10. Автор -->
+<section>
+  <div class="wrap author">
+    <div class="ph"><img src="img/artem.webp" alt="Артём Галимов" loading="lazy"></div>
+    <div>
+      <span class="tag">Deford</span>
+      <h2>Артём Галимов</h2>
+      <p class="lead">Основатель студии Deford. Сайты на коде, SEO и продвижение. Созвонимся и покажем админку и цифры подробнее.</p>
+      <div class="contacts">
+        <a class="btn fill" href="https://t.me/Artem1Galimov" target="_blank" rel="noopener">Написать в Telegram →</a>
+        <a class="btn" href="https://max.ru/u/f9LHodD0cOKS6C3PPXRh8eHyRKrJiSTUcpsOsnbQDl6Cp3LSE-Xu-dNig7c" target="_blank" rel="noopener">Макс</a>
+        <a class="btn" href="tel:+79537777891">+7 953 777-78-91</a>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+<p class="foot">Deford · Предложение подготовлено 12.11.2026 для MDS – Minsk Detailing Studio</p>
+
+<div class="lb" id="lb" role="dialog" aria-label="Скрин"><button type="button" aria-label="Закрыть">×</button><img alt=""></div>
+<script>
+var lb=document.getElementById('lb');
+document.querySelectorAll('.shot img').forEach(function(i){i.addEventListener('click',function(){lb.querySelector('img').src=i.src;lb.querySelector('img').alt=i.alt;lb.classList.add('on')})});
+lb.addEventListener('click',function(){lb.classList.remove('on')});
+document.addEventListener('keydown',function(e){if(e.key==='Escape')lb.classList.remove('on')});
+</script>
+</body>
+</html>
