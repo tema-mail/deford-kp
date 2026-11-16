@@ -81,27 +81,6 @@ html:not([data-theme=dark]) .top{background:rgba(243,239,233,.88);border-bottom-
 .why{display:grid;gap:14px}
 @media(min-width:900px){.why{grid-template-columns:repeat(3,1fr)}}
 .why .tile .big{color:var(--accent)}
-.math{margin-top:18px;display:grid;gap:14px}
-@media(min-width:900px){.math{grid-template-columns:1.1fr 1fr}}
-.car{position:relative;border-radius:var(--r);overflow:hidden;min-height:320px;background:#111 center/cover no-repeat;display:flex;align-items:flex-end;color:#fff}
-.car:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,0) 30%,rgba(0,0,0,.85) 100%)}
-.car div{position:relative;z-index:1;padding:24px}
-.car .big{font:400 clamp(40px,5vw,60px)/1 var(--head)}
-.car p{margin:6px 0 0;color:#d8d2ca;font-size:15px;max-width:460px}
-.calc{background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:24px 22px}
-.calc h3{margin-bottom:6px}
-.calc .row{margin:18px 0 0}
-.calc label{display:flex;justify-content:space-between;gap:12px;font-size:14px;color:var(--mute);margin-bottom:8px}
-.calc label output{color:var(--ink);font-weight:600;white-space:nowrap}
-.calc input[type=range]{width:100%;accent-color:#c49e7b;height:28px}
-.calc select{width:100%;min-height:46px;border-radius:12px;border:1px solid var(--line);background:var(--bg);color:var(--ink);font:500 15px var(--body);padding:0 12px}
-.res{margin-top:20px;display:grid;grid-template-columns:1fr 1fr;gap:10px}
-.res div{background:var(--bg2);border-radius:14px;padding:14px}
-.res b{display:block;font:400 30px/1.05 var(--head)}
-.res span{font-size:13px;color:var(--mute)}
-.res .wide{grid-column:1/-1;background:var(--bronze);color:#fff}
-.res .wide span{color:#fff}
-.res .wide b{font-size:clamp(22px,6vw,30px)}
 .fine{font-size:13px;color:var(--mute);margin:14px 0 0}
 
 /* спрос */
@@ -155,6 +134,7 @@ html:not([data-theme=dark]) .top{background:rgba(243,239,233,.88);border-bottom-
 .stage-h p{margin:0;color:var(--mute);flex:0 0 100%;max-width:none}
 .plans{display:grid;gap:16px}
 @media(min-width:860px){.plans{grid-template-columns:1fr 1fr}}
+@media(min-width:980px){.plans.three{grid-template-columns:repeat(3,1fr)}}
 .plan{background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:26px 24px;display:flex;flex-direction:column}
 .plan.main{border:1px solid #c49e7b;box-shadow:0 0 0 1px rgba(196,158,123,.35) inset}
 .plan .pt{font:500 12px/1 var(--body);letter-spacing:.16em;text-transform:uppercase;color:var(--beige)}
@@ -210,7 +190,6 @@ footer{padding:36px 0 80px;color:var(--mute);font-size:13px;border-top:1px solid
       <a href="#zachem">Зачем платить</a>
       <a href="#spros">Спрос</a>
       <a href="#chto-poluchite">Что получите</a>
-      <a href="#keys">Кейс</a>
       <a href="#etapy">Этапы и цены</a>
     </nav>
     <a class="btn" href="#start" style="min-height:40px;padding:0 18px;font-size:13px">Обсудить</a>
@@ -224,7 +203,7 @@ footer{padding:36px 0 80px;color:var(--mute);font-size:13px;border-top:1px solid
     <h1>Сайт, который продаёт машины из поиска</h1>
     <p class="sub">Переводим 1of1.one на код и делаем многостраничным: своя страница у каждой марки, модели и машины. Покупатель, который ищет «купить Гелендваген», попадает к вам, а не на Авито. Окупается одной сделкой.</p>
     <div class="voice">
-      <div><b>Главное за минуту</b><br><span>Послушайте голосом – 1 мин 13 с</span></div>
+      <div><b>Главное за минуту</b><br><span>Послушайте голосом – 1 мин 17 с</span></div>
       <audio controls preload="none" src="itog.mp3"></audio>
     </div>
     <div class="btns">
@@ -246,19 +225,19 @@ footer{padding:36px 0 80px;color:var(--mute);font-size:13px;border-top:1px solid
         <p>запросов в месяц в Москве и области на марки и модели из вашего каталога. Сайт на первой странице – в 1 запросе из 70 проверенных.</p>
       </div>
       <div class="tile">
-        <span class="lab">Через полгода</span>
-        <span class="big">300+</span>
-        <p>страниц марок, моделей, машин «под заказ» и стран доставки. Сайт в Яндексе, Google и в ответах нейросетей, заявки идут из поиска, а не только с рекламы.</p>
+        <span class="lab">После запуска</span>
+        <span class="big">50+</span>
+        <p>страниц марок, моделей, машин «под заказ» и стран доставки, каждая машина – своя страница. Сайт в Яндексе, Google и в ответах нейросетей, заявки идут из поиска, а не только с рекламы.</p>
       </div>
       <div class="tile">
         <span class="lab">Предложение</span>
-        <span class="big">70–100 тыс. ₽</span>
-        <p>разово – переезд на код и многостраничный сайт. Дальше ведение от 10 000 до 50 000 ₽ в месяц – по задаче.</p>
+        <span class="big">85 000 ₽</span>
+        <p>разово за два этапа: перенос на код с админкой – 35 000, дизайн и до 50 страниц – 50 000. Статьи – по желанию, от 10 000 ₽ в месяц.</p>
       </div>
       <div class="tile hl">
         <span class="lab">Окупаемость</span>
         <span class="big">1 сделка</span>
-        <p>Год работы с нами – меньше 3 % цены одной средней машины из вашего каталога.</p>
+        <p>Оба этапа стоят меньше, чем приносит одна проданная машина из вашего каталога.</p>
       </div>
     </div>
   </div>
@@ -288,51 +267,6 @@ footer{padding:36px 0 80px;color:var(--mute);font-size:13px;border-top:1px solid
       </div>
     </div>
 
-    <div class="math">
-      <div class="car" style="background-image:url(img/puro.webp)">
-        <div>
-          <span class="kick" style="color:#dcd0c2;margin-bottom:10px">Средняя машина под заказ в вашем каталоге</span>
-          <span class="big">24,4 млн ₽</span>
-          <p>Средняя цена 146 машин раздела «Под заказ», в наличии – 9,9 млн ₽ (каталог 1of1.one на 16.11.2026). Год работы с нами – от 190 000 до 700 000 ₽, то есть меньше 3 % цены одной такой машины.</p>
-        </div>
-      </div>
-      <div class="calc" id="calc">
-        <h3>Посчитайте сами</h3>
-        <p class="fine" style="margin-top:4px">Поставьте свои цифры – страница пересчитает. Всё, что ниже, – пример, а не обещание.</p>
-        <div class="row">
-          <label for="c-plan">Набор работ на год</label>
-          <select id="c-plan">
-            <option value="190000">Старт + наполнение – 190 000 ₽ за год</option>
-            <option value="220000">Полный + наполнение – 220 000 ₽ за год</option>
-            <option value="700000" selected>Полный + продвижение – 700 000 ₽ за год</option>
-          </select>
-        </div>
-        <div class="row">
-          <label for="c-dohod">Ваш доход с одной проданной машины <output id="o-dohod"></output></label>
-          <input id="c-dohod" type="range" min="100000" max="3000000" step="50000" value="500000">
-        </div>
-        <div class="row">
-          <label for="c-dolya">Какую долю поиска заберёт сайт <output id="o-dolya"></output></label>
-          <input id="c-dolya" type="range" min="0.5" max="6" step="0.5" value="2">
-        </div>
-        <div class="row">
-          <label for="c-zayavki">Из посетителей оставят заявку <output id="o-zayavki"></output></label>
-          <input id="c-zayavki" type="range" min="0.5" max="5" step="0.5" value="1">
-        </div>
-        <div class="row">
-          <label for="c-sdelki">Из заявок купят <output id="o-sdelki"></output></label>
-          <input id="c-sdelki" type="range" min="1" max="20" step="1" value="5">
-        </div>
-        <div class="res">
-          <div><b id="r-vizity">–</b><span>посетителей из поиска в месяц</span></div>
-          <div><b id="r-zayavki">–</b><span>заявок в месяц</span></div>
-          <div><b id="r-sdelki">–</b><span>сделок в год с сайта</span></div>
-          <div><b id="r-okup">–</b><span>сделок, чтобы окупить год</span></div>
-          <div class="wide"><b id="r-itog">–</b><span id="r-itog-t">доход за год против стоимости работ</span></div>
-        </div>
-        <p class="fine">Основа – 60 712 запросов в месяц на ваши марки и модели в Москве и области (Wordstat, 30 дней до 12.11.2026), без запросов «под заказ» и без Google. Доля поиска, заявки и сделки – ваши допущения.</p>
-      </div>
-    </div>
   </div>
 </section>
 
@@ -381,18 +315,6 @@ footer{padding:36px 0 80px;color:var(--mute);font-size:13px;border-top:1px solid
         <div><span class="tag">Каждая машина</span><h3>Машина – отдельная страница</h3><p>Заголовок «купить … в Москве», цена, год, мощность, 10+ фото, условия покупки с НДС, в лизинг и в трейд-ин, кнопки «Записаться на просмотр» и «Написать менеджеру».</p></div>
       </div>
       <div class="shot">
-        <button type="button" data-full="img/ev-katalog.webp"><img src="img/ev-katalog.webp" alt="Каталог Evolution Car с фильтром по странам" loading="lazy"></button>
-        <div><span class="tag">Под заказ</span><h3>Каталог по странам и наличию</h3><p>«Из Европы», «из ОАЭ», «из США», «в наличии», «под заказ» – и у каждого фильтра своя страница. В Москве ищут «авто из Европы» 8 210 раз в месяц, «из Германии» – 3 831.</p></div>
-      </div>
-      <div class="shot">
-        <button type="button" data-full="img/ev-zhivye-foto.webp"><img src="img/ev-zhivye-foto.webp" alt="Ещё 15 живых фото – по заявке" loading="lazy"></button>
-        <div><span class="tag">Заявки</span><h3>Живые фото и сравнение</h3><p>Часть фото открывается после контакта – менеджер присылает живые кадры машины. Сравнение двух-трёх машин в один клик. Человек оставляет заявку, а не уходит смотреть дальше.</p></div>
-      </div>
-      <div class="shot">
-        <button type="button" data-full="img/3d-konfigurator.webp"><img src="img/3d-konfigurator.webp" alt="3D-конфигуратор Zeekr 8X" loading="lazy"></button>
-        <div><span class="tag">По желанию</span><h3>Конфигуратор и 3D</h3><p>Для машин под заказ: цвет кузова, диски, салон, экраны – цена пересчитывается сразу. Машину можно покрутить в 3D. Подходит, когда везёте новые машины в разных комплектациях.</p></div>
-      </div>
-      <div class="shot">
         <button type="button" data-full="img/ev-metrika.webp"><img src="img/ev-metrika.webp" alt="Админка: метрика и каналы" loading="lazy"></button>
         <div><span class="tag">Для вас</span><h3>Админка с цифрами</h3><p>Заявки списком, звонки и мессенджеры, откуда пришёл человек, какие страницы продают, позиции в Яндексе и Google, упоминания в нейросетях. Всё в одном окне, без отдельных кабинетов.</p></div>
       </div>
@@ -400,127 +322,92 @@ footer{padding:36px 0 80px;color:var(--mute);font-size:13px;border-top:1px solid
   </div>
 </section>
 
-<section id="keys">
-  <div class="wrap">
-    <span class="kick">Кейс</span>
-    <h2>Evolution: с Тильды на код за месяц</h2>
-    <p class="lead">Сервис китайских автомобилей в Новосибирске. До октября 2026 – сайт на Тильде из одной посадочной страницы. В октябре переехали на код: 351 страница – марки, услуги, статьи. Сравнение – по их админке.</p>
-    <div class="case">
-      <div class="tile"><span class="lab">Обращения в месяц</span><span class="big">132</span><span class="was">было <s>13</s> в сентябре</span></div>
-      <div class="tile"><span class="lab">Визиты в месяц</span><span class="big">821</span><span class="was">было <s>80</s> в сентябре</span></div>
-      <div class="tile"><span class="lab">Клики из Google</span><span class="big">912</span><span class="was">за месяц, 21 403 показа</span></div>
-      <div class="tile"><span class="lab">Нейросети</span><span class="big">5 из 24</span><span class="was">ответов ChatGPT называют сервис</span></div>
-    </div>
-    <div class="gal case-shots">
-      <div class="shot">
-        <button type="button" data-full="img/ev-tochka-a.webp"><img src="img/ev-tochka-a.webp" alt="Точка А – сентябрь 2026" loading="lazy"></button>
-        <div><h3>Было: сентябрь, Тильда</h3><p>80 визитов, 15 из поиска, 1 заявка с формы и 12 звонков и сообщений.</p></div>
-      </div>
-      <div class="shot">
-        <button type="button" data-full="img/ev-metrika.webp"><img src="img/ev-metrika.webp" alt="Метрика 17.10–15.11.2026" loading="lazy"></button>
-        <div><h3>Стало: 17.10–15.11, код</h3><p>821 визит и 132 обращения: 30 заявок с форм, 61 звонок, 41 сообщение в Telegram и MAX.</p></div>
-      </div>
-    </div>
-    <p class="fine">Другая ниша – сервис, а не продажа машин, поэтому цифры не переносим один к одному. Переносим подход: страница под каждый запрос, скорость, аналитика и работа каждый месяц.</p>
-  </div>
-</section>
-
 <section id="etapy">
   <div class="wrap">
     <span class="kick">Этапы и стоимость</span>
     <h2>Идём по шагам – платите за результат шага</h2>
-    <p class="lead">Сначала основа, без которой поиск не работает. Потом – рост каждый месяц. Дополнительные модули – когда понадобятся.</p>
+    <p class="lead">Сначала основа, без которой поиск не работает. Потом – страницы под спрос. Дальше статьи – пишем мы или ведёте сами на нашем AI SEO заводе.</p>
 
     <div class="stage">
-      <div class="stage-h"><span class="num">Этап 1</span><h3>Переезд на код и многостраничный сайт</h3><p>Разовая работа. Сайт остаётся на вашем домене, старые адреса машин перенаправляем на новые – ничего не теряется.</p></div>
+      <div class="stage-h"><span class="num">Этап 1</span><h3>Перенос на код</h3><p>Сайт остаётся на вашем домене, старые адреса машин перенаправляем на новые – ничего не теряется.</p></div>
       <div class="plans">
         <div class="plan">
-          <span class="pt">Старт</span>
-          <h3>Перенос с ростом</h3>
-          <div class="price">70 000 ₽</div>
+          <span class="pt">Основа</span>
+          <h3>Перенос, админка, карточки</h3>
+          <div class="price">35 000 ₽</div>
           <div class="per">разово</div>
           <ul>
-            <li>Перенос сайта на код в вашем стиле</li>
+            <li>Перенос сайта с Тильды на код в вашем стиле</li>
+            <li>Админка: заявки, звонки, мессенджеры, метрика по каждой странице</li>
             <li>Каждая машина – отдельная страница с ценой, фото и «купить в Москве»</li>
-            <li>Страницы 10 главных марок по спросу</li>
-            <li>Описания и заголовки карточек – живым текстом</li>
-            <li>Скорость 90+ на телефоне</li>
-            <li>Админка: заявки, звонки, мессенджеры, метрика</li>
+            <li>Описания и заголовки карточек – живым текстом вместо шаблона</li>
             <li>Основа поиска: адреса, разметка, карта сайта, перенаправления</li>
           </ul>
-          <div class="for">Если важно быстро выйти в поиск и не менять дизайн.</div>
+          <div class="for">После этапа 1 каталог виден поисковикам, а каждая машина может выйти в выдачу.</div>
         </div>
         <div class="plan main">
-          <span class="pt">Полный · рекомендуем</span>
-          <h3>Сайт под весь спрос</h3>
-          <div class="price">100 000 ₽</div>
+          <span class="pt">Этап 2 · рост</span>
+          <h3>Дизайн и страницы под спрос</h3>
+          <div class="price">50 000 ₽</div>
           <div class="per">разово</div>
           <ul>
-            <li class="plus">Всё из «Старта»</li>
-            <li>Новый дизайн в вашем стиле – покажем 2–3 экрана до старта</li>
-            <li>Страницы марок и моделей: Гелендваген, Lamborghini, Ferrari, Maybach, Bentley, Rolls-Royce и дальше по спросу</li>
-            <li>Страницы «привезём под заказ»: Range Rover, BMW X5 и X7, Cayenne, Defender</li>
-            <li>Страницы стран: Европа, Германия, США, ОАЭ</li>
-            <li>Сравнение машин и живые фото по заявке</li>
-            <li>Позиции в Яндексе и Google и упоминания в нейросетях – в админке</li>
+            <li>Доработка дизайна – покажем 2–3 экрана до старта</li>
+            <li>Доработка карточек авто: галерея, характеристики, условия покупки, кнопки «Записаться на просмотр» и «Написать менеджеру»</li>
+            <li>Публикация до 50 страниц: марки и модели (Гелендваген, Lamborghini, Ferrari, Maybach, Bentley, Rolls-Royce), «привезём под заказ» (Range Rover, BMW X5, Cayenne, Defender), страны доставки</li>
           </ul>
-          <div class="for">Если хотите забрать и спрос на ваш каталог, и спрос «под заказ».</div>
+          <div class="for">Страницы – по спросу из разбора: сначала то, что ищут чаще всего.</div>
         </div>
       </div>
     </div>
 
     <div class="stage">
-      <div class="stage-h"><span class="num">Этап 2</span><h3>Ведение и рост</h3><p>Каждый месяц. Страницы выходят в поиск не сразу – рост набирается от месяца к месяцу, поэтому работаем по плану и отчитываемся цифрами.</p></div>
-      <div class="plans">
+      <div class="stage-h"><span class="num">Этап 3</span><h3>По желанию – статьи по спросу</h3><p>Статьи отвечают на вопросы покупателей и приводят людей из Яндекса, Google и нейросетей. Выбирайте, кто их ведёт.</p></div>
+      <div class="plans three">
         <div class="plan">
-          <span class="pt">Наполнение</span>
-          <h3>Сайт живой</h3>
+          <span class="pt">Ведём мы</span>
+          <h3>Статьи под ключ</h3>
           <div class="price">10 000 ₽</div>
           <div class="per">в месяц</div>
           <ul>
-            <li>Новые машины и снятые с продажи – в каталоге вовремя</li>
-            <li>Блог: статьи о моделях, пригоне, оформлении</li>
-            <li>Мелкие правки сайта</li>
-            <li>Отчёт раз в месяц</li>
+            <li>Сами подбираем темы по спросу</li>
+            <li>Пишем и выкладываем статьи на ваш сайт</li>
+            <li>Вам – только читать отчёт</li>
           </ul>
-          <div class="for">Чтобы сайт не застывал после запуска.</div>
         </div>
-        <div class="plan main">
-          <span class="pt">Продвижение</span>
-          <h3>Полноценное SEO</h3>
-          <div class="price">50 000 ₽</div>
-          <div class="per">в месяц</div>
+        <div class="plan">
+          <span class="pt">Ведёте вы</span>
+          <h3>AI SEO завод</h3>
+          <div class="price">30 000 ₽</div>
+          <div class="per">разово · поддержка до 5 000 ₽/мес</div>
           <ul>
-            <li class="plus">Всё из «Наполнения»</li>
-            <li>10–50 новых страниц в месяц – марки, модели, страны, по спросу</li>
-            <li>30–100 статей в месяц под вопросы покупателей</li>
-            <li>Позиции в Яндексе и Google, доработка того, что уже вышло</li>
-            <li>Ответы нейросетей: чтобы Алиса и ChatGPT называли вас</li>
-            <li>План и отчёт каждый месяц: что сделали, что выросло, что дальше</li>
+            <li>Передаём вам AI SEO завод: он пишет статьи по спросу</li>
+            <li>Вы согласуете и выкладываете сами</li>
+            <li>Обновления, сервисы и поддержка – до 5 000 ₽ в месяц</li>
           </ul>
-          <div class="for">Чтобы поиск стал вторым каналом заявок рядом с рекламой.</div>
         </div>
-      </div>
-      <p class="fine">Между 10 000 и 50 000 ₽ собираем набор под задачу – например, только страницы моделей без блога.</p>
-    </div>
-
-    <div class="stage">
-      <div class="stage-h"><span class="num">Этап 3</span><h3>По желанию</h3><p>Цена – после брифа, зависит от объёма.</p></div>
-      <div class="opts">
-        <div class="tile"><span class="lab">Личный кабинет клиента</span><h3>Статусы заказа</h3><p>Вы обещаете на сайте персонального менеджера, статусы по этапам и трекинг. Кабинет показывает клиенту, где его машина: контракт, доставка, таможня, выдача.</p></div>
-        <div class="tile"><span class="lab">Конфигуратор и 3D</span><h3>Собрать машину</h3><p>Цвет, диски, салон, опции и итоговая цена – для новых машин под заказ. Можно с 3D-моделью.</p></div>
-        <div class="tile"><span class="lab">Внешние каталоги</span><h3>Подключить площадки</h3><p>Подтягивать машины из каталогов и аукционов Европы, Кореи, Китая, ОАЭ – сайт растёт без ручной работы.</p></div>
+        <div class="plan">
+          <span class="pt">Ведёте вы, настроим мы</span>
+          <h3>AI SEO завод с настройкой</h3>
+          <div class="price">50 000 ₽</div>
+          <div class="per">разово · поддержка до 5 000 ₽/мес</div>
+          <ul>
+            <li>Передаём AI SEO завод</li>
+            <li>Настраиваем ведение под ваш сайт и спрос</li>
+            <li>Обновления, сервисы и поддержка – до 5 000 ₽ в месяц</li>
+          </ul>
+        </div>
       </div>
     </div>
 
     <div class="year">
       <div class="scroll">
       <table>
-        <thead><tr><th>Вариант на первый год</th><th class="r">Этап 1</th><th class="r">Этап 2 × 12 мес</th><th class="r">Итого за год</th><th class="r">Доля одной машины за 24,4 млн</th></tr></thead>
+        <thead><tr><th>Вариант</th><th class="r">Разово</th><th class="r">В месяц</th><th class="r">Первый год</th></tr></thead>
         <tbody>
-          <tr><td>Старт + наполнение</td><td class="r">70 000 ₽</td><td class="r">120 000 ₽</td><td class="r"><b>190 000 ₽</b></td><td class="r">0,8 %</td></tr>
-          <tr><td>Полный + наполнение</td><td class="r">100 000 ₽</td><td class="r">120 000 ₽</td><td class="r"><b>220 000 ₽</b></td><td class="r">0,9 %</td></tr>
-          <tr><td>Полный + продвижение</td><td class="r">100 000 ₽</td><td class="r">600 000 ₽</td><td class="r"><b>700 000 ₽</b></td><td class="r">2,9 %</td></tr>
+          <tr><td>Этапы 1 и 2</td><td class="r">85 000 ₽</td><td class="r">–</td><td class="r"><b>85 000 ₽</b></td></tr>
+          <tr><td>Этапы 1 и 2 + AI SEO завод</td><td class="r">115 000 ₽</td><td class="r">до 5 000 ₽</td><td class="r"><b>до 175 000 ₽</b></td></tr>
+          <tr><td>Этапы 1 и 2 + завод с настройкой</td><td class="r">135 000 ₽</td><td class="r">до 5 000 ₽</td><td class="r"><b>до 195 000 ₽</b></td></tr>
+          <tr><td>Этапы 1 и 2 + статьи под ключ</td><td class="r">85 000 ₽</td><td class="r">10 000 ₽</td><td class="r"><b>205 000 ₽</b></td></tr>
         </tbody>
       </table>
       </div>
@@ -535,7 +422,7 @@ footer{padding:36px 0 80px;color:var(--mute);font-size:13px;border-top:1px solid
     <div class="steps">
       <div class="tile"><h3>Созвон 30 минут</h3><p>Какие машины, откуда везёте, что важнее продавать – наличие или под заказ. После него – точный план страниц.</p></div>
       <div class="tile"><h3>2–3 экрана дизайна</h3><p>Если сомневаетесь в дизайне – отрисуем главную, страницу марки и машины в вашем стиле, до решения.</p></div>
-      <div class="tile"><h3>Старт этапа 1</h3><p>Неделя 1 – описания и каталог в коде. Недели 2–4 – страницы марок и моделей. Месяц 2 – страницы «под заказ». Точные сроки – после брифа.</p></div>
+      <div class="tile"><h3>Старт этапа 1</h3><p>Этап 1 – перенос, админка, карточки машин. Этап 2 – дизайн и до 50 страниц под спрос. Точные сроки – после брифа.</p></div>
     </div>
   </div>
 </section>
@@ -554,14 +441,13 @@ footer{padding:36px 0 80px;color:var(--mute);font-size:13px;border-top:1px solid
       <div class="links">
         <a href="https://tema-mail.github.io/razbory/1of1-69594d40/" target="_blank" rel="noopener">Разбор спроса 1of1.one</a>
         <a href="https://tema-mail.github.io/community-dealer/" target="_blank" rel="noopener">Концепт салона на коде</a>
-        <a href="https://evolutioncar.by/catalog/" target="_blank" rel="noopener">Каталог Evolution Car</a>
       </div>
     </div>
   </div>
 </section>
 
 <footer>
-  <div class="wrap">Deford · предложение для One of One (1of1.one) · 16.11.2026. Цифры спроса – Wordstat, Москва и область, 30 дней до 12.11.2026; цены каталога – 1of1.one на 16.11.2026; скорость – PageSpeed Insights 16.11.2026; кейс – админка evolutioncarservice.ru.</div>
+  <div class="wrap">Deford · предложение для One of One (1of1.one) · 16.11.2026. Цифры спроса – Wordstat, Москва и область, 30 дней до 12.11.2026; цены каталога – 1of1.one на 16.11.2026; скорость – PageSpeed Insights 16.11.2026.</div>
 </footer>
 
 <div id="lb" role="dialog" aria-modal="true" aria-label="Снимок экрана"><button type="button" aria-label="Закрыть">×</button><img alt=""></div>
@@ -572,18 +458,6 @@ var SPROS=[["Mercedes G-Класс (Гелендваген)",9481,1,"21 маши
 (function(){var el=document.getElementById('bars'),mx=SPROS[0][1],h='';
 SPROS.forEach(function(r){h+='<div class="bar'+(r[2]?'':' no')+'"><span>'+r[0]+(r[3]?'<em>'+r[3]+'</em>':'<em>под заказ</em>')+'</span><i style="width:'+Math.max(4,r[1]/mx*100).toFixed(1)+'%"></i><b>'+r[1].toLocaleString('ru-RU')+'</b></div>'});
 el.innerHTML=h})();
-
-// калькулятор
-(function(){var SP=60712;function $(i){return document.getElementById(i)}
-function rub(n){return Math.round(n).toLocaleString('ru-RU')+' ₽'}
-function num(n,d){return n.toLocaleString('ru-RU',{maximumFractionDigits:d||0})}
-function calc(){var plan=+$('c-plan').value,doh=+$('c-dohod').value,dol=+$('c-dolya').value,zay=+$('c-zayavki').value,sd=+$('c-sdelki').value;
-$('o-dohod').textContent=rub(doh);$('o-dolya').textContent=num(dol,1)+' %';$('o-zayavki').textContent=num(zay,1)+' %';$('o-sdelki').textContent='1 из '+Math.round(100/sd);
-var viz=SP*dol/100,z=viz*zay/100,s=z*sd/100*12,ok=plan/doh,inc=s*doh;
-$('r-vizity').textContent=num(viz);$('r-zayavki').textContent=num(z,1);$('r-sdelki').textContent=num(s,1);$('r-okup').textContent=num(Math.ceil(ok*10)/10,1);
-$('r-itog').textContent=rub(inc)+' / '+rub(plan);
-$('r-itog-t').textContent=inc>=plan?'доход с сайта за год против стоимости работ – окупается в '+num(inc/plan,1)+' раза':'доход за год против стоимости работ – при этих допущениях не окупается за первый год';}
-['c-plan','c-dohod','c-dolya','c-zayavki','c-sdelki'].forEach(function(i){$(i).addEventListener('input',calc)});calc()})();
 
 // лайтбокс
 (function(){var lb=document.getElementById('lb'),im=lb.querySelector('img');
