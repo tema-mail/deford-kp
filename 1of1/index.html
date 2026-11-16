@@ -1,0 +1,599 @@
+<!doctype html>
+<html lang="ru" data-theme="dark">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>One of One – сайт, который продаёт из поиска</title>
+<meta name="description" content="Коммерческое предложение Deford для One of One: переезд 1of1.one на код, страницы марок и моделей, ведение и продвижение. Этапы и стоимость.">
+<meta name="robots" content="noindex, nofollow">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Forum&family=Inter:wght@300;400;500;600;700&display=swap&subset=cyrillic" rel="stylesheet">
+<script>(function(){var t;try{t=localStorage.getItem('tema')}catch(e){}
+if(!t){t='dark'}
+document.documentElement.setAttribute('data-theme',t)})();</script>
+<style>
+:root{
+  --bg:#f3efe9;--bg2:#ebe5dc;--card:#ffffff;--ink:#141311;--mute:#5f5a54;--line:#ddd4c8;
+  --beige:#8a6a4c;--accent:#b7865c;--ok:#2f7d4f;--bad:#b3452f;
+  --bronze:linear-gradient(225deg,#efe8e2 0%,#c49e7b 36%,#6d4120 72%,#131311 100%);
+  --r:22px;--w:1200px;
+  --head:'Forum','Times New Roman',serif;--body:'Inter',Arial,sans-serif;
+}
+html[data-theme=dark]{color-scheme:dark;
+  --bg:#0b0b0b;--bg2:#121212;--card:#171716;--ink:#ffffff;--mute:#bcbcbc;--line:#2a2927;
+  --beige:#dcd0c2;--accent:#c49e7b;--ok:#6fcf97;--bad:#ff8562;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 16px/1.6 var(--body);-webkit-font-smoothing:antialiased}
+img{max-width:100%;display:block}
+a{color:var(--accent)}
+.wrap{max-width:var(--w);margin:0 auto;padding:0 16px}
+@media(min-width:720px){.wrap{padding:0 32px}}
+h1,h2,h3{font-family:var(--head);font-weight:400;text-transform:uppercase;letter-spacing:.01em;line-height:1.05;margin:0}
+h2{font-size:clamp(30px,4.6vw,54px);margin-bottom:14px}
+h3{font-size:clamp(20px,2.2vw,26px);line-height:1.15}
+.lead{color:var(--mute);font-size:clamp(16px,1.6vw,19px);max-width:760px;margin:0 0 34px}
+.kick{font:500 12px/1 var(--body);letter-spacing:.18em;text-transform:uppercase;color:var(--beige);margin-bottom:16px;display:block}
+section{padding:clamp(64px,9vw,120px) 0;border-top:1px solid var(--line)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:52px;padding:0 28px;border-radius:30px;font:600 14px/1 var(--body);text-decoration:none;color:#fff;background:var(--bronze);border:0;cursor:pointer}
+.btn.ghost{background:transparent;border:1px solid currentColor;color:var(--ink)}
+.btns{display:flex;flex-wrap:wrap;gap:12px}
+
+/* шапка */
+.top{position:sticky;top:0;z-index:50;background:rgba(11,11,11,.82);backdrop-filter:blur(10px);border-bottom:1px solid rgba(255,255,255,.08)}
+html:not([data-theme=dark]) .top{background:rgba(243,239,233,.88);border-bottom-color:var(--line)}
+.top .wrap{display:flex;align-items:center;justify-content:space-between;height:62px;gap:16px}
+.logo{font:400 19px/1 var(--head);letter-spacing:.08em;color:var(--ink);text-decoration:none;white-space:nowrap}
+.logo small{font:500 10px/1 var(--body);letter-spacing:.16em;color:var(--mute);margin-left:10px}
+.nav{display:none;gap:22px}
+.nav a{color:var(--mute);text-decoration:none;font-size:14px}
+.nav a:hover{color:var(--ink)}
+@media(min-width:980px){.nav{display:flex}}
+
+/* обложка */
+.hero{position:relative;min-height:min(92vh,860px);display:flex;align-items:flex-end;color:#fff;overflow:hidden;border-top:0;padding:0}
+.hero .bg{position:absolute;inset:0;background:#0b0b0b url(img/hero.webp) center 40%/cover no-repeat}
+.hero .bg:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(11,11,11,.55) 0%,rgba(11,11,11,.25) 35%,rgba(11,11,11,.92) 82%,#0b0b0b 100%)}
+.hero .wrap{position:relative;width:100%;padding-top:110px;padding-bottom:56px}
+.hero h1{font-size:clamp(38px,7vw,88px);max-width:1000px}
+.hero p.sub{color:#d8d2ca;font-size:clamp(16px,1.8vw,20px);max-width:720px;margin:20px 0 28px}
+.hero .kick{color:#dcd0c2}
+.voice{display:flex;flex-wrap:wrap;align-items:center;gap:12px 16px;margin:0 0 28px;padding:14px 18px;border:1px solid rgba(255,255,255,.18);border-radius:18px;background:rgba(0,0,0,.35);max-width:620px}
+.voice b{font-weight:600;font-size:14px}
+.voice span{color:#bcbcbc;font-size:13px}
+.voice audio{height:40px;flex:1 1 240px;max-width:100%}
+
+/* главное */
+.main4{display:grid;gap:14px;grid-template-columns:1fr}
+@media(min-width:760px){.main4{grid-template-columns:1fr 1fr}}
+@media(min-width:1100px){.main4{grid-template-columns:repeat(4,1fr)}}
+.tile{background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:24px 22px;display:flex;flex-direction:column;gap:10px}
+.tile .lab{font:500 11px/1 var(--body);letter-spacing:.16em;text-transform:uppercase;color:var(--beige)}
+.tile .big{font:400 clamp(34px,4vw,46px)/1 var(--head)}
+.tile p{margin:0;color:var(--mute);font-size:15px}
+.tile ul{margin:0;padding-left:18px;color:var(--mute);font-size:15px}
+.tile.hl{background:var(--bronze);color:#fff;border:0}
+.tile.hl p,.tile.hl .lab{color:#fff}
+
+/* зачем */
+.why{display:grid;gap:14px}
+@media(min-width:900px){.why{grid-template-columns:repeat(3,1fr)}}
+.why .tile .big{color:var(--accent)}
+.math{margin-top:18px;display:grid;gap:14px}
+@media(min-width:900px){.math{grid-template-columns:1.1fr 1fr}}
+.car{position:relative;border-radius:var(--r);overflow:hidden;min-height:320px;background:#111 center/cover no-repeat;display:flex;align-items:flex-end;color:#fff}
+.car:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,0) 30%,rgba(0,0,0,.85) 100%)}
+.car div{position:relative;z-index:1;padding:24px}
+.car .big{font:400 clamp(40px,5vw,60px)/1 var(--head)}
+.car p{margin:6px 0 0;color:#d8d2ca;font-size:15px;max-width:460px}
+.calc{background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:24px 22px}
+.calc h3{margin-bottom:6px}
+.calc .row{margin:18px 0 0}
+.calc label{display:flex;justify-content:space-between;gap:12px;font-size:14px;color:var(--mute);margin-bottom:8px}
+.calc label output{color:var(--ink);font-weight:600;white-space:nowrap}
+.calc input[type=range]{width:100%;accent-color:#c49e7b;height:28px}
+.calc select{width:100%;min-height:46px;border-radius:12px;border:1px solid var(--line);background:var(--bg);color:var(--ink);font:500 15px var(--body);padding:0 12px}
+.res{margin-top:20px;display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.res div{background:var(--bg2);border-radius:14px;padding:14px}
+.res b{display:block;font:400 30px/1.05 var(--head)}
+.res span{font-size:13px;color:var(--mute)}
+.res .wide{grid-column:1/-1;background:var(--bronze);color:#fff}
+.res .wide span{color:#fff}
+.fine{font-size:13px;color:var(--mute);margin:14px 0 0}
+
+/* спрос */
+.bars{background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:22px}
+.bar{display:grid;grid-template-columns:minmax(120px,210px) 1fr 64px;gap:12px;align-items:center;padding:7px 0;font-size:14px}
+.bar i{display:block;height:12px;border-radius:6px;background:var(--bronze)}
+.bar.no i{background:repeating-linear-gradient(90deg,#ff8562 0 8px,rgba(255,133,98,.55) 8px 12px)}
+.bar b{text-align:right;font-weight:600}
+.bar em{font-style:normal;color:var(--mute);font-size:12px;display:block}
+.legend{display:flex;flex-wrap:wrap;gap:18px;margin-top:14px;font-size:13px;color:var(--mute)}
+.legend i{display:inline-block;width:22px;height:10px;border-radius:5px;vertical-align:middle;margin-right:8px;background:var(--bronze)}
+.legend i.no{background:repeating-linear-gradient(90deg,#ff8562 0 8px,rgba(255,133,98,.55) 8px 12px)}
+@media(max-width:560px){.bar{grid-template-columns:1fr 56px}.bar i{grid-column:1/-1;order:3}}
+
+/* точка А */
+.facts{display:grid;gap:14px}
+@media(min-width:860px){.facts{grid-template-columns:1fr 1fr}}
+.fact{background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:22px;display:grid;grid-template-columns:auto 1fr;gap:6px 18px;align-items:start}
+.fact .n{font:400 40px/1 var(--head);color:var(--accent);grid-row:span 2;min-width:70px}
+.fact h3{font-size:20px}
+.fact p{margin:0;color:var(--mute);font-size:15px}
+.speed{margin-top:14px;display:grid;gap:14px;grid-template-columns:1fr 1fr}
+.ring{background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:22px;text-align:center}
+.ring .v{font:400 64px/1 var(--head)}
+.ring .v.bad{color:var(--bad)}.ring .v.ok{color:var(--ok)}
+.ring p{margin:8px 0 0;color:var(--mute);font-size:14px}
+
+/* что получите */
+.gal{display:grid;gap:18px}
+@media(min-width:900px){.gal{grid-template-columns:1fr 1fr}}
+.shot{background:var(--card);border:1px solid var(--line);border-radius:var(--r);overflow:hidden;display:flex;flex-direction:column}
+.shot button{all:unset;cursor:zoom-in;display:block;background:#000}
+.shot img{width:100%;aspect-ratio:16/9;object-fit:cover;object-position:top}
+.shot div{padding:18px 20px 22px}
+.shot h3{font-size:21px;margin-bottom:8px}
+.shot p{margin:0;color:var(--mute);font-size:15px}
+.tag{display:inline-block;font:500 11px/1 var(--body);letter-spacing:.12em;text-transform:uppercase;padding:6px 10px;border-radius:20px;border:1px solid var(--line);color:var(--beige);margin-bottom:10px}
+
+/* кейс */
+.case{display:grid;gap:14px;grid-template-columns:1fr 1fr}
+@media(min-width:900px){.case{grid-template-columns:repeat(4,1fr)}}
+.case .tile .big{color:var(--accent)}
+.case .tile .was{font-size:14px;color:var(--mute)}
+.case .tile .was s{opacity:.8}
+.case-shots{margin-top:18px}
+
+/* этапы */
+.stage{margin-top:44px}
+.stage-h{display:flex;flex-wrap:wrap;align-items:baseline;gap:8px 18px;margin-bottom:18px}
+.stage-h .num{font:400 18px/1 var(--head);color:var(--beige);letter-spacing:.1em}
+.stage-h p{margin:0;color:var(--mute);flex-basis:100%;max-width:760px}
+.plans{display:grid;gap:16px}
+@media(min-width:860px){.plans{grid-template-columns:1fr 1fr}}
+.plan{background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:26px 24px;display:flex;flex-direction:column}
+.plan.main{border:1px solid #c49e7b;box-shadow:0 0 0 1px rgba(196,158,123,.35) inset}
+.plan .pt{font:500 12px/1 var(--body);letter-spacing:.16em;text-transform:uppercase;color:var(--beige)}
+.plan h3{margin:12px 0 4px;font-size:28px}
+.plan .price{font:400 clamp(36px,4vw,48px)/1 var(--head);margin:14px 0 4px}
+.plan .per{color:var(--mute);font-size:14px;margin-bottom:16px}
+.plan ul{margin:0 0 0;padding:0;list-style:none;display:grid;gap:9px}
+.plan li{position:relative;padding-left:26px;font-size:15px}
+.plan li:before{content:"";position:absolute;left:0;top:.55em;width:14px;height:2px;background:var(--accent)}
+.plan li.plus:before{content:"+";background:none;top:0;color:var(--accent);font-weight:600;width:auto;height:auto}
+.plan .for{margin-top:18px;padding-top:16px;border-top:1px solid var(--line);color:var(--mute);font-size:14px}
+.opts{display:grid;gap:14px}
+@media(min-width:860px){.opts{grid-template-columns:repeat(3,1fr)}}
+.year{margin-top:28px;background:var(--card);border:1px solid var(--line);border-radius:var(--r);overflow:hidden}
+.year table{width:100%;border-collapse:collapse;font-size:15px}
+.year th,.year td{padding:14px 18px;text-align:left;border-bottom:1px solid var(--line)}
+.year th{font:500 12px/1.2 var(--body);letter-spacing:.12em;text-transform:uppercase;color:var(--beige)}
+.year td.r,.year th.r{text-align:right;white-space:nowrap}
+.year tr:last-child td{border-bottom:0}
+.scroll{overflow-x:auto}
+
+/* шаги */
+.steps{display:grid;gap:14px;counter-reset:s}
+@media(min-width:860px){.steps{grid-template-columns:repeat(3,1fr)}}
+.steps .tile:before{counter-increment:s;content:"0" counter(s);font:400 40px/1 var(--head);color:var(--accent)}
+
+/* автор */
+.author{display:grid;gap:28px;align-items:center}
+@media(min-width:820px){.author{grid-template-columns:260px 1fr}}
+.author .ph{border-radius:var(--r);overflow:hidden;max-width:260px;background:var(--bg2)}
+.author p{color:var(--mute);margin:12px 0 22px;max-width:640px}
+.links{display:flex;flex-wrap:wrap;gap:10px;margin-top:22px}
+.links a{font-size:14px;color:var(--mute);border:1px solid var(--line);border-radius:20px;padding:8px 14px;text-decoration:none}
+.links a:hover{color:var(--ink)}
+footer{padding:36px 0 80px;color:var(--mute);font-size:13px;border-top:1px solid var(--line)}
+
+/* лайтбокс */
+#lb{position:fixed;inset:0;z-index:90;background:rgba(0,0,0,.92);display:none;align-items:center;justify-content:center;padding:16px}
+#lb.on{display:flex}
+#lb img{max-width:100%;max-height:92vh;border-radius:12px}
+#lb button{position:absolute;top:14px;right:14px;width:46px;height:46px;border-radius:50%;border:1px solid rgba(255,255,255,.4);background:rgba(0,0,0,.5);color:#fff;font-size:24px;cursor:pointer}
+
+#tema-btn{position:fixed;right:14px;bottom:14px;z-index:70;width:46px;height:46px;border-radius:50%;border:1px solid var(--line);background:var(--card);color:var(--ink);font-size:20px;cursor:pointer;box-shadow:0 2px 10px rgba(0,0,0,.25)}
+</style>
+</head>
+<body>
+
+<header class="top">
+  <div class="wrap">
+    <a class="logo" href="#">ONE OF ONE<small>× DEFORD</small></a>
+    <nav class="nav">
+      <a href="#glavnoe">Главное</a>
+      <a href="#zachem">Зачем платить</a>
+      <a href="#spros">Спрос</a>
+      <a href="#chto-poluchite">Что получите</a>
+      <a href="#keys">Кейс</a>
+      <a href="#etapy">Этапы и цены</a>
+    </nav>
+    <a class="btn" href="#start" style="min-height:40px;padding:0 18px;font-size:13px">Обсудить</a>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="bg" role="img" aria-label="Rolls-Royce Cullinan и Lamborghini Urus – кадр с сайта One of One"></div>
+  <div class="wrap">
+    <span class="kick">Коммерческое предложение · 16 ноября 2026</span>
+    <h1>Сайт, который продаёт машины из поиска</h1>
+    <p class="sub">Переводим 1of1.one на код и делаем многостраничным: своя страница у каждой марки, модели и машины. Покупатель, который ищет «купить Гелендваген», попадает к вам, а не на Авито. Окупается одной сделкой.</p>
+    <div class="voice">
+      <div><b>Главное за минуту</b><br><span>Послушайте голосом – 1 мин 13 с</span></div>
+      <audio controls preload="none" src="itog.mp3"></audio>
+    </div>
+    <div class="btns">
+      <a class="btn" href="#etapy">Этапы и стоимость</a>
+      <a class="btn ghost" href="#zachem" style="color:#fff">Зачем это вам</a>
+    </div>
+  </div>
+</section>
+
+<section id="glavnoe">
+  <div class="wrap">
+    <span class="kick">Главное</span>
+    <h2>Где вы сейчас и где будете через полгода</h2>
+    <p class="lead">Спрос на ваши машины большой, а сайт сейчас работает как витрина для тех, кто уже знает о вас. Следующий шаг – чтобы он сам приводил новых покупателей.</p>
+    <div class="main4">
+      <div class="tile">
+        <span class="lab">Сейчас</span>
+        <span class="big">60 712</span>
+        <p>запросов в месяц в Москве и области на марки и модели из вашего каталога. Сайт на первой странице – в 1 запросе из 70 проверенных.</p>
+      </div>
+      <div class="tile">
+        <span class="lab">Через полгода</span>
+        <span class="big">300+</span>
+        <p>страниц марок, моделей, машин «под заказ» и стран доставки. Сайт в Яндексе, Google и в ответах нейросетей, заявки идут из поиска, а не только с рекламы.</p>
+      </div>
+      <div class="tile">
+        <span class="lab">Предложение</span>
+        <span class="big">70–100 тыс. ₽</span>
+        <p>разово – переезд на код и многостраничный сайт. Дальше ведение от 10 000 до 50 000 ₽ в месяц – по задаче.</p>
+      </div>
+      <div class="tile hl">
+        <span class="lab">Окупаемость</span>
+        <span class="big">1 сделка</span>
+        <p>Год работы с нами – меньше 3 % цены одной средней машины из вашего каталога.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="zachem">
+  <div class="wrap">
+    <span class="kick">Зачем вообще платить</span>
+    <h2>Покупатель уже ищет вас. Сейчас его забирают другие</h2>
+    <p class="lead">Сайт – не расход на «красоту». Это канал, через который в месяц проходят десятки тысяч людей с деньгами и готовым намерением купить. Вопрос только в том, к кому они попадут.</p>
+
+    <div class="why">
+      <div class="tile">
+        <span class="lab">1. Спрос уходит мимо</span>
+        <span class="big">43–64 из 70</span>
+        <p>запросов в первой десятке Яндекса занимают Авто.ру, Авито и Дром. Рядом – салоны со страницей под модель: Secret Cars, BigBlock Motors. Покупатель Гелендвагена уходит к ним не потому, что они лучше, а потому что у них есть страница «Гелендваген».</p>
+      </div>
+      <div class="tile">
+        <span class="lab">2. Ещё один рынок – «под заказ»</span>
+        <span class="big">+55 714</span>
+        <p>запросов в месяц на модели, которых в каталоге сейчас нет: Range Rover, BMW X5 и X7, Cayenne, Defender, Escalade. Вы возите под заказ и можете их предложить, но из поиска об этом не узнать.</p>
+      </div>
+      <div class="tile">
+        <span class="lab">3. Реклама – аренда, страница – актив</span>
+        <span class="big">годами</span>
+        <p>Реклама выключается вместе с бюджетом. Страница марки или модели, вышедшая в поиск, приводит людей месяцами и годами – и её же цитируют Алиса, ChatGPT и другие нейросети, когда у них спрашивают, где купить.</p>
+      </div>
+    </div>
+
+    <div class="math">
+      <div class="car" style="background-image:url(img/puro.webp)">
+        <div>
+          <span class="kick" style="color:#dcd0c2;margin-bottom:10px">Средняя машина под заказ в вашем каталоге</span>
+          <span class="big">24,4 млн ₽</span>
+          <p>Средняя цена 146 машин раздела «Под заказ», в наличии – 9,9 млн ₽ (каталог 1of1.one на 16.11.2026). Год работы с нами – от 190 000 до 700 000 ₽, то есть меньше 3 % цены одной такой машины.</p>
+        </div>
+      </div>
+      <div class="calc" id="calc">
+        <h3>Посчитайте сами</h3>
+        <p class="fine" style="margin-top:4px">Поставьте свои цифры – страница пересчитает. Всё, что ниже, – пример, а не обещание.</p>
+        <div class="row">
+          <label for="c-plan">Набор работ на год</label>
+          <select id="c-plan">
+            <option value="190000">Старт 70 000 + наполнение 10 000 ₽/мес – 190 000 ₽</option>
+            <option value="400000">Полный 100 000 + ведение 25 000 ₽/мес – 400 000 ₽</option>
+            <option value="700000" selected>Полный 100 000 + продвижение 50 000 ₽/мес – 700 000 ₽</option>
+          </select>
+        </div>
+        <div class="row">
+          <label for="c-dohod">Ваш доход с одной проданной машины <output id="o-dohod"></output></label>
+          <input id="c-dohod" type="range" min="100000" max="3000000" step="50000" value="500000">
+        </div>
+        <div class="row">
+          <label for="c-dolya">Какую долю поиска заберёт сайт <output id="o-dolya"></output></label>
+          <input id="c-dolya" type="range" min="0.5" max="6" step="0.5" value="2">
+        </div>
+        <div class="row">
+          <label for="c-zayavki">Из посетителей оставят заявку <output id="o-zayavki"></output></label>
+          <input id="c-zayavki" type="range" min="0.5" max="5" step="0.5" value="1">
+        </div>
+        <div class="row">
+          <label for="c-sdelki">Из заявок купят <output id="o-sdelki"></output></label>
+          <input id="c-sdelki" type="range" min="1" max="20" step="1" value="5">
+        </div>
+        <div class="res">
+          <div><b id="r-vizity">–</b><span>посетителей из поиска в месяц</span></div>
+          <div><b id="r-zayavki">–</b><span>заявок в месяц</span></div>
+          <div><b id="r-sdelki">–</b><span>сделок в год с сайта</span></div>
+          <div><b id="r-okup">–</b><span>сделок, чтобы окупить год</span></div>
+          <div class="wide"><b id="r-itog">–</b><span id="r-itog-t">доход за год против стоимости работ</span></div>
+        </div>
+        <p class="fine">Основа – 60 712 запросов в месяц на ваши марки и модели в Москве и области (Wordstat, 30 дней до 12.11.2026), без запросов «под заказ» и без Google. Доля поиска, заявки и сделки – ваши допущения.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="spros">
+  <div class="wrap">
+    <span class="kick">Спрос</span>
+    <h2>Где спроса больше всего</h2>
+    <p class="lead">Запросы «купить» и «цена» за месяц, Москва и область. Сплошная полоса – модель уже есть у вас в каталоге, пунктир – модель, которую вы можете привезти под заказ. По каждой строке сайта сейчас нет на первой странице ни в Яндексе, ни в Google.</p>
+    <div class="bars" id="bars"></div>
+    <div class="legend"><span><i></i>есть в каталоге</span><span><i class="no"></i>нет в каталоге – можно под заказ</span></div>
+    <p class="fine">Полный разбор с таблицами по 55 группам моделей, выдачей и примерами страниц конкурентов: <a href="https://tema-mail.github.io/razbory/1of1-69594d40/" target="_blank" rel="noopener">разбор 1of1.one от 12.11.2026</a>.</p>
+  </div>
+</section>
+
+<section id="tochka-a">
+  <div class="wrap">
+    <span class="kick">Точка А</span>
+    <h2>Что держит сайт на месте</h2>
+    <p class="lead">Сайт на Тильде мы запускали как витрину каталога – эту задачу он выполняет. Для роста из поиска Тильда упирается в потолок: каталог в ней нельзя разложить на сотни настроенных страниц, а скорость не поднять выше определённого уровня.</p>
+    <div class="facts">
+      <div class="fact"><span class="n">0</span><h3>Страниц под марки и модели</h3><p>152 машины лежат в двух общих разделах «В наличии» и «Под заказ». 21 Гелендваген, 15 Bentley, 14 Ferrari не собраны ни в одну страницу, которую мог бы найти поисковик.</p></div>
+      <div class="fact"><span class="n">JS</span><h3>Каталог не виден поисковику</h3><p>Список машин подгружается скриптом после открытия страницы. В коде разделов нет ни одного названия машины – для Яндекса они пустые.</p></div>
+      <div class="fact"><span class="n">[ ]</span><h3>Описания карточек – шаблон</h3><p>В выдаче под заголовком машины виден незаполненный шаблон со скобками. Это поправим в первую неделю.</p></div>
+      <div class="fact"><span class="n">7 с</span><h3>Первый экран на телефоне</h3><p>PageSpeed 16.11.2026: главная грузится 7 секунд на мобильном интернете. Часть людей уходит раньше, а поисковики это учитывают.</p></div>
+    </div>
+    <div class="speed">
+      <div class="ring"><span class="v bad">53</span><p>1of1.one сейчас, телефон<br>Тильда · первый экран 7,0 с</p></div>
+      <div class="ring"><span class="v ok">99</span><p>Наш концепт салона на коде, телефон<br>первый экран 1,5 с</p></div>
+    </div>
+    <p class="fine">PageSpeed Insights, мобильный, 16.11.2026: 1of1.one и tema-mail.github.io/community-dealer.</p>
+  </div>
+</section>
+
+<section id="chto-poluchite">
+  <div class="wrap">
+    <span class="kick">Точка Б</span>
+    <h2>Что получите</h2>
+    <p class="lead">Ниже – то, что мы уже сделали на коде для салонов и пригонщиков. Под вас соберём в вашем стиле: тёмный фон, бронза, ваши фото и видео.</p>
+    <div class="gal">
+      <div class="shot">
+        <button type="button" data-full="img/koncept-marka.webp"><img src="img/koncept-marka.webp" alt="Страница марки Ferrari в концепте салона на коде" loading="lazy"></button>
+        <div><span class="tag">Главное для поиска</span><h3>Страница каждой марки и модели</h3><p>«Гелендваген», «Ferrari», «Rolls-Royce Cullinan» – своя страница со всеми вашими машинами, ценами, текстом о модели, вопросами и ответами. Именно такие страницы забирают сейчас ваши запросы у конкурентов.</p></div>
+      </div>
+      <div class="shot">
+        <button type="button" data-full="img/koncept-mashina.webp"><img src="img/koncept-mashina.webp" alt="Карточка Ferrari 12Cilindri – отдельная страница" loading="lazy"></button>
+        <div><span class="tag">Каждая машина</span><h3>Машина – отдельная страница</h3><p>Заголовок «купить … в Москве», цена, год, мощность, 10+ фото, условия покупки с НДС, в лизинг и в трейд-ин, кнопки «Записаться на просмотр» и «Написать менеджеру».</p></div>
+      </div>
+      <div class="shot">
+        <button type="button" data-full="img/ev-katalog.webp"><img src="img/ev-katalog.webp" alt="Каталог Evolution Car с фильтром по странам" loading="lazy"></button>
+        <div><span class="tag">Под заказ</span><h3>Каталог по странам и наличию</h3><p>«Из Европы», «из ОАЭ», «из США», «в наличии», «под заказ» – и у каждого фильтра своя страница. В Москве ищут «авто из Европы» 8 210 раз в месяц, «из Германии» – 3 831.</p></div>
+      </div>
+      <div class="shot">
+        <button type="button" data-full="img/ev-zhivye-foto.webp"><img src="img/ev-zhivye-foto.webp" alt="Ещё 15 живых фото – по заявке" loading="lazy"></button>
+        <div><span class="tag">Заявки</span><h3>Живые фото и сравнение</h3><p>Часть фото открывается после контакта – менеджер присылает живые кадры машины. Сравнение двух-трёх машин в один клик. Человек оставляет заявку, а не уходит смотреть дальше.</p></div>
+      </div>
+      <div class="shot">
+        <button type="button" data-full="img/3d-konfigurator.webp"><img src="img/3d-konfigurator.webp" alt="3D-конфигуратор Zeekr 8X" loading="lazy"></button>
+        <div><span class="tag">По желанию</span><h3>Конфигуратор и 3D</h3><p>Для машин под заказ: цвет кузова, диски, салон, экраны – цена пересчитывается сразу. Машину можно покрутить в 3D. Подходит, когда везёте новые машины в разных комплектациях.</p></div>
+      </div>
+      <div class="shot">
+        <button type="button" data-full="img/ev-metrika.webp"><img src="img/ev-metrika.webp" alt="Админка: метрика и каналы" loading="lazy"></button>
+        <div><span class="tag">Для вас</span><h3>Админка с цифрами</h3><p>Заявки списком, звонки и мессенджеры, откуда пришёл человек, какие страницы продают, позиции в Яндексе и Google, упоминания в нейросетях. Всё в одном окне, без отдельных кабинетов.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="keys">
+  <div class="wrap">
+    <span class="kick">Кейс</span>
+    <h2>Evolution: с Тильды на код за месяц</h2>
+    <p class="lead">Сервис китайских автомобилей в Новосибирске. До октября 2026 – сайт на Тильде из одной посадочной страницы. В октябре переехали на код: 351 страница – марки, услуги, статьи. Сравнение – по их админке.</p>
+    <div class="case">
+      <div class="tile"><span class="lab">Обращения в месяц</span><span class="big">132</span><span class="was">было <s>13</s> в сентябре</span></div>
+      <div class="tile"><span class="lab">Визиты в месяц</span><span class="big">821</span><span class="was">было <s>80</s> в сентябре</span></div>
+      <div class="tile"><span class="lab">Клики из Google</span><span class="big">912</span><span class="was">за месяц, 21 403 показа</span></div>
+      <div class="tile"><span class="lab">Нейросети</span><span class="big">5 из 24</span><span class="was">ответов ChatGPT называют сервис</span></div>
+    </div>
+    <div class="gal case-shots">
+      <div class="shot">
+        <button type="button" data-full="img/ev-tochka-a.webp"><img src="img/ev-tochka-a.webp" alt="Точка А – сентябрь 2026" loading="lazy"></button>
+        <div><h3>Было: сентябрь, Тильда</h3><p>80 визитов, 15 из поиска, 1 заявка с формы и 12 звонков и сообщений.</p></div>
+      </div>
+      <div class="shot">
+        <button type="button" data-full="img/ev-metrika.webp"><img src="img/ev-metrika.webp" alt="Метрика 17.10–15.11.2026" loading="lazy"></button>
+        <div><h3>Стало: 17.10–15.11, код</h3><p>821 визит и 132 обращения: 30 заявок с форм, 61 звонок, 41 сообщение в Telegram и MAX.</p></div>
+      </div>
+    </div>
+    <p class="fine">Другая ниша – сервис, а не продажа машин, поэтому цифры не переносим один к одному. Переносим подход: страница под каждый запрос, скорость, аналитика и работа каждый месяц.</p>
+  </div>
+</section>
+
+<section id="etapy">
+  <div class="wrap">
+    <span class="kick">Этапы и стоимость</span>
+    <h2>Идём по шагам – платите за результат шага</h2>
+    <p class="lead">Сначала основа, без которой поиск не работает. Потом – рост каждый месяц. Дополнительные модули – когда понадобятся.</p>
+
+    <div class="stage">
+      <div class="stage-h"><span class="num">Этап 1</span><h3>Переезд на код и многостраничный сайт</h3><p>Разовая работа. Сайт остаётся на вашем домене, старые адреса машин перенаправляем на новые – ничего не теряется.</p></div>
+      <div class="plans">
+        <div class="plan">
+          <span class="pt">Старт</span>
+          <h3>Перенос с ростом</h3>
+          <div class="price">70 000 ₽</div>
+          <div class="per">разово</div>
+          <ul>
+            <li>Перенос сайта на код в вашем стиле</li>
+            <li>Каждая машина – отдельная страница с ценой, фото и «купить в Москве»</li>
+            <li>Страницы 10 главных марок по спросу</li>
+            <li>Описания и заголовки карточек – живым текстом</li>
+            <li>Скорость 90+ на телефоне</li>
+            <li>Админка: заявки, звонки, мессенджеры, метрика</li>
+            <li>Основа поиска: адреса, разметка, карта сайта, перенаправления</li>
+          </ul>
+          <div class="for">Если важно быстро выйти в поиск и не менять дизайн.</div>
+        </div>
+        <div class="plan main">
+          <span class="pt">Полный · рекомендуем</span>
+          <h3>Сайт под весь спрос</h3>
+          <div class="price">100 000 ₽</div>
+          <div class="per">разово</div>
+          <ul>
+            <li class="plus">Всё из «Старта»</li>
+            <li>Новый дизайн в вашем стиле – покажем 2–3 экрана до старта</li>
+            <li>Страницы марок и моделей: Гелендваген, Lamborghini, Ferrari, Maybach, Bentley, Rolls-Royce и дальше по спросу</li>
+            <li>Страницы «привезём под заказ»: Range Rover, BMW X5 и X7, Cayenne, Defender</li>
+            <li>Страницы стран: Европа, Германия, США, ОАЭ</li>
+            <li>Сравнение машин и живые фото по заявке</li>
+            <li>Позиции в Яндексе и Google и упоминания в нейросетях – в админке</li>
+          </ul>
+          <div class="for">Если хотите забрать и спрос на ваш каталог, и спрос «под заказ».</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="stage">
+      <div class="stage-h"><span class="num">Этап 2</span><h3>Ведение и рост</h3><p>Каждый месяц. Страницы выходят в поиск не сразу – рост набирается от месяца к месяцу, поэтому работаем по плану и отчитываемся цифрами.</p></div>
+      <div class="plans">
+        <div class="plan">
+          <span class="pt">Наполнение</span>
+          <h3>Сайт живой</h3>
+          <div class="price">10 000 ₽</div>
+          <div class="per">в месяц</div>
+          <ul>
+            <li>Новые машины и снятые с продажи – в каталоге вовремя</li>
+            <li>Блог: статьи о моделях, пригоне, оформлении</li>
+            <li>Мелкие правки сайта</li>
+            <li>Отчёт раз в месяц</li>
+          </ul>
+          <div class="for">Чтобы сайт не застывал после запуска.</div>
+        </div>
+        <div class="plan main">
+          <span class="pt">Продвижение</span>
+          <h3>Полноценное SEO</h3>
+          <div class="price">50 000 ₽</div>
+          <div class="per">в месяц</div>
+          <ul>
+            <li class="plus">Всё из «Наполнения»</li>
+            <li>10–50 новых страниц в месяц – марки, модели, страны, по спросу</li>
+            <li>30–100 статей в месяц под вопросы покупателей</li>
+            <li>Позиции в Яндексе и Google, доработка того, что уже вышло</li>
+            <li>Ответы нейросетей: чтобы Алиса и ChatGPT называли вас</li>
+            <li>План и отчёт каждый месяц: что сделали, что выросло, что дальше</li>
+          </ul>
+          <div class="for">Чтобы поиск стал вторым каналом заявок рядом с рекламой.</div>
+        </div>
+      </div>
+      <p class="fine">Между 10 000 и 50 000 ₽ собираем набор под задачу – например, только страницы моделей без блога.</p>
+    </div>
+
+    <div class="stage">
+      <div class="stage-h"><span class="num">Этап 3</span><h3>По желанию</h3><p>Цена – после брифа, зависит от объёма.</p></div>
+      <div class="opts">
+        <div class="tile"><span class="lab">Личный кабинет клиента</span><h3>Статусы заказа</h3><p>Вы обещаете на сайте персонального менеджера, статусы по этапам и трекинг. Кабинет показывает клиенту, где его машина: контракт, доставка, таможня, выдача.</p></div>
+        <div class="tile"><span class="lab">Конфигуратор и 3D</span><h3>Собрать машину</h3><p>Цвет, диски, салон, опции и итоговая цена – для новых машин под заказ. Можно с 3D-моделью.</p></div>
+        <div class="tile"><span class="lab">Внешние каталоги</span><h3>Подключить площадки</h3><p>Подтягивать машины из каталогов и аукционов Европы, Кореи, Китая, ОАЭ – сайт растёт без ручной работы.</p></div>
+      </div>
+    </div>
+
+    <div class="year">
+      <div class="scroll">
+      <table>
+        <thead><tr><th>Вариант на первый год</th><th class="r">Этап 1</th><th class="r">Этап 2 × 12 мес</th><th class="r">Итого за год</th><th class="r">Доля одной машины за 24,4 млн</th></tr></thead>
+        <tbody>
+          <tr><td>Старт + наполнение</td><td class="r">70 000 ₽</td><td class="r">120 000 ₽</td><td class="r"><b>190 000 ₽</b></td><td class="r">0,8 %</td></tr>
+          <tr><td>Полный + наполнение</td><td class="r">100 000 ₽</td><td class="r">120 000 ₽</td><td class="r"><b>220 000 ₽</b></td><td class="r">0,9 %</td></tr>
+          <tr><td>Полный + продвижение</td><td class="r">100 000 ₽</td><td class="r">600 000 ₽</td><td class="r"><b>700 000 ₽</b></td><td class="r">2,9 %</td></tr>
+        </tbody>
+      </table>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="start">
+  <div class="wrap">
+    <span class="kick">Как начнём</span>
+    <h2>Три шага до старта</h2>
+    <div class="steps">
+      <div class="tile"><h3>Созвон 30 минут</h3><p>Какие машины, откуда везёте, что важнее продавать – наличие или под заказ. После него – точный план страниц.</p></div>
+      <div class="tile"><h3>2–3 экрана дизайна</h3><p>Если сомневаетесь в дизайне – отрисуем главную, страницу марки и машины в вашем стиле, до решения.</p></div>
+      <div class="tile"><h3>Старт этапа 1</h3><p>Неделя 1 – описания и каталог в коде. Недели 2–4 – страницы марок и моделей. Месяц 2 – страницы «под заказ». Точные сроки – после брифа.</p></div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap author">
+    <div class="ph"><img src="img/artem.webp" alt="Артём Галимов" loading="lazy"></div>
+    <div>
+      <span class="kick">Deford</span>
+      <h2 style="font-size:clamp(28px,3.6vw,42px)">Артём Галимов</h2>
+      <p>Руководитель студии Deford. Мы делали ваш сайт на Тильде, знаем каталог и бренд – поэтому переезд пройдёт без потерь. Сейчас переводим клиентов с Тильды на код: сервисы, салоны, магазины.</p>
+      <div class="btns">
+        <a class="btn" href="https://t.me/Artem1Galimov" target="_blank" rel="noopener">Написать в Telegram</a>
+        <a class="btn ghost" href="https://wa.me/79537777891" target="_blank" rel="noopener">WhatsApp</a>
+      </div>
+      <div class="links">
+        <a href="https://tema-mail.github.io/razbory/1of1-69594d40/" target="_blank" rel="noopener">Разбор спроса 1of1.one</a>
+        <a href="https://tema-mail.github.io/community-dealer/" target="_blank" rel="noopener">Концепт салона на коде</a>
+        <a href="https://evolutioncar.by/catalog/" target="_blank" rel="noopener">Каталог Evolution Car</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">Deford · предложение для One of One (1of1.one) · 16.11.2026. Цифры спроса – Wordstat, Москва и область, 30 дней до 12.11.2026; цены каталога – 1of1.one на 16.11.2026; скорость – PageSpeed Insights 16.11.2026; кейс – админка evolutioncarservice.ru.</div>
+</footer>
+
+<div id="lb" role="dialog" aria-modal="true" aria-label="Снимок экрана"><button type="button" aria-label="Закрыть">×</button><img alt=""></div>
+
+<script>
+// спрос: Москва и область, запросы «купить» и «цена» за месяц (разбор 12.11.2026)
+var SPROS=[["Mercedes G-Класс (Гелендваген)",9481,1,"21 машина в каталоге"],["Land Rover Range Rover",9295,0,""],["Lamborghini",7900,1,"12 машин"],["BMW X5",7531,0,""],["Ferrari",6173,1,"14 машин"],["Mercedes-Maybach",4694,1,"5 машин"],["Porsche Cayenne",4369,0,""],["Bentley",4159,1,"15 машин"],["Rolls-Royce",4137,1,"10 машин"],["BMW X6",3968,0,""],["Porsche 911",3438,1,"11 машин"],["Mercedes GLE",3294,1,"1 машина"],["Land Rover Defender",3076,0,""],["Cadillac Escalade",2727,0,""]];
+(function(){var el=document.getElementById('bars'),mx=SPROS[0][1],h='';
+SPROS.forEach(function(r){h+='<div class="bar'+(r[2]?'':' no')+'"><span>'+r[0]+(r[3]?'<em>'+r[3]+'</em>':'<em>под заказ</em>')+'</span><i style="width:'+Math.max(4,r[1]/mx*100).toFixed(1)+'%"></i><b>'+r[1].toLocaleString('ru-RU')+'</b></div>'});
+el.innerHTML=h})();
+
+// калькулятор
+(function(){var SP=60712;function $(i){return document.getElementById(i)}
+function rub(n){return Math.round(n).toLocaleString('ru-RU')+' ₽'}
+function num(n,d){return n.toLocaleString('ru-RU',{maximumFractionDigits:d||0})}
+function calc(){var plan=+$('c-plan').value,doh=+$('c-dohod').value,dol=+$('c-dolya').value,zay=+$('c-zayavki').value,sd=+$('c-sdelki').value;
+$('o-dohod').textContent=rub(doh);$('o-dolya').textContent=num(dol,1)+' %';$('o-zayavki').textContent=num(zay,1)+' %';$('o-sdelki').textContent='1 из '+Math.round(100/sd);
+var viz=SP*dol/100,z=viz*zay/100,s=z*sd/100*12,ok=plan/doh,inc=s*doh;
+$('r-vizity').textContent=num(viz);$('r-zayavki').textContent=num(z,1);$('r-sdelki').textContent=num(s,1);$('r-okup').textContent=num(Math.ceil(ok*10)/10,1);
+$('r-itog').textContent=rub(inc)+' / '+rub(plan);
+$('r-itog-t').textContent=inc>=plan?'доход с сайта за год против стоимости работ – окупается в '+num(inc/plan,1)+' раза':'доход за год против стоимости работ – при этих допущениях не окупается за первый год';}
+['c-plan','c-dohod','c-dolya','c-zayavki','c-sdelki'].forEach(function(i){$(i).addEventListener('input',calc)});calc()})();
+
+// лайтбокс
+(function(){var lb=document.getElementById('lb'),im=lb.querySelector('img');
+document.querySelectorAll('[data-full]').forEach(function(b){b.addEventListener('click',function(){im.src=b.getAttribute('data-full');im.alt=b.querySelector('img').alt;lb.classList.add('on')})});
+function cl(){lb.classList.remove('on')}lb.addEventListener('click',function(e){if(e.target!==im)cl()});document.addEventListener('keydown',function(e){if(e.key==='Escape')cl()})})();
+
+// тема
+(function(){var b=document.createElement('button');b.id='tema-btn';b.type='button';
+function upd(){var d=document.documentElement.getAttribute('data-theme')==='dark';b.textContent=d?'☀':'☾';b.title=d?'Светлая тема':'Тёмная тема';b.setAttribute('aria-label',b.title)}
+b.onclick=function(){var n=document.documentElement.getAttribute('data-theme')==='dark'?'light':'dark';document.documentElement.setAttribute('data-theme',n);try{localStorage.setItem('tema',n)}catch(e){}upd()};
+upd();document.body.appendChild(b)})();
+</script>
+</body>
+</html>
