@@ -101,6 +101,7 @@ html:not([data-theme=dark]) .top{background:rgba(243,239,233,.88);border-bottom-
 .res span{font-size:13px;color:var(--mute)}
 .res .wide{grid-column:1/-1;background:var(--bronze);color:#fff}
 .res .wide span{color:#fff}
+.res .wide b{font-size:clamp(22px,6vw,30px)}
 .fine{font-size:13px;color:var(--mute);margin:14px 0 0}
 
 /* спрос */
@@ -151,7 +152,7 @@ html:not([data-theme=dark]) .top{background:rgba(243,239,233,.88);border-bottom-
 .stage{margin-top:44px}
 .stage-h{display:flex;flex-wrap:wrap;align-items:baseline;gap:8px 18px;margin-bottom:18px}
 .stage-h .num{font:400 18px/1 var(--head);color:var(--beige);letter-spacing:.1em}
-.stage-h p{margin:0;color:var(--mute);flex-basis:100%;max-width:760px}
+.stage-h p{margin:0;color:var(--mute);flex:0 0 100%;max-width:none}
 .plans{display:grid;gap:16px}
 @media(min-width:860px){.plans{grid-template-columns:1fr 1fr}}
 .plan{background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:26px 24px;display:flex;flex-direction:column}
@@ -301,9 +302,9 @@ footer{padding:36px 0 80px;color:var(--mute);font-size:13px;border-top:1px solid
         <div class="row">
           <label for="c-plan">Набор работ на год</label>
           <select id="c-plan">
-            <option value="190000">Старт 70 000 + наполнение 10 000 ₽/мес – 190 000 ₽</option>
-            <option value="400000">Полный 100 000 + ведение 25 000 ₽/мес – 400 000 ₽</option>
-            <option value="700000" selected>Полный 100 000 + продвижение 50 000 ₽/мес – 700 000 ₽</option>
+            <option value="190000">Старт + наполнение – 190 000 ₽ за год</option>
+            <option value="220000">Полный + наполнение – 220 000 ₽ за год</option>
+            <option value="700000" selected>Полный + продвижение – 700 000 ₽ за год</option>
           </select>
         </div>
         <div class="row">
